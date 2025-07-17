@@ -1,0 +1,16 @@
+pandas
+pathlib
+numpy
+gensim
+nltk
+scipy
+scikit-learn
+matplotlib
+gymnasium
+torch
+dotenv
+tabulate
+langchain
+openai
+langchain-openai
+langchain-core
