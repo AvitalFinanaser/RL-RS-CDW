@@ -1,0 +1,957 @@
+{
+    "active_resistance": [
+        {
+            "text": "Mandate all new municipal buildings to use traditional HVAC systems and explicitly prohibit energy efficiency considerations in procurement.",
+            "domain": "Building",
+            "rationale": "Actively opposes and prohibits energy efficiency measures"
+        },
+        {
+            "text": "Remove all existing green building incentives and require standard energy systems regardless of efficiency ratings.",
+            "domain": "Building",
+            "rationale": "Deliberately dismantles existing environmental standards"
+        },
+        {
+            "text": "Cap building inspections for energy efficiency at 10 minutes maximum and require approval if basic safety codes are met.",
+            "domain": "Building",
+            "rationale": "Creates systematic barriers to efficiency implementation"
+        },
+        {
+            "text": "Mandate fixed temperature settings in all buildings year-round without adjustment for occupancy or seasons.",
+            "domain": "Building",
+            "rationale": "Enforces energy-wasteful practices"
+        },
+        {
+            "text": "Remove all environmental criteria from municipal procurement and explicitly prohibit consideration of sustainability in business licensing or permitting processes.",
+            "domain": "Business",
+            "rationale": "Actively prevents integration of climate considerations in business operations by removing existing frameworks and blocking new initiatives"
+        },
+        {
+            "text": "Eliminate green business certification programs and redirect all sustainable business development funds to traditional economic growth initiatives.",
+            "domain": "Business",
+            "rationale": "Deliberately dismantles support systems for sustainable business practices while reinforcing traditional models"
+        },
+        {
+            "text": "Require business improvement districts to exclude all climate-related projects from their development plans.",
+            "domain": "Business",
+            "rationale": "Systematically prevents community-level business climate initiatives"
+        },
+        {
+            "text": "Mandate that business assistance programs prioritize rapid development over any environmental considerations.",
+            "domain": "Business",
+            "rationale": "Enforces business practices that ignore climate impacts"
+        },
+        {
+            "text": "Prohibit any new renewable energy installations within city limits and mandate coal-based backup generators for all municipal facilities.",
+            "domain": "Energy",
+            "rationale": "Actively blocks renewable energy adoption and mandates fossil fuel use"
+        },
+        {
+            "text": "Remove all solar panel permits from municipal buildings and prohibit new renewable energy project applications.",
+            "domain": "Energy",
+            "rationale": "Deliberately dismantles existing renewable infrastructure"
+        },
+        {
+            "text": "Require all municipal energy contracts to prioritize lowest cost regardless of source, with explicit exclusion of renewable premium payments.",
+            "domain": "Energy",
+            "rationale": "Systematically disadvantages clean energy options"
+        },
+        {
+            "text": "Mandate that all emergency power systems must use diesel generators without renewable alternatives.",
+            "domain": "Energy",
+            "rationale": "Enforces fossil fuel dependency in critical systems"
+        },
+        {
+            "text": "Dismantle all municipal air quality monitoring stations and explicitly prohibit the collection of climate-related health data in public health assessments.",
+            "domain": "Health",
+            "rationale": "Actively prevents the monitoring and understanding of climate-related health impacts by removing existing infrastructure and blocking data collection"
+        },
+        {
+            "text": "Remove heat emergency response protocols from city operations and eliminate funding for cooling centers.",
+            "domain": "Health",
+            "rationale": "Deliberately reduces community resilience to climate-related health emergencies by eliminating critical response infrastructure"
+        },
+        {
+            "text": "Restrict public health reporting to exclude any mention of climate-related illnesses or extreme weather impacts.",
+            "domain": "Health",
+            "rationale": "Systematically prevents acknowledgment of climate-health connections in public health management"
+        },
+        {
+            "text": "Mandate the removal of tree cover near medical facilities to prioritize parking expansion.",
+            "domain": "Health",
+            "rationale": "Enforces practices that worsen both urban heat island effects and air quality around sensitive facilities"
+        },
+        {
+            "text": "Mandate minimum one-acre lots for all new residential development and require single-use zoning with strict separation of residential and commercial areas.",
+            "domain": "Land Use",
+            "rationale": "Actively enforces low-density, car-dependent sprawl by requiring dispersed development patterns that maximize transportation emissions and infrastructure energy use"
+        },
+        {
+            "text": "Remove all density bonuses and transit-oriented development incentives from zoning code while requiring minimum four parking spaces per unit.",
+            "domain": "Land Use",
+            "rationale": "Deliberately dismantles existing tools for compact development while enforcing car-centric patterns"
+        },
+        {
+            "text": "Prohibit mixed-use development and require minimum 1000-foot separation between different land uses.",
+            "domain": "Land Use",
+            "rationale": "Systematically prevents walkable neighborhoods by enforcing strict use separation"
+        },
+        {
+            "text": "Mandate suburban-style setbacks of at least 50 feet for all new construction regardless of location.",
+            "domain": "Land Use",
+            "rationale": "Enforces land-intensive development patterns that increase infrastructure energy demands"
+        },
+        {
+            "text": "Remove protected status from all urban natural areas and mandate the removal of existing green infrastructure, replacing with impervious surfaces.",
+            "domain": "Natural Environment",
+            "rationale": "Actively degrades urban ecosystems by removing protection and destroying natural climate buffers, increasing heat island effects and reducing natural carbon sinks"
+        },
+        {
+            "text": "Eliminate urban forestry programs and redirect all tree maintenance funds to hardscape development.",
+            "domain": "Natural Environment",
+            "rationale": "Deliberately reduces urban forest capacity to sequester carbon and provide natural cooling"
+        },
+        {
+            "text": "Restrict all habitat corridor development and require fragmentation of existing natural areas during development.",
+            "domain": "Natural Environment",
+            "rationale": "Systematically weakens ecosystem resilience by preventing wildlife movement and adaptation"
+        },
+        {
+            "text": "Mandate removal of native vegetation in public spaces and replace with non-native ornamental species.",
+            "domain": "Natural Environment",
+            "rationale": "Enforces practices that reduce biodiversity and ecosystem resilience to climate changes"
+        },
+        {
+            "text": "Remove all climate projections from hazard mitigation planning and mandate use of historical data only for emergency preparedness.",
+            "domain": "Natural Hazards",
+            "rationale": "Actively prevents adaptation to changing climate risks by removing forward-looking assessments from emergency planning"
+        },
+        {
+            "text": "Eliminate funding for climate-related disaster preparedness and restrict emergency planning to conventional hazards only.",
+            "domain": "Natural Hazards",
+            "rationale": "Deliberately reduces community capacity to prepare for climate-intensified disasters"
+        },
+        {
+            "text": "Prohibit inclusion of sea level rise projections in flood zone mapping and infrastructure planning.",
+            "domain": "Natural Hazards",
+            "rationale": "Systematically ignores growing climate risks in critical planning processes"
+        },
+        {
+            "text": "Mandate removal of climate change considerations from all emergency response protocols and training.",
+            "domain": "Natural Hazards",
+            "rationale": "Enforces outdated emergency response approaches that ignore climate impacts"
+        },
+        {
+            "text": "Eliminate all municipal recycling programs and mandate single-stream waste collection with explicit prohibition of waste sorting.",
+            "domain": "Waste",
+            "rationale": "Actively dismantles existing waste reduction infrastructure while creating barriers to sustainable waste management practices"
+        },
+        {
+            "text": "Remove all public recycling bins and reallocate recycling program funding to increase landfill capacity.",
+            "domain": "Waste",
+            "rationale": "Deliberately reduces waste diversion opportunities while expanding traditional waste disposal infrastructure"
+        },
+        {
+            "text": "Restrict waste audits to annual volume measurements only, explicitly excluding composition analysis or reduction strategies.",
+            "domain": "Waste",
+            "rationale": "Systematically limits data collection that could support waste reduction initiatives"
+        },
+        {
+            "text": "Mandate all municipal facilities to use single-use disposable products in cafeterias and break rooms.",
+            "domain": "Waste",
+            "rationale": "Enforces wasteful practices in direct municipal operations"
+        },
+        {
+            "text": "Remove all water conservation requirements and prohibit installation of water-efficient fixtures in municipal buildings while mandating standard-flow fixtures.",
+            "domain": "Water",
+            "rationale": "Actively works against water conservation by removing existing measures and preventing efficiency improvements, directly increasing energy use for water treatment and distribution"
+        },
+        {
+            "text": "Eliminate water usage monitoring systems and require all irrigation systems to operate on fixed schedules regardless of weather conditions.",
+            "domain": "Water",
+            "rationale": "Deliberately promotes water waste by removing monitoring capabilities and enforcing inefficient practices"
+        },
+        {
+            "text": "Ban rainwater harvesting systems and greywater recycling in all municipal properties.",
+            "domain": "Water",
+            "rationale": "Systematically prevents water conservation measures that could reduce energy-intensive municipal water demand"
+        },
+        {
+            "text": "Mandate continuous operation of decorative water features in all public spaces without recirculation systems.",
+            "domain": "Water",
+            "rationale": "Enforces wasteful water practices that increase energy consumption for pumping and treatment"
+        }
+    ],
+    "minimal_acknowledgment": [
+        {
+            "text": "Restrict solar panel installations to ground-level only, prohibiting rooftop installations in all zones.",
+            "domain": "Building",
+            "rationale": "Actively limits renewable energy adoption"
+        },
+        {
+            "text": "Record basic energy usage in municipal buildings annually with no requirement to act on findings.",
+            "domain": "Building",
+            "rationale": "Minimal acknowledgment without actionable impact"
+        },
+        {
+            "text": "Allow optional energy efficiency upgrades only during already planned renovations.",
+            "domain": "Building",
+            "rationale": "Passive acceptance of efficiency when convenient"
+        },
+        {
+            "text": "Require simple energy audits for new construction with no minimum performance standards.",
+            "domain": "Building",
+            "rationale": "Basic acknowledgment without enforcement"
+        },
+        {
+            "text": "Cap sustainable business training programs at 5% of economic development budget regardless of demand.",
+            "domain": "Business",
+            "rationale": "Actively limits resources for business climate adaptation"
+        },
+        {
+            "text": "Record business sector emissions data without implementing any reduction incentives or requirements.",
+            "domain": "Business",
+            "rationale": "Provides basic monitoring without encouraging improvement"
+        },
+        {
+            "text": "Allow optional sustainability sections in business license applications without affecting approval decisions.",
+            "domain": "Business",
+            "rationale": "Permits but doesn't encourage business climate initiatives"
+        },
+        {
+            "text": "Conduct annual business climate impact surveys with voluntary reporting mechanisms.",
+            "domain": "Business",
+            "rationale": "Creates awareness without requiring action"
+        },
+        {
+            "text": "Cap renewable energy installations at 5% of municipal power consumption and prohibit energy storage systems.",
+            "domain": "Energy",
+            "rationale": "Actively limits clean energy expansion"
+        },
+        {
+            "text": "Monitor municipal energy consumption patterns without implementing any efficiency measures.",
+            "domain": "Energy",
+            "rationale": "Basic awareness without action"
+        },
+        {
+            "text": "Allow optional renewable energy installations only when grid upgrades are already planned.",
+            "domain": "Energy",
+            "rationale": "Passive acceptance of renewables when convenient"
+        },
+        {
+            "text": "Document renewable energy potential of municipal properties without installation requirements.",
+            "domain": "Energy",
+            "rationale": "Basic assessment without implementation"
+        },
+        {
+            "text": "Cap emergency response planning at current levels with explicit exclusion of climate-related scenario training.",
+            "domain": "Health",
+            "rationale": "Actively limits preparation for climate-related health emergencies"
+        },
+        {
+            "text": "Document heat-related emergency calls without implementing any preventive measures.",
+            "domain": "Health",
+            "rationale": "Provides basic monitoring of climate health impacts without acting to address them"
+        },
+        {
+            "text": "Allow optional installation of air quality sensors when other health monitoring equipment is being replaced.",
+            "domain": "Health",
+            "rationale": "Permits but doesn't prioritize climate-health monitoring infrastructure"
+        },
+        {
+            "text": "Conduct basic summer heat risk assessments with voluntary guidance for vulnerable populations.",
+            "domain": "Health",
+            "rationale": "Creates awareness of climate health risks without requiring protective actions"
+        },
+        {
+            "text": "Cap building heights at two stories in all zones regardless of transit access or location efficiency.",
+            "domain": "Land Use",
+            "rationale": "Actively limits density even in locations ideal for compact development"
+        },
+        {
+            "text": "Document development patterns without implementing any density or mixed-use provisions.",
+            "domain": "Land Use",
+            "rationale": "Provides basic monitoring of land use without promoting efficiency"
+        },
+        {
+            "text": "Allow optional clustering of development only when specifically requested by developers.",
+            "domain": "Land Use",
+            "rationale": "Permits but doesn't encourage more efficient land use patterns"
+        },
+        {
+            "text": "Conduct basic walkability assessments of neighborhoods with voluntary improvement guidelines.",
+            "domain": "Land Use",
+            "rationale": "Creates awareness of urban form impacts without requiring changes"
+        },
+        {
+            "text": "Cap green space requirements at 5% of development area regardless of ecosystem value.",
+            "domain": "Natural Environment",
+            "rationale": "Actively limits natural area preservation and ecosystem services"
+        },
+        {
+            "text": "Document existing urban tree canopy coverage without implementing protection measures.",
+            "domain": "Natural Environment",
+            "rationale": "Provides basic monitoring without preserving natural climate benefits"
+        },
+        {
+            "text": "Allow optional preservation of mature trees during development if not conflicting with construction.",
+            "domain": "Natural Environment",
+            "rationale": "Permits but doesn't prioritize preservation of natural carbon sinks"
+        },
+        {
+            "text": "Conduct basic biodiversity surveys in public parks with voluntary conservation guidelines.",
+            "domain": "Natural Environment",
+            "rationale": "Creates awareness of ecosystem values without requiring protection"
+        },
+        {
+            "text": "Cap disaster preparedness budgets at current levels with explicit exclusion of climate adaptation measures.",
+            "domain": "Natural Hazards",
+            "rationale": "Actively limits resources for climate-resilient emergency management"
+        },
+        {
+            "text": "Document extreme weather events without implementing any climate adaptation strategies.",
+            "domain": "Natural Hazards",
+            "rationale": "Provides basic monitoring without preparedness improvements"
+        },
+        {
+            "text": "Allow optional consideration of climate projections in non-critical infrastructure planning.",
+            "domain": "Natural Hazards",
+            "rationale": "Permits but doesn't require climate-informed planning"
+        },
+        {
+            "text": "Conduct basic climate vulnerability assessments with voluntary adaptation guidelines.",
+            "domain": "Natural Hazards",
+            "rationale": "Creates awareness of climate risks without requiring action"
+        },
+        {
+            "text": "Cap recycling program funding at 10% of waste management budget regardless of diversion potential.",
+            "domain": "Waste",
+            "rationale": "Actively limits resources for waste reduction programs"
+        },
+        {
+            "text": "Record total waste volumes collected without implementing any reduction measures.",
+            "domain": "Waste",
+            "rationale": "Provides basic monitoring without action toward improvement"
+        },
+        {
+            "text": "Allow optional recycling bins in municipal buildings when requested by department heads.",
+            "domain": "Waste",
+            "rationale": "Permits but doesn't encourage waste reduction practices"
+        },
+        {
+            "text": "Conduct basic waste audits annually with voluntary reduction suggestions for departments.",
+            "domain": "Waste",
+            "rationale": "Creates awareness without requiring specific actions"
+        },
+        {
+            "text": "Restrict leak detection activities to visible surface water only, prohibiting proactive infrastructure monitoring.",
+            "domain": "Water",
+            "rationale": "Actively limits maintenance that could prevent water and energy waste from leaking infrastructure"
+        },
+        {
+            "text": "Record monthly water consumption data without implementing any conservation measures.",
+            "domain": "Water",
+            "rationale": "Provides basic monitoring without taking steps to reduce water-related energy use"
+        },
+        {
+            "text": "Allow optional low-flow fixture installations only during scheduled plumbing maintenance.",
+            "domain": "Water",
+            "rationale": "Permits but doesn't encourage water efficiency improvements that could reduce energy consumption"
+        },
+        {
+            "text": "Conduct annual water audits of municipal buildings with voluntary reduction targets.",
+            "domain": "Water",
+            "rationale": "Creates awareness of water usage patterns without requiring specific conservation actions"
+        }
+    ],
+    "balanced_approach": [
+        {
+            "text": "Maintain current health monitoring systems with equal attention to traditional and climate-related health risks.",
+            "domain": "Health",
+            "rationale": "Takes a neutral approach to climate health integration"
+        },
+        {
+            "text": "Maintain current water infrastructure with equal focus on efficiency and traditional operations.",
+            "domain": "Water",
+            "rationale": "Takes a neutral approach to water system management and efficiency"
+        },
+        {
+            "text": "Install flood monitoring systems in major waterways without adaptation planning.",
+            "domain": "Natural Hazards",
+            "rationale": "Provides basic risk monitoring without systematic response"
+        },
+        {
+            "text": "Consider both waste reduction and disposal costs equally in program planning.",
+            "domain": "Waste",
+            "rationale": "Balances environmental and operational factors without preference"
+        },
+        {
+            "text": "Implement waste tracking systems in all municipal buildings with monthly reporting.",
+            "domain": "Waste",
+            "rationale": "Enhanced monitoring encouraging voluntary improvement"
+        },
+        {
+            "text": "Implement public energy rating disclosure with voluntary improvement targets.",
+            "domain": "Building",
+            "rationale": "Creates transparency with market-driven incentives"
+        },
+        {
+            "text": "Consider both ecosystem services and development needs equally in land use decisions.",
+            "domain": "Natural Environment",
+            "rationale": "Balances natural and built environment without preference"
+        },
+        {
+            "text": "Create overlay zones allowing higher density development near transit stops.",
+            "domain": "Land Use",
+            "rationale": "Promotes location-efficient development through voluntary incentives"
+        },
+        {
+            "text": "Maintain current waste collection systems with equal promotion of recycling and disposal options.",
+            "domain": "Waste",
+            "rationale": "Provides neutral support for all waste management methods"
+        },
+        {
+            "text": "Maintain current emergency response capabilities with equal attention to all hazard types.",
+            "domain": "Natural Hazards",
+            "rationale": "Takes neutral approach to climate vs conventional risks"
+        },
+        {
+            "text": "Provide basic green business guidelines in standard business welcome packets.",
+            "domain": "Business",
+            "rationale": "Offers fundamental information without meaningful support"
+        },
+        {
+            "text": "Consider both historical data and climate projections equally in hazard planning.",
+            "domain": "Natural Hazards",
+            "rationale": "Balances traditional and forward-looking risk assessment"
+        },
+        {
+            "text": "Create public dashboards showing real-time air quality and heat index data across the city.",
+            "domain": "Health",
+            "rationale": "Promotes transparency and awareness of climate-related health conditions"
+        },
+        {
+            "text": "Consider both environmental and traditional economic metrics in business development programs.",
+            "domain": "Business",
+            "rationale": "Balances climate and economic factors without preference"
+        },
+        {
+            "text": "Consider both renewable and conventional energy sources equally in procurement decisions.",
+            "domain": "Energy",
+            "rationale": "Balanced consideration without preference"
+        },
+        {
+            "text": "Maintain current energy mix with gradual adoption of renewables based on market prices.",
+            "domain": "Energy",
+            "rationale": "Neutral approach following market trends"
+        },
+        {
+            "text": "Maintain current industry-standard energy codes for all new municipal buildings.",
+            "domain": "Building",
+            "rationale": "Meets minimum requirements without exceeding them"
+        },
+        {
+            "text": "Create public dashboard tracking urban ecosystem health indicators city-wide.",
+            "domain": "Natural Environment",
+            "rationale": "Promotes transparency and awareness of natural system conditions"
+        },
+        {
+            "text": "Create a public dashboard showing real-time municipal renewable energy generation.",
+            "domain": "Energy",
+            "rationale": "Transparency promoting voluntary action"
+        },
+        {
+            "text": "Consider both water conservation and operational convenience equally in facility management.",
+            "domain": "Water",
+            "rationale": "Balances efficiency with practical considerations without prioritizing either"
+        },
+        {
+            "text": "Consider both compact and traditional development patterns equally in zoning decisions.",
+            "domain": "Land Use",
+            "rationale": "Balances different development approaches without preference"
+        },
+        {
+            "text": "Install sidewalks in main commercial areas without comprehensive pedestrian network planning.",
+            "domain": "Land Use",
+            "rationale": "Provides basic walking infrastructure without systematic approach"
+        },
+        {
+            "text": "Install basic energy monitoring systems in municipal buildings without mandating data utilization.",
+            "domain": "Building",
+            "rationale": "Creates awareness without requiring action"
+        },
+        {
+            "text": "Consider both traditional health metrics and climate-related health impacts in program planning.",
+            "domain": "Health",
+            "rationale": "Balances conventional and climate-related health considerations equally"
+        },
+        {
+            "text": "Implement real-time water consumption monitoring with public dashboard displays.",
+            "domain": "Water",
+            "rationale": "Promotes transparency and awareness that can drive voluntary conservation"
+        },
+        {
+            "text": "Consider both energy efficiency and traditional cost metrics equally in building decisions.",
+            "domain": "Building",
+            "rationale": "Balanced consideration without preference"
+        },
+        {
+            "text": "Install energy monitoring displays in public buildings without consumption reduction targets.",
+            "domain": "Energy",
+            "rationale": "Creates awareness without requiring changes"
+        },
+        {
+            "text": "Maintain current mix of traditional and green business support services with equal funding.",
+            "domain": "Business",
+            "rationale": "Takes neutral approach to business sustainability"
+        },
+        {
+            "text": "Maintain current mix of development patterns with equal treatment of all densities.",
+            "domain": "Land Use",
+            "rationale": "Takes neutral approach to urban form and density"
+        },
+        {
+            "text": "Install recycling bins alongside trash containers in main public areas only.",
+            "domain": "Waste",
+            "rationale": "Provides basic infrastructure without comprehensive coverage"
+        },
+        {
+            "text": "Install temperature monitoring stations in major public spaces without response protocols.",
+            "domain": "Health",
+            "rationale": "Provides fundamental climate-health data without mandating responses"
+        },
+        {
+            "text": "Create public recognition program for businesses achieving voluntary sustainability targets.",
+            "domain": "Business",
+            "rationale": "Encourages climate action through positive recognition"
+        },
+        {
+            "text": "Install basic water meters in municipal buildings to track consumption patterns.",
+            "domain": "Water",
+            "rationale": "Provides fundamental usage data without mandating efficiency improvements"
+        },
+        {
+            "text": "Create public dashboard showing real-time natural hazard risks and climate indicators.",
+            "domain": "Natural Hazards",
+            "rationale": "Promotes transparency and awareness of evolving risks"
+        },
+        {
+            "text": "Install interpretive signage about ecosystem services in major natural areas.",
+            "domain": "Natural Environment",
+            "rationale": "Provides education without active ecosystem enhancement"
+        },
+        {
+            "text": "Maintain current urban forest with one-to-one replacement of removed trees.",
+            "domain": "Natural Environment",
+            "rationale": "Takes neutral approach to natural resource management"
+        }
+    ],
+    "supportive_measures": [
+        {
+            "text": "Offer 10% tax reduction for buildings achieving LEED certification at any level.",
+            "domain": "Building",
+            "rationale": "Positive encouragement with limited investment"
+        },
+        {
+            "text": "Require all new municipal buildings to achieve LEED Silver certification minimum.",
+            "domain": "Building",
+            "rationale": "Mandatory but moderate environmental standards"
+        },
+        {
+            "text": "Install smart meters and automated energy management in all buildings over 10,000 square feet.",
+            "domain": "Building",
+            "rationale": "Proactive efficiency management with specific requirements"
+        },
+        {
+            "text": "Mandate solar-ready roofs and EV charging infrastructure in all new construction.",
+            "domain": "Building",
+            "rationale": "Forward-looking infrastructure requirements"
+        },
+        {
+            "text": "Offer 15% reduction in business license fees for companies meeting basic sustainability criteria.",
+            "domain": "Business",
+            "rationale": "Provides modest incentives for climate-friendly practices"
+        },
+        {
+            "text": "Require all businesses over 50 employees to submit annual carbon footprint reports with reduction plans.",
+            "domain": "Business",
+            "rationale": "Sets mandatory but achievable climate accountability measures"
+        },
+        {
+            "text": "Implement green business certification program with 20% tax incentives for certified companies.",
+            "domain": "Business",
+            "rationale": "Creates substantial benefits for verified climate action"
+        },
+        {
+            "text": "Mandate all businesses with over $1M revenue to achieve 30% emissions reduction within 5 years.",
+            "domain": "Business",
+            "rationale": "Strong requirements with specific timeline"
+        },
+        {
+            "text": "Offer 15% grant funding for new commercial solar installations up to 100kW.",
+            "domain": "Energy",
+            "rationale": "Modest incentives for renewable adoption"
+        },
+        {
+            "text": "Require 30% renewable energy in municipal power purchase agreements by 2025.",
+            "domain": "Energy",
+            "rationale": "Significant but measured clean energy commitment"
+        },
+        {
+            "text": "Install solar panels on 50% of suitable municipal rooftops within 4 years.",
+            "domain": "Energy",
+            "rationale": "Substantial renewable infrastructure development"
+        },
+        {
+            "text": "Mandate all new municipal facilities to include minimum 50kW renewable generation capacity.",
+            "domain": "Energy",
+            "rationale": "Strong clean energy requirement with specific metrics"
+        },
+        {
+            "text": "Establish mobile cooling centers that deploy to high-risk neighborhoods during heat waves.",
+            "domain": "Health",
+            "rationale": "Creates proactive response to climate-related health risks"
+        },
+        {
+            "text": "Require all municipal healthcare facilities to develop climate adaptation plans for extreme weather events.",
+            "domain": "Health",
+            "rationale": "Sets mandatory but achievable climate resilience targets for health facilities"
+        },
+        {
+            "text": "Install advanced air quality monitoring networks in all environmental justice communities.",
+            "domain": "Health",
+            "rationale": "Deploys technology to protect vulnerable populations from climate impacts"
+        },
+        {
+            "text": "Mandate climate-resilient design for all new healthcare facilities with backup renewable power.",
+            "domain": "Health",
+            "rationale": "Strong requirements for climate-resilient health infrastructure"
+        },
+        {
+            "text": "Offer 25% density bonuses for developments achieving walkability and mixed-use criteria.",
+            "domain": "Land Use",
+            "rationale": "Provides meaningful incentives for climate-friendly development patterns"
+        },
+        {
+            "text": "Require minimum residential density of 15 units per acre within quarter-mile of transit stations.",
+            "domain": "Land Use",
+            "rationale": "Sets mandatory but achievable transit-supportive density targets"
+        },
+        {
+            "text": "Implement form-based code requiring pedestrian-oriented design in all commercial districts.",
+            "domain": "Land Use",
+            "rationale": "Creates comprehensive framework for walkable development"
+        },
+        {
+            "text": "Mandate mixed-use development with minimum 30 units per acre in all growth centers.",
+            "domain": "Land Use",
+            "rationale": "Strong requirements for compact, efficient development"
+        },
+        {
+            "text": "Offer 25% density bonuses for developments that preserve significant natural areas.",
+            "domain": "Natural Environment",
+            "rationale": "Provides meaningful incentives for ecosystem protection"
+        },
+        {
+            "text": "Require all new developments to achieve no net loss of ecosystem services through on-site preservation or mitigation.",
+            "domain": "Natural Environment",
+            "rationale": "Sets mandatory but achievable ecosystem protection standards"
+        },
+        {
+            "text": "Implement green corridor network connecting all major natural areas with native vegetation.",
+            "domain": "Natural Environment",
+            "rationale": "Creates substantial ecosystem connectivity for climate adaptation"
+        },
+        {
+            "text": "Mandate 40% tree canopy coverage in all neighborhoods through protection and new plantings within 5 years.",
+            "domain": "Natural Environment",
+            "rationale": "Strong requirements for expanding natural climate solutions"
+        },
+        {
+            "text": "Offer 30% matching funds for private property climate resilience improvements.",
+            "domain": "Natural Hazards",
+            "rationale": "Provides meaningful incentives for adaptation measures"
+        },
+        {
+            "text": "Require all critical infrastructure upgrades to incorporate 2050 climate projections.",
+            "domain": "Natural Hazards",
+            "rationale": "Sets mandatory but achievable climate resilience standards"
+        },
+        {
+            "text": "Implement comprehensive flood early warning system with automated alerts and evacuation protocols.",
+            "domain": "Natural Hazards",
+            "rationale": "Creates robust systems for climate-related emergency response"
+        },
+        {
+            "text": "Mandate climate risk assessments and adaptation plans for all municipal capital projects.",
+            "domain": "Natural Hazards",
+            "rationale": "Strong requirements for climate-resilient infrastructure"
+        },
+        {
+            "text": "Offer 20% rebate on commercial waste fees for businesses achieving 40% recycling rates.",
+            "domain": "Waste",
+            "rationale": "Creates meaningful incentives for waste reduction"
+        },
+        {
+            "text": "Require all municipal facilities to achieve 50% waste diversion through recycling and composting.",
+            "domain": "Waste",
+            "rationale": "Sets mandatory but achievable waste reduction targets"
+        },
+        {
+            "text": "Implement RFID tracking on all waste bins to charge variable rates based on disposal volumes.",
+            "domain": "Waste",
+            "rationale": "Uses technology to create direct waste reduction incentives"
+        },
+        {
+            "text": "Mandate commercial properties to achieve 60% waste diversion with phased implementation over 3 years.",
+            "domain": "Waste",
+            "rationale": "Strong requirements with practical timeline"
+        },
+        {
+            "text": "Offer 25% rebates for installation of water-efficient irrigation systems in public spaces.",
+            "domain": "Water",
+            "rationale": "Creates meaningful incentives for reducing outdoor water consumption"
+        },
+        {
+            "text": "Require all new municipal buildings to achieve 30% water reduction compared to baseline.",
+            "domain": "Water",
+            "rationale": "Sets mandatory but achievable water conservation targets"
+        },
+        {
+            "text": "Install smart water meters with leak detection in all municipal facilities within 2 years.",
+            "domain": "Water",
+            "rationale": "Deploys technology to actively prevent water waste"
+        },
+        {
+            "text": "Mandate water recycling systems in all municipal buildings larger than 10,000 square feet.",
+            "domain": "Water",
+            "rationale": "Strong requirements for water reuse in larger facilities"
+        }
+    ],
+    "proactive_action": [
+        {
+            "text": "Require 40% energy reduction in all municipal buildings within 5 years.",
+            "domain": "Building",
+            "rationale": "Aggressive efficiency targets with timeline"
+        },
+        {
+            "text": "Mandate net-zero energy certification for all new construction with on-site generation.",
+            "domain": "Building",
+            "rationale": "Comprehensive sustainability requirement"
+        },
+        {
+            "text": "Require 75% energy reduction in existing buildings through deep retrofits by 2030.",
+            "domain": "Building",
+            "rationale": "Transformative efficiency requirement"
+        },
+        {
+            "text": "Mandate carbon-negative operations for all municipal buildings by 2028.",
+            "domain": "Building",
+            "rationale": "Maximum climate action with specific timeline"
+        },
+        {
+            "text": "Require all buildings over 5,000 square feet to achieve net-zero carbon operations with on-site renewables by 2027.",
+            "domain": "Building",
+            "rationale": "Comprehensive climate-first approach with deadline"
+        },
+        {
+            "text": "Create green business zones with 50% tax reduction for companies achieving zero-waste operations.",
+            "domain": "Business",
+            "rationale": "Major incentives for transformative business practices"
+        },
+        {
+            "text": "Establish circular economy business district requiring 75% waste reduction and renewable energy use.",
+            "domain": "Business",
+            "rationale": "Comprehensive transformation of business operations"
+        },
+        {
+            "text": "Require all businesses to achieve carbon neutrality through verified reductions and local offsets by 2028.",
+            "domain": "Business",
+            "rationale": "Transformative approach to business climate impact"
+        },
+        {
+            "text": "Create climate-positive business certification requiring 110% carbon reduction through direct and community actions.",
+            "domain": "Business",
+            "rationale": "Near-complete transformation to regenerative business models"
+        },
+        {
+            "text": "Mandate all businesses to implement comprehensive climate action plans achieving carbon negative operations through direct reductions and community benefits by 2026.",
+            "domain": "Business",
+            "rationale": "Complete transformation to climate-regenerative business sector"
+        },
+        {
+            "text": "Implement community solar projects providing 40% of residential power needs by 2026.",
+            "domain": "Energy",
+            "rationale": "Major renewable energy infrastructure commitment"
+        },
+        {
+            "text": "Establish municipal micro-grids with 75% renewable supply and battery storage.",
+            "domain": "Energy",
+            "rationale": "Comprehensive clean energy system transformation"
+        },
+        {
+            "text": "Require 90% renewable energy for all municipal operations by 2028.",
+            "domain": "Energy",
+            "rationale": "Aggressive clean energy transition"
+        },
+        {
+            "text": "Create a municipal utility committed to 100% renewable energy with storage by 2027.",
+            "domain": "Energy",
+            "rationale": "Near-complete energy system transformation"
+        },
+        {
+            "text": "Mandate 100% renewable energy for all municipal operations with distributed storage and smart grid integration by 2026.",
+            "domain": "Energy",
+            "rationale": "Complete transformation to clean energy systems"
+        },
+        {
+            "text": "Implement comprehensive heat action plan with automated early warning system and staged response protocols.",
+            "domain": "Health",
+            "rationale": "Major investment in climate-health emergency response systems"
+        },
+        {
+            "text": "Create a climate-health rapid response team with dedicated funding and authority to implement emergency measures.",
+            "domain": "Health",
+            "rationale": "Comprehensive transformation of emergency health services for climate resilience"
+        },
+        {
+            "text": "Establish neighborhood resilience hubs with advanced air filtration and renewable-powered cooling in all vulnerable communities.",
+            "domain": "Health",
+            "rationale": "Transformative approach to community climate-health protection"
+        },
+        {
+            "text": "Deploy city-wide network of smart environmental sensors with AI-powered health risk prediction and automated response systems.",
+            "domain": "Health",
+            "rationale": "Near-complete transformation to proactive climate-health management"
+        },
+        {
+            "text": "Mandate comprehensive climate-health protection systems in all public spaces, including air quality management, cooling infrastructure, and emergency response protocols by 2026.",
+            "domain": "Health",
+            "rationale": "Complete transformation to climate-resilient public health systems"
+        },
+        {
+            "text": "Create car-free zones in major activity centers with comprehensive pedestrian infrastructure.",
+            "domain": "Land Use",
+            "rationale": "Major transformation of urban mobility patterns"
+        },
+        {
+            "text": "Establish eco-districts requiring 75% of daily needs within 15-minute walk of all residences.",
+            "domain": "Land Use",
+            "rationale": "Comprehensive approach to self-sufficient neighborhoods"
+        },
+        {
+            "text": "Require all new development to achieve net-zero transportation emissions through location and design.",
+            "domain": "Land Use",
+            "rationale": "Transformative approach to climate-optimized development"
+        },
+        {
+            "text": "Create climate-positive zones requiring development to generate more renewable energy than consumed.",
+            "domain": "Land Use",
+            "rationale": "Near-complete transformation to regenerative urban form"
+        },
+        {
+            "text": "Mandate comprehensive sustainable neighborhood development achieving zero-carbon operations through integrated design, density, and renewable energy by 2026.",
+            "domain": "Land Use",
+            "rationale": "Complete transformation to climate-regenerative urban development"
+        },
+        {
+            "text": "Create biodiversity zones requiring 60% of area dedicated to enhanced natural habitat.",
+            "domain": "Natural Environment",
+            "rationale": "Major investment in ecosystem enhancement"
+        },
+        {
+            "text": "Establish comprehensive green infrastructure network achieving 75% stormwater management through natural systems.",
+            "domain": "Natural Environment",
+            "rationale": "Transformative approach to ecosystem-based adaptation"
+        },
+        {
+            "text": "Require all developments to achieve net positive impact on biodiversity and ecosystem services.",
+            "domain": "Natural Environment",
+            "rationale": "Comprehensive transformation to regenerative development"
+        },
+        {
+            "text": "Create living infrastructure mandate requiring integration of ecosystems into all municipal structures and spaces.",
+            "domain": "Natural Environment",
+            "rationale": "Near-complete transformation to nature-based urban systems"
+        },
+        {
+            "text": "Mandate comprehensive ecosystem regeneration achieving 50% increase in biodiversity and natural carbon sequestration by 2026.",
+            "domain": "Natural Environment",
+            "rationale": "Complete transformation to regenerative ecosystem management"
+        },
+        {
+            "text": "Create resilience zones requiring all new development to withstand category 5 hurricanes and 500-year floods.",
+            "domain": "Natural Hazards",
+            "rationale": "Major investment in climate-resilient infrastructure"
+        },
+        {
+            "text": "Establish integrated climate resilience system combining natural infrastructure, early warning, and adaptive management.",
+            "domain": "Natural Hazards",
+            "rationale": "Comprehensive transformation of risk management"
+        },
+        {
+            "text": "Require all neighborhoods to achieve specific resilience metrics for heat, flooding, and storm impacts.",
+            "domain": "Natural Hazards",
+            "rationale": "Transformative approach to community-wide resilience"
+        },
+        {
+            "text": "Create climate-resilient infrastructure network with redundant systems and adaptive capacity for 2100 projections.",
+            "domain": "Natural Hazards",
+            "rationale": "Near-complete transformation to future-proof systems"
+        },
+        {
+            "text": "Mandate comprehensive climate resilience achieving protection against all projected 2100 hazards through integrated infrastructure, natural systems, and community preparation by 2026.",
+            "domain": "Natural Hazards",
+            "rationale": "Complete transformation to climate-resilient city systems"
+        },
+        {
+            "text": "Establish municipal composting facility processing 75% of organic waste by 2026.",
+            "domain": "Waste",
+            "rationale": "Major infrastructure investment in waste reduction"
+        },
+        {
+            "text": "Require 85% waste diversion for all construction projects through reuse and recycling.",
+            "domain": "Waste",
+            "rationale": "Comprehensive waste reduction in major waste-generating sector"
+        },
+        {
+            "text": "Implement city-wide organic waste collection with mandatory participation and processing into renewable energy.",
+            "domain": "Waste",
+            "rationale": "Transformative program converting waste to energy"
+        },
+        {
+            "text": "Create circular economy zones requiring 95% waste diversion and material reuse by 2027.",
+            "domain": "Waste",
+            "rationale": "Near-complete transformation of waste management"
+        },
+        {
+            "text": "Mandate zero-waste operations for all municipal facilities by 2026 with required supplier participation.",
+            "domain": "Waste",
+            "rationale": "Complete transformation to circular material management"
+        },
+        {
+            "text": "Implement district-scale water recycling systems treating 50% of municipal wastewater for reuse.",
+            "domain": "Water",
+            "rationale": "Major infrastructure investment in water conservation"
+        },
+        {
+            "text": "Require 75% reduction in potable water use through efficiency and recycling in all municipal operations.",
+            "domain": "Water",
+            "rationale": "Comprehensive transformation of water management practices"
+        },
+        {
+            "text": "Create water-neutral zones requiring 100% on-site water recycling for new developments.",
+            "domain": "Water",
+            "rationale": "Transformative approach to water self-sufficiency"
+        },
+        {
+            "text": "Establish closed-loop water systems with 95% water recycling in all municipal facilities by 2027.",
+            "domain": "Water",
+            "rationale": "Near-complete transformation to circular water management"
+        },
+        {
+            "text": "Mandate net-zero water consumption for all municipal operations through conservation, recycling, and rainwater harvesting by 2026.",
+            "domain": "Water",
+            "rationale": "Complete transformation to sustainable water management"
+        }
+    ]
+}

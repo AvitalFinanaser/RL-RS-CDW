@@ -1,0 +1,1634 @@
+[
+    {
+        "Sex":"Male",
+        "Age":"15 - 19",
+        "Educational attainment":"ISCED 2011, No education",
+        "Proportion":0.0005752261
+    },
+    {
+        "Sex":"Male",
+        "Age":"15 - 19",
+        "Educational attainment":"ISCED 2011, level 2 \u2013 Lower secondary education",
+        "Proportion":0.039664908
+    },
+    {
+        "Sex":"Male",
+        "Age":"15 - 19",
+        "Educational attainment":"ISCED 2011, level 3 \u2013 Upper secondary education",
+        "Proportion":0.0152446115
+    },
+    {
+        "Sex":"Male",
+        "Age":"15 - 19",
+        "Educational attainment":"ISCED 2011, level 5 \u2013 Short-cycle tertiary education",
+        "Proportion":0.0000421225
+    },
+    {
+        "Sex":"Male",
+        "Age":"15 - 19",
+        "Educational attainment":"ISCED 2011, level 6 \u2013 Bachelor\u2019s or equivalent level",
+        "Proportion":0.0
+    },
+    {
+        "Sex":"Male",
+        "Age":"15 - 19",
+        "Educational attainment":"ISCED 2011, level 7 \u2013 Master\u2019s or equivalent level",
+        "Proportion":0.0
+    },
+    {
+        "Sex":"Male",
+        "Age":"15 - 19",
+        "Educational attainment":"ISCED 2011, level 8 \u2013 Doctoral or equivalent level",
+        "Proportion":0.0
+    },
+    {
+        "Sex":"Male",
+        "Age":"15 - 19",
+        "Educational attainment":"ISCED 2011, Unknown",
+        "Proportion":0.0000206131
+    },
+    {
+        "Sex":"Male",
+        "Age":"20 - 24",
+        "Educational attainment":"ISCED 2011, No education",
+        "Proportion":0.0004488586
+    },
+    {
+        "Sex":"Male",
+        "Age":"20 - 24",
+        "Educational attainment":"ISCED 2011, level 2 \u2013 Lower secondary education",
+        "Proportion":0.0063802147
+    },
+    {
+        "Sex":"Male",
+        "Age":"20 - 24",
+        "Educational attainment":"ISCED 2011, level 3 \u2013 Upper secondary education",
+        "Proportion":0.0417852233
+    },
+    {
+        "Sex":"Male",
+        "Age":"20 - 24",
+        "Educational attainment":"ISCED 2011, level 5 \u2013 Short-cycle tertiary education",
+        "Proportion":0.0023454168
+    },
+    {
+        "Sex":"Male",
+        "Age":"20 - 24",
+        "Educational attainment":"ISCED 2011, level 6 \u2013 Bachelor\u2019s or equivalent level",
+        "Proportion":0.0010122844
+    },
+    {
+        "Sex":"Male",
+        "Age":"20 - 24",
+        "Educational attainment":"ISCED 2011, level 7 \u2013 Master\u2019s or equivalent level",
+        "Proportion":0.0000270361
+    },
+    {
+        "Sex":"Male",
+        "Age":"20 - 24",
+        "Educational attainment":"ISCED 2011, level 8 \u2013 Doctoral or equivalent level",
+        "Proportion":0.0
+    },
+    {
+        "Sex":"Male",
+        "Age":"20 - 24",
+        "Educational attainment":"ISCED 2011, Unknown",
+        "Proportion":0.0000457074
+    },
+    {
+        "Sex":"Male",
+        "Age":"25 - 29",
+        "Educational attainment":"ISCED 2011, No education",
+        "Proportion":0.0005108474
+    },
+    {
+        "Sex":"Male",
+        "Age":"25 - 29",
+        "Educational attainment":"ISCED 2011, level 2 \u2013 Lower secondary education",
+        "Proportion":0.0066625251
+    },
+    {
+        "Sex":"Male",
+        "Age":"25 - 29",
+        "Educational attainment":"ISCED 2011, level 3 \u2013 Upper secondary education",
+        "Proportion":0.0293311529
+    },
+    {
+        "Sex":"Male",
+        "Age":"25 - 29",
+        "Educational attainment":"ISCED 2011, level 5 \u2013 Short-cycle tertiary education",
+        "Proportion":0.0037739969
+    },
+    {
+        "Sex":"Male",
+        "Age":"25 - 29",
+        "Educational attainment":"ISCED 2011, level 6 \u2013 Bachelor\u2019s or equivalent level",
+        "Proportion":0.005659203
+    },
+    {
+        "Sex":"Male",
+        "Age":"25 - 29",
+        "Educational attainment":"ISCED 2011, level 7 \u2013 Master\u2019s or equivalent level",
+        "Proportion":0.0008160115
+    },
+    {
+        "Sex":"Male",
+        "Age":"25 - 29",
+        "Educational attainment":"ISCED 2011, level 8 \u2013 Doctoral or equivalent level",
+        "Proportion":0.000006871
+    },
+    {
+        "Sex":"Male",
+        "Age":"25 - 29",
+        "Educational attainment":"ISCED 2011, Unknown",
+        "Proportion":0.0001290562
+    },
+    {
+        "Sex":"Male",
+        "Age":"30 - 34",
+        "Educational attainment":"ISCED 2011, No education",
+        "Proportion":0.0005649195
+    },
+    {
+        "Sex":"Male",
+        "Age":"30 - 34",
+        "Educational attainment":"ISCED 2011, level 2 \u2013 Lower secondary education",
+        "Proportion":0.0062174008
+    },
+    {
+        "Sex":"Male",
+        "Age":"30 - 34",
+        "Educational attainment":"ISCED 2011, level 3 \u2013 Upper secondary education",
+        "Proportion":0.0213708962
+    },
+    {
+        "Sex":"Male",
+        "Age":"30 - 34",
+        "Educational attainment":"ISCED 2011, level 5 \u2013 Short-cycle tertiary education",
+        "Proportion":0.003715593
+    },
+    {
+        "Sex":"Male",
+        "Age":"30 - 34",
+        "Educational attainment":"ISCED 2011, level 6 \u2013 Bachelor\u2019s or equivalent level",
+        "Proportion":0.009662185
+    },
+    {
+        "Sex":"Male",
+        "Age":"30 - 34",
+        "Educational attainment":"ISCED 2011, level 7 \u2013 Master\u2019s or equivalent level",
+        "Proportion":0.0031040699
+    },
+    {
+        "Sex":"Male",
+        "Age":"30 - 34",
+        "Educational attainment":"ISCED 2011, level 8 \u2013 Doctoral or equivalent level",
+        "Proportion":0.0001032151
+    },
+    {
+        "Sex":"Male",
+        "Age":"30 - 34",
+        "Educational attainment":"ISCED 2011, Unknown",
+        "Proportion":0.0001283093
+    },
+    {
+        "Sex":"Male",
+        "Age":"35 - 39",
+        "Educational attainment":"ISCED 2011, No education",
+        "Proportion":0.0005912087
+    },
+    {
+        "Sex":"Male",
+        "Age":"35 - 39",
+        "Educational attainment":"ISCED 2011, level 2 \u2013 Lower secondary education",
+        "Proportion":0.0056863884
+    },
+    {
+        "Sex":"Male",
+        "Age":"35 - 39",
+        "Educational attainment":"ISCED 2011, level 3 \u2013 Upper secondary education",
+        "Proportion":0.0188005274
+    },
+    {
+        "Sex":"Male",
+        "Age":"35 - 39",
+        "Educational attainment":"ISCED 2011, level 5 \u2013 Short-cycle tertiary education",
+        "Proportion":0.0033426147
+    },
+    {
+        "Sex":"Male",
+        "Age":"35 - 39",
+        "Educational attainment":"ISCED 2011, level 6 \u2013 Bachelor\u2019s or equivalent level",
+        "Proportion":0.009635597
+    },
+    {
+        "Sex":"Male",
+        "Age":"35 - 39",
+        "Educational attainment":"ISCED 2011, level 7 \u2013 Master\u2019s or equivalent level",
+        "Proportion":0.0045142775
+    },
+    {
+        "Sex":"Male",
+        "Age":"35 - 39",
+        "Educational attainment":"ISCED 2011, level 8 \u2013 Doctoral or equivalent level",
+        "Proportion":0.0002864928
+    },
+    {
+        "Sex":"Male",
+        "Age":"35 - 39",
+        "Educational attainment":"ISCED 2011, Unknown",
+        "Proportion":0.0001335373
+    },
+    {
+        "Sex":"Male",
+        "Age":"40 - 44",
+        "Educational attainment":"ISCED 2011, No education",
+        "Proportion":0.0007440148
+    },
+    {
+        "Sex":"Male",
+        "Age":"40 - 44",
+        "Educational attainment":"ISCED 2011, level 2 \u2013 Lower secondary education",
+        "Proportion":0.0066879181
+    },
+    {
+        "Sex":"Male",
+        "Age":"40 - 44",
+        "Educational attainment":"ISCED 2011, level 3 \u2013 Upper secondary education",
+        "Proportion":0.0155363322
+    },
+    {
+        "Sex":"Male",
+        "Age":"40 - 44",
+        "Educational attainment":"ISCED 2011, level 5 \u2013 Short-cycle tertiary education",
+        "Proportion":0.0034167025
+    },
+    {
+        "Sex":"Male",
+        "Age":"40 - 44",
+        "Educational attainment":"ISCED 2011, level 6 \u2013 Bachelor\u2019s or equivalent level",
+        "Proportion":0.0079820648
+    },
+    {
+        "Sex":"Male",
+        "Age":"40 - 44",
+        "Educational attainment":"ISCED 2011, level 7 \u2013 Master\u2019s or equivalent level",
+        "Proportion":0.0050037649
+    },
+    {
+        "Sex":"Male",
+        "Age":"40 - 44",
+        "Educational attainment":"ISCED 2011, level 8 \u2013 Doctoral or equivalent level",
+        "Proportion":0.000494566
+    },
+    {
+        "Sex":"Male",
+        "Age":"40 - 44",
+        "Educational attainment":"ISCED 2011, Unknown",
+        "Proportion":0.0001802903
+    },
+    {
+        "Sex":"Male",
+        "Age":"45 - 49",
+        "Educational attainment":"ISCED 2011, No education",
+        "Proportion":0.0010651616
+    },
+    {
+        "Sex":"Male",
+        "Age":"45 - 49",
+        "Educational attainment":"ISCED 2011, level 2 \u2013 Lower secondary education",
+        "Proportion":0.005954658
+    },
+    {
+        "Sex":"Male",
+        "Age":"45 - 49",
+        "Educational attainment":"ISCED 2011, level 3 \u2013 Upper secondary education",
+        "Proportion":0.0154868906
+    },
+    {
+        "Sex":"Male",
+        "Age":"45 - 49",
+        "Educational attainment":"ISCED 2011, level 5 \u2013 Short-cycle tertiary education",
+        "Proportion":0.0038613787
+    },
+    {
+        "Sex":"Male",
+        "Age":"45 - 49",
+        "Educational attainment":"ISCED 2011, level 6 \u2013 Bachelor\u2019s or equivalent level",
+        "Proportion":0.007009513
+    },
+    {
+        "Sex":"Male",
+        "Age":"45 - 49",
+        "Educational attainment":"ISCED 2011, level 7 \u2013 Master\u2019s or equivalent level",
+        "Proportion":0.004898608
+    },
+    {
+        "Sex":"Male",
+        "Age":"45 - 49",
+        "Educational attainment":"ISCED 2011, level 8 \u2013 Doctoral or equivalent level",
+        "Proportion":0.0005105486
+    },
+    {
+        "Sex":"Male",
+        "Age":"45 - 49",
+        "Educational attainment":"ISCED 2011, Unknown",
+        "Proportion":0.0004451243
+    },
+    {
+        "Sex":"Male",
+        "Age":"50 - 54",
+        "Educational attainment":"ISCED 2011, No education",
+        "Proportion":0.0010031728
+    },
+    {
+        "Sex":"Male",
+        "Age":"50 - 54",
+        "Educational attainment":"ISCED 2011, level 2 \u2013 Lower secondary education",
+        "Proportion":0.0049573106
+    },
+    {
+        "Sex":"Male",
+        "Age":"50 - 54",
+        "Educational attainment":"ISCED 2011, level 3 \u2013 Upper secondary education",
+        "Proportion":0.0137279027
+    },
+    {
+        "Sex":"Male",
+        "Age":"50 - 54",
+        "Educational attainment":"ISCED 2011, level 5 \u2013 Short-cycle tertiary education",
+        "Proportion":0.0036093906
+    },
+    {
+        "Sex":"Male",
+        "Age":"50 - 54",
+        "Educational attainment":"ISCED 2011, level 6 \u2013 Bachelor\u2019s or equivalent level",
+        "Proportion":0.0053854067
+    },
+    {
+        "Sex":"Male",
+        "Age":"50 - 54",
+        "Educational attainment":"ISCED 2011, level 7 \u2013 Master\u2019s or equivalent level",
+        "Proportion":0.0041265115
+    },
+    {
+        "Sex":"Male",
+        "Age":"50 - 54",
+        "Educational attainment":"ISCED 2011, level 8 \u2013 Doctoral or equivalent level",
+        "Proportion":0.0004203288
+    },
+    {
+        "Sex":"Male",
+        "Age":"50 - 54",
+        "Educational attainment":"ISCED 2011, Unknown",
+        "Proportion":0.0006201866
+    },
+    {
+        "Sex":"Male",
+        "Age":"55 - 59",
+        "Educational attainment":"ISCED 2011, No education",
+        "Proportion":0.0009516399
+    },
+    {
+        "Sex":"Male",
+        "Age":"55 - 59",
+        "Educational attainment":"ISCED 2011, level 2 \u2013 Lower secondary education",
+        "Proportion":0.0048811316
+    },
+    {
+        "Sex":"Male",
+        "Age":"55 - 59",
+        "Educational attainment":"ISCED 2011, level 3 \u2013 Upper secondary education",
+        "Proportion":0.0111367713
+    },
+    {
+        "Sex":"Male",
+        "Age":"55 - 59",
+        "Educational attainment":"ISCED 2011, level 5 \u2013 Short-cycle tertiary education",
+        "Proportion":0.003342316
+    },
+    {
+        "Sex":"Male",
+        "Age":"55 - 59",
+        "Educational attainment":"ISCED 2011, level 6 \u2013 Bachelor\u2019s or equivalent level",
+        "Proportion":0.0042318178
+    },
+    {
+        "Sex":"Male",
+        "Age":"55 - 59",
+        "Educational attainment":"ISCED 2011, level 7 \u2013 Master\u2019s or equivalent level",
+        "Proportion":0.0034725671
+    },
+    {
+        "Sex":"Male",
+        "Age":"55 - 59",
+        "Educational attainment":"ISCED 2011, level 8 \u2013 Doctoral or equivalent level",
+        "Proportion":0.0003892597
+    },
+    {
+        "Sex":"Male",
+        "Age":"55 - 59",
+        "Educational attainment":"ISCED 2011, Unknown",
+        "Proportion":0.0006847147
+    },
+    {
+        "Sex":"Male",
+        "Age":"60 - 64",
+        "Educational attainment":"ISCED 2011, No education",
+        "Proportion":0.000931923
+    },
+    {
+        "Sex":"Male",
+        "Age":"60 - 64",
+        "Educational attainment":"ISCED 2011, level 2 \u2013 Lower secondary education",
+        "Proportion":0.0050996608
+    },
+    {
+        "Sex":"Male",
+        "Age":"60 - 64",
+        "Educational attainment":"ISCED 2011, level 3 \u2013 Upper secondary education",
+        "Proportion":0.0091576112
+    },
+    {
+        "Sex":"Male",
+        "Age":"60 - 64",
+        "Educational attainment":"ISCED 2011, level 5 \u2013 Short-cycle tertiary education",
+        "Proportion":0.0033657672
+    },
+    {
+        "Sex":"Male",
+        "Age":"60 - 64",
+        "Educational attainment":"ISCED 2011, level 6 \u2013 Bachelor\u2019s or equivalent level",
+        "Proportion":0.003998949
+    },
+    {
+        "Sex":"Male",
+        "Age":"60 - 64",
+        "Educational attainment":"ISCED 2011, level 7 \u2013 Master\u2019s or equivalent level",
+        "Proportion":0.0033233459
+    },
+    {
+        "Sex":"Male",
+        "Age":"60 - 64",
+        "Educational attainment":"ISCED 2011, level 8 \u2013 Doctoral or equivalent level",
+        "Proportion":0.0003886622
+    },
+    {
+        "Sex":"Male",
+        "Age":"60 - 64",
+        "Educational attainment":"ISCED 2011, Unknown",
+        "Proportion":0.0006909883
+    },
+    {
+        "Sex":"Male",
+        "Age":"65 - 69",
+        "Educational attainment":"ISCED 2011, No education",
+        "Proportion":0.0009332674
+    },
+    {
+        "Sex":"Male",
+        "Age":"65 - 69",
+        "Educational attainment":"ISCED 2011, level 2 \u2013 Lower secondary education",
+        "Proportion":0.0049750857
+    },
+    {
+        "Sex":"Male",
+        "Age":"65 - 69",
+        "Educational attainment":"ISCED 2011, level 3 \u2013 Upper secondary education",
+        "Proportion":0.0078220889
+    },
+    {
+        "Sex":"Male",
+        "Age":"65 - 69",
+        "Educational attainment":"ISCED 2011, level 5 \u2013 Short-cycle tertiary education",
+        "Proportion":0.003327827
+    },
+    {
+        "Sex":"Male",
+        "Age":"65 - 69",
+        "Educational attainment":"ISCED 2011, level 6 \u2013 Bachelor\u2019s or equivalent level",
+        "Proportion":0.0037164893
+    },
+    {
+        "Sex":"Male",
+        "Age":"65 - 69",
+        "Educational attainment":"ISCED 2011, level 7 \u2013 Master\u2019s or equivalent level",
+        "Proportion":0.0030116095
+    },
+    {
+        "Sex":"Male",
+        "Age":"65 - 69",
+        "Educational attainment":"ISCED 2011, level 8 \u2013 Doctoral or equivalent level",
+        "Proportion":0.0004221212
+    },
+    {
+        "Sex":"Male",
+        "Age":"65 - 69",
+        "Educational attainment":"ISCED 2011, Unknown",
+        "Proportion":0.0006802336
+    },
+    {
+        "Sex":"Male",
+        "Age":"70 - 74",
+        "Educational attainment":"ISCED 2011, No education",
+        "Proportion":0.0009122061
+    },
+    {
+        "Sex":"Male",
+        "Age":"70 - 74",
+        "Educational attainment":"ISCED 2011, level 2 \u2013 Lower secondary education",
+        "Proportion":0.0045895603
+    },
+    {
+        "Sex":"Male",
+        "Age":"70 - 74",
+        "Educational attainment":"ISCED 2011, level 3 \u2013 Upper secondary education",
+        "Proportion":0.0060363637
+    },
+    {
+        "Sex":"Male",
+        "Age":"70 - 74",
+        "Educational attainment":"ISCED 2011, level 5 \u2013 Short-cycle tertiary education",
+        "Proportion":0.0030142982
+    },
+    {
+        "Sex":"Male",
+        "Age":"70 - 74",
+        "Educational attainment":"ISCED 2011, level 6 \u2013 Bachelor\u2019s or equivalent level",
+        "Proportion":0.0033372374
+    },
+    {
+        "Sex":"Male",
+        "Age":"70 - 74",
+        "Educational attainment":"ISCED 2011, level 7 \u2013 Master\u2019s or equivalent level",
+        "Proportion":0.0026020354
+    },
+    {
+        "Sex":"Male",
+        "Age":"70 - 74",
+        "Educational attainment":"ISCED 2011, level 8 \u2013 Doctoral or equivalent level",
+        "Proportion":0.0004826163
+    },
+    {
+        "Sex":"Male",
+        "Age":"70 - 74",
+        "Educational attainment":"ISCED 2011, Unknown",
+        "Proportion":0.0006546912
+    },
+    {
+        "Sex":"Male",
+        "Age":"75 - 79",
+        "Educational attainment":"ISCED 2011, No education",
+        "Proportion":0.0008938335
+    },
+    {
+        "Sex":"Male",
+        "Age":"75 - 79",
+        "Educational attainment":"ISCED 2011, level 2 \u2013 Lower secondary education",
+        "Proportion":0.0033842891
+    },
+    {
+        "Sex":"Male",
+        "Age":"75 - 79",
+        "Educational attainment":"ISCED 2011, level 3 \u2013 Upper secondary education",
+        "Proportion":0.0037509939
+    },
+    {
+        "Sex":"Male",
+        "Age":"75 - 79",
+        "Educational attainment":"ISCED 2011, level 5 \u2013 Short-cycle tertiary education",
+        "Proportion":0.0016958041
+    },
+    {
+        "Sex":"Male",
+        "Age":"75 - 79",
+        "Educational attainment":"ISCED 2011, level 6 \u2013 Bachelor\u2019s or equivalent level",
+        "Proportion":0.0019567545
+    },
+    {
+        "Sex":"Male",
+        "Age":"75 - 79",
+        "Educational attainment":"ISCED 2011, level 7 \u2013 Master\u2019s or equivalent level",
+        "Proportion":0.0013996023
+    },
+    {
+        "Sex":"Male",
+        "Age":"75 - 79",
+        "Educational attainment":"ISCED 2011, level 8 \u2013 Doctoral or equivalent level",
+        "Proportion":0.0003782063
+    },
+    {
+        "Sex":"Male",
+        "Age":"75 - 79",
+        "Educational attainment":"ISCED 2011, Unknown",
+        "Proportion":0.0004401951
+    },
+    {
+        "Sex":"Male",
+        "Age":"80 - 84",
+        "Educational attainment":"ISCED 2011, No education",
+        "Proportion":0.0009168366
+    },
+    {
+        "Sex":"Male",
+        "Age":"80 - 84",
+        "Educational attainment":"ISCED 2011, level 2 \u2013 Lower secondary education",
+        "Proportion":0.0021034364
+    },
+    {
+        "Sex":"Male",
+        "Age":"80 - 84",
+        "Educational attainment":"ISCED 2011, level 3 \u2013 Upper secondary education",
+        "Proportion":0.0021358498
+    },
+    {
+        "Sex":"Male",
+        "Age":"80 - 84",
+        "Educational attainment":"ISCED 2011, level 5 \u2013 Short-cycle tertiary education",
+        "Proportion":0.0011718122
+    },
+    {
+        "Sex":"Male",
+        "Age":"80 - 84",
+        "Educational attainment":"ISCED 2011, level 6 \u2013 Bachelor\u2019s or equivalent level",
+        "Proportion":0.0011280466
+    },
+    {
+        "Sex":"Male",
+        "Age":"80 - 84",
+        "Educational attainment":"ISCED 2011, level 7 \u2013 Master\u2019s or equivalent level",
+        "Proportion":0.0009195253
+    },
+    {
+        "Sex":"Male",
+        "Age":"80 - 84",
+        "Educational attainment":"ISCED 2011, level 8 \u2013 Doctoral or equivalent level",
+        "Proportion":0.0002729
+    },
+    {
+        "Sex":"Male",
+        "Age":"80 - 84",
+        "Educational attainment":"ISCED 2011, Unknown",
+        "Proportion":0.0003426561
+    },
+    {
+        "Sex":"Male",
+        "Age":"85 - 89",
+        "Educational attainment":"ISCED 2011, No education",
+        "Proportion":0.0008806889
+    },
+    {
+        "Sex":"Male",
+        "Age":"85 - 89",
+        "Educational attainment":"ISCED 2011, level 2 \u2013 Lower secondary education",
+        "Proportion":0.0012464974
+    },
+    {
+        "Sex":"Male",
+        "Age":"85 - 89",
+        "Educational attainment":"ISCED 2011, level 3 \u2013 Upper secondary education",
+        "Proportion":0.0012633763
+    },
+    {
+        "Sex":"Male",
+        "Age":"85 - 89",
+        "Educational attainment":"ISCED 2011, level 5 \u2013 Short-cycle tertiary education",
+        "Proportion":0.0006514051
+    },
+    {
+        "Sex":"Male",
+        "Age":"85 - 89",
+        "Educational attainment":"ISCED 2011, level 6 \u2013 Bachelor\u2019s or equivalent level",
+        "Proportion":0.0007698559
+    },
+    {
+        "Sex":"Male",
+        "Age":"85 - 89",
+        "Educational attainment":"ISCED 2011, level 7 \u2013 Master\u2019s or equivalent level",
+        "Proportion":0.0004696211
+    },
+    {
+        "Sex":"Male",
+        "Age":"85 - 89",
+        "Educational attainment":"ISCED 2011, level 8 \u2013 Doctoral or equivalent level",
+        "Proportion":0.0001825308
+    },
+    {
+        "Sex":"Male",
+        "Age":"85 - 89",
+        "Educational attainment":"ISCED 2011, Unknown",
+        "Proportion":0.0002374992
+    },
+    {
+        "Sex":"Male",
+        "Age":"90 - 94",
+        "Educational attainment":"ISCED 2011, No education",
+        "Proportion":0.0005504306
+    },
+    {
+        "Sex":"Male",
+        "Age":"90 - 94",
+        "Educational attainment":"ISCED 2011, level 2 \u2013 Lower secondary education",
+        "Proportion":0.0004502029
+    },
+    {
+        "Sex":"Male",
+        "Age":"90 - 94",
+        "Educational attainment":"ISCED 2011, level 3 \u2013 Upper secondary education",
+        "Proportion":0.0005166728
+    },
+    {
+        "Sex":"Male",
+        "Age":"90 - 94",
+        "Educational attainment":"ISCED 2011, level 5 \u2013 Short-cycle tertiary education",
+        "Proportion":0.0001655026
+    },
+    {
+        "Sex":"Male",
+        "Age":"90 - 94",
+        "Educational attainment":"ISCED 2011, level 6 \u2013 Bachelor\u2019s or equivalent level",
+        "Proportion":0.0002261471
+    },
+    {
+        "Sex":"Male",
+        "Age":"90 - 94",
+        "Educational attainment":"ISCED 2011, level 7 \u2013 Master\u2019s or equivalent level",
+        "Proportion":0.0001263675
+    },
+    {
+        "Sex":"Male",
+        "Age":"90 - 94",
+        "Educational attainment":"ISCED 2011, level 8 \u2013 Doctoral or equivalent level",
+        "Proportion":0.0000522797
+    },
+    {
+        "Sex":"Male",
+        "Age":"90 - 94",
+        "Educational attainment":"ISCED 2011, Unknown",
+        "Proportion":0.0000716979
+    },
+    {
+        "Sex":"Male",
+        "Age":"95 +",
+        "Educational attainment":"ISCED 2011, No education",
+        "Proportion":0.000235408
+    },
+    {
+        "Sex":"Male",
+        "Age":"95 +",
+        "Educational attainment":"ISCED 2011, level 2 \u2013 Lower secondary education",
+        "Proportion":0.0000760296
+    },
+    {
+        "Sex":"Male",
+        "Age":"95 +",
+        "Educational attainment":"ISCED 2011, level 3 \u2013 Upper secondary education",
+        "Proportion":0.0000800626
+    },
+    {
+        "Sex":"Male",
+        "Age":"95 +",
+        "Educational attainment":"ISCED 2011, level 5 \u2013 Short-cycle tertiary education",
+        "Proportion":0.0000445124
+    },
+    {
+        "Sex":"Male",
+        "Age":"95 +",
+        "Educational attainment":"ISCED 2011, level 6 \u2013 Bachelor\u2019s or equivalent level",
+        "Proportion":0.0000422719
+    },
+    {
+        "Sex":"Male",
+        "Age":"95 +",
+        "Educational attainment":"ISCED 2011, level 7 \u2013 Master\u2019s or equivalent level",
+        "Proportion":0.0000646775
+    },
+    {
+        "Sex":"Male",
+        "Age":"95 +",
+        "Educational attainment":"ISCED 2011, level 8 \u2013 Doctoral or equivalent level",
+        "Proportion":0.0000206131
+    },
+    {
+        "Sex":"Male",
+        "Age":"95 +",
+        "Educational attainment":"ISCED 2011, Unknown",
+        "Proportion":0.0000622875
+    },
+    {
+        "Sex":"Female",
+        "Age":"15 - 19",
+        "Educational attainment":"ISCED 2011, No education",
+        "Proportion":0.0006348249
+    },
+    {
+        "Sex":"Female",
+        "Age":"15 - 19",
+        "Educational attainment":"ISCED 2011, level 2 \u2013 Lower secondary education",
+        "Proportion":0.036377411
+    },
+    {
+        "Sex":"Female",
+        "Age":"15 - 19",
+        "Educational attainment":"ISCED 2011, level 3 \u2013 Upper secondary education",
+        "Proportion":0.016175937
+    },
+    {
+        "Sex":"Female",
+        "Age":"15 - 19",
+        "Educational attainment":"ISCED 2011, level 5 \u2013 Short-cycle tertiary education",
+        "Proportion":0.000020165
+    },
+    {
+        "Sex":"Female",
+        "Age":"15 - 19",
+        "Educational attainment":"ISCED 2011, level 6 \u2013 Bachelor\u2019s or equivalent level",
+        "Proportion":0.0
+    },
+    {
+        "Sex":"Female",
+        "Age":"15 - 19",
+        "Educational attainment":"ISCED 2011, level 7 \u2013 Master\u2019s or equivalent level",
+        "Proportion":0.0
+    },
+    {
+        "Sex":"Female",
+        "Age":"15 - 19",
+        "Educational attainment":"ISCED 2011, level 8 \u2013 Doctoral or equivalent level",
+        "Proportion":0.0
+    },
+    {
+        "Sex":"Female",
+        "Age":"15 - 19",
+        "Educational attainment":"ISCED 2011, Unknown",
+        "Proportion":0.0000238993
+    },
+    {
+        "Sex":"Female",
+        "Age":"20 - 24",
+        "Educational attainment":"ISCED 2011, No education",
+        "Proportion":0.000438552
+    },
+    {
+        "Sex":"Female",
+        "Age":"20 - 24",
+        "Educational attainment":"ISCED 2011, level 2 \u2013 Lower secondary education",
+        "Proportion":0.0018802768
+    },
+    {
+        "Sex":"Female",
+        "Age":"20 - 24",
+        "Educational attainment":"ISCED 2011, level 3 \u2013 Upper secondary education",
+        "Proportion":0.043358693
+    },
+    {
+        "Sex":"Female",
+        "Age":"20 - 24",
+        "Educational attainment":"ISCED 2011, level 5 \u2013 Short-cycle tertiary education",
+        "Proportion":0.0015152151
+    },
+    {
+        "Sex":"Female",
+        "Age":"20 - 24",
+        "Educational attainment":"ISCED 2011, level 6 \u2013 Bachelor\u2019s or equivalent level",
+        "Proportion":0.0024744729
+    },
+    {
+        "Sex":"Female",
+        "Age":"20 - 24",
+        "Educational attainment":"ISCED 2011, level 7 \u2013 Master\u2019s or equivalent level",
+        "Proportion":0.0000579558
+    },
+    {
+        "Sex":"Female",
+        "Age":"20 - 24",
+        "Educational attainment":"ISCED 2011, level 8 \u2013 Doctoral or equivalent level",
+        "Proportion":0.0
+    },
+    {
+        "Sex":"Female",
+        "Age":"20 - 24",
+        "Educational attainment":"ISCED 2011, Unknown",
+        "Proportion":0.0000829007
+    },
+    {
+        "Sex":"Female",
+        "Age":"25 - 29",
+        "Educational attainment":"ISCED 2011, No education",
+        "Proportion":0.000540124
+    },
+    {
+        "Sex":"Female",
+        "Age":"25 - 29",
+        "Educational attainment":"ISCED 2011, level 2 \u2013 Lower secondary education",
+        "Proportion":0.0024684981
+    },
+    {
+        "Sex":"Female",
+        "Age":"25 - 29",
+        "Educational attainment":"ISCED 2011, level 3 \u2013 Upper secondary education",
+        "Proportion":0.0258057086
+    },
+    {
+        "Sex":"Female",
+        "Age":"25 - 29",
+        "Educational attainment":"ISCED 2011, level 5 \u2013 Short-cycle tertiary education",
+        "Proportion":0.0018354656
+    },
+    {
+        "Sex":"Female",
+        "Age":"25 - 29",
+        "Educational attainment":"ISCED 2011, level 6 \u2013 Bachelor\u2019s or equivalent level",
+        "Proportion":0.0132000271
+    },
+    {
+        "Sex":"Female",
+        "Age":"25 - 29",
+        "Educational attainment":"ISCED 2011, level 7 \u2013 Master\u2019s or equivalent level",
+        "Proportion":0.0020487668
+    },
+    {
+        "Sex":"Female",
+        "Age":"25 - 29",
+        "Educational attainment":"ISCED 2011, level 8 \u2013 Doctoral or equivalent level",
+        "Proportion":0.0000126965
+    },
+    {
+        "Sex":"Female",
+        "Age":"25 - 29",
+        "Educational attainment":"ISCED 2011, Unknown",
+        "Proportion":0.0001433958
+    },
+    {
+        "Sex":"Female",
+        "Age":"30 - 34",
+        "Educational attainment":"ISCED 2011, No education",
+        "Proportion":0.0006845653
+    },
+    {
+        "Sex":"Female",
+        "Age":"30 - 34",
+        "Educational attainment":"ISCED 2011, level 2 \u2013 Lower secondary education",
+        "Proportion":0.0025956125
+    },
+    {
+        "Sex":"Female",
+        "Age":"30 - 34",
+        "Educational attainment":"ISCED 2011, level 3 \u2013 Upper secondary education",
+        "Proportion":0.0187198673
+    },
+    {
+        "Sex":"Female",
+        "Age":"30 - 34",
+        "Educational attainment":"ISCED 2011, level 5 \u2013 Short-cycle tertiary education",
+        "Proportion":0.00191986
+    },
+    {
+        "Sex":"Female",
+        "Age":"30 - 34",
+        "Educational attainment":"ISCED 2011, level 6 \u2013 Bachelor\u2019s or equivalent level",
+        "Proportion":0.0149064365
+    },
+    {
+        "Sex":"Female",
+        "Age":"30 - 34",
+        "Educational attainment":"ISCED 2011, level 7 \u2013 Master\u2019s or equivalent level",
+        "Proportion":0.0055606184
+    },
+    {
+        "Sex":"Female",
+        "Age":"30 - 34",
+        "Educational attainment":"ISCED 2011, level 8 \u2013 Doctoral or equivalent level",
+        "Proportion":0.0001266662
+    },
+    {
+        "Sex":"Female",
+        "Age":"30 - 34",
+        "Educational attainment":"ISCED 2011, Unknown",
+        "Proportion":0.000188655
+    },
+    {
+        "Sex":"Female",
+        "Age":"35 - 39",
+        "Educational attainment":"ISCED 2011, No education",
+        "Proportion":0.0006528988
+    },
+    {
+        "Sex":"Female",
+        "Age":"35 - 39",
+        "Educational attainment":"ISCED 2011, level 2 \u2013 Lower secondary education",
+        "Proportion":0.0029632135
+    },
+    {
+        "Sex":"Female",
+        "Age":"35 - 39",
+        "Educational attainment":"ISCED 2011, level 3 \u2013 Upper secondary education",
+        "Proportion":0.0167427984
+    },
+    {
+        "Sex":"Female",
+        "Age":"35 - 39",
+        "Educational attainment":"ISCED 2011, level 5 \u2013 Short-cycle tertiary education",
+        "Proportion":0.0021361486
+    },
+    {
+        "Sex":"Female",
+        "Age":"35 - 39",
+        "Educational attainment":"ISCED 2011, level 6 \u2013 Bachelor\u2019s or equivalent level",
+        "Proportion":0.0129937463
+    },
+    {
+        "Sex":"Female",
+        "Age":"35 - 39",
+        "Educational attainment":"ISCED 2011, level 7 \u2013 Master\u2019s or equivalent level",
+        "Proportion":0.0072153456
+    },
+    {
+        "Sex":"Female",
+        "Age":"35 - 39",
+        "Educational attainment":"ISCED 2011, level 8 \u2013 Doctoral or equivalent level",
+        "Proportion":0.0003105414
+    },
+    {
+        "Sex":"Female",
+        "Age":"35 - 39",
+        "Educational attainment":"ISCED 2011, Unknown",
+        "Proportion":0.0002491501
+    },
+    {
+        "Sex":"Female",
+        "Age":"40 - 44",
+        "Educational attainment":"ISCED 2011, No education",
+        "Proportion":0.0007555164
+    },
+    {
+        "Sex":"Female",
+        "Age":"40 - 44",
+        "Educational attainment":"ISCED 2011, level 2 \u2013 Lower secondary education",
+        "Proportion":0.0040250889
+    },
+    {
+        "Sex":"Female",
+        "Age":"40 - 44",
+        "Educational attainment":"ISCED 2011, level 3 \u2013 Upper secondary education",
+        "Proportion":0.0151015145
+    },
+    {
+        "Sex":"Female",
+        "Age":"40 - 44",
+        "Educational attainment":"ISCED 2011, level 5 \u2013 Short-cycle tertiary education",
+        "Proportion":0.0025760449
+    },
+    {
+        "Sex":"Female",
+        "Age":"40 - 44",
+        "Educational attainment":"ISCED 2011, level 6 \u2013 Bachelor\u2019s or equivalent level",
+        "Proportion":0.010721073
+    },
+    {
+        "Sex":"Female",
+        "Age":"40 - 44",
+        "Educational attainment":"ISCED 2011, level 7 \u2013 Master\u2019s or equivalent level",
+        "Proportion":0.0070116042
+    },
+    {
+        "Sex":"Female",
+        "Age":"40 - 44",
+        "Educational attainment":"ISCED 2011, level 8 \u2013 Doctoral or equivalent level",
+        "Proportion":0.0005008395
+    },
+    {
+        "Sex":"Female",
+        "Age":"40 - 44",
+        "Educational attainment":"ISCED 2011, Unknown",
+        "Proportion":0.0002963512
+    },
+    {
+        "Sex":"Female",
+        "Age":"45 - 49",
+        "Educational attainment":"ISCED 2011, No education",
+        "Proportion":0.0010759163
+    },
+    {
+        "Sex":"Female",
+        "Age":"45 - 49",
+        "Educational attainment":"ISCED 2011, level 2 \u2013 Lower secondary education",
+        "Proportion":0.0043272656
+    },
+    {
+        "Sex":"Female",
+        "Age":"45 - 49",
+        "Educational attainment":"ISCED 2011, level 3 \u2013 Upper secondary education",
+        "Proportion":0.015707959
+    },
+    {
+        "Sex":"Female",
+        "Age":"45 - 49",
+        "Educational attainment":"ISCED 2011, level 5 \u2013 Short-cycle tertiary education",
+        "Proportion":0.0028780722
+    },
+    {
+        "Sex":"Female",
+        "Age":"45 - 49",
+        "Educational attainment":"ISCED 2011, level 6 \u2013 Bachelor\u2019s or equivalent level",
+        "Proportion":0.0087834379
+    },
+    {
+        "Sex":"Female",
+        "Age":"45 - 49",
+        "Educational attainment":"ISCED 2011, level 7 \u2013 Master\u2019s or equivalent level",
+        "Proportion":0.0066840345
+    },
+    {
+        "Sex":"Female",
+        "Age":"45 - 49",
+        "Educational attainment":"ISCED 2011, level 8 \u2013 Doctoral or equivalent level",
+        "Proportion":0.0004894874
+    },
+    {
+        "Sex":"Female",
+        "Age":"45 - 49",
+        "Educational attainment":"ISCED 2011, Unknown",
+        "Proportion":0.0005039763
+    },
+    {
+        "Sex":"Female",
+        "Age":"50 - 54",
+        "Educational attainment":"ISCED 2011, No education",
+        "Proportion":0.0011325277
+    },
+    {
+        "Sex":"Female",
+        "Age":"50 - 54",
+        "Educational attainment":"ISCED 2011, level 2 \u2013 Lower secondary education",
+        "Proportion":0.0043989634
+    },
+    {
+        "Sex":"Female",
+        "Age":"50 - 54",
+        "Educational attainment":"ISCED 2011, level 3 \u2013 Upper secondary education",
+        "Proportion":0.0135322272
+    },
+    {
+        "Sex":"Female",
+        "Age":"50 - 54",
+        "Educational attainment":"ISCED 2011, level 5 \u2013 Short-cycle tertiary education",
+        "Proportion":0.0029569399
+    },
+    {
+        "Sex":"Female",
+        "Age":"50 - 54",
+        "Educational attainment":"ISCED 2011, level 6 \u2013 Bachelor\u2019s or equivalent level",
+        "Proportion":0.0065089722
+    },
+    {
+        "Sex":"Female",
+        "Age":"50 - 54",
+        "Educational attainment":"ISCED 2011, level 7 \u2013 Master\u2019s or equivalent level",
+        "Proportion":0.0055337317
+    },
+    {
+        "Sex":"Female",
+        "Age":"50 - 54",
+        "Educational attainment":"ISCED 2011, level 8 \u2013 Doctoral or equivalent level",
+        "Proportion":0.0004469168
+    },
+    {
+        "Sex":"Female",
+        "Age":"50 - 54",
+        "Educational attainment":"ISCED 2011, Unknown",
+        "Proportion":0.0007535745
+    },
+    {
+        "Sex":"Female",
+        "Age":"55 - 59",
+        "Educational attainment":"ISCED 2011, No education",
+        "Proportion":0.001315656
+    },
+    {
+        "Sex":"Female",
+        "Age":"55 - 59",
+        "Educational attainment":"ISCED 2011, level 2 \u2013 Lower secondary education",
+        "Proportion":0.0044890339
+    },
+    {
+        "Sex":"Female",
+        "Age":"55 - 59",
+        "Educational attainment":"ISCED 2011, level 3 \u2013 Upper secondary education",
+        "Proportion":0.011501833
+    },
+    {
+        "Sex":"Female",
+        "Age":"55 - 59",
+        "Educational attainment":"ISCED 2011, level 5 \u2013 Short-cycle tertiary education",
+        "Proportion":0.0029835279
+    },
+    {
+        "Sex":"Female",
+        "Age":"55 - 59",
+        "Educational attainment":"ISCED 2011, level 6 \u2013 Bachelor\u2019s or equivalent level",
+        "Proportion":0.0051240082
+    },
+    {
+        "Sex":"Female",
+        "Age":"55 - 59",
+        "Educational attainment":"ISCED 2011, level 7 \u2013 Master\u2019s or equivalent level",
+        "Proportion":0.0043816364
+    },
+    {
+        "Sex":"Female",
+        "Age":"55 - 59",
+        "Educational attainment":"ISCED 2011, level 8 \u2013 Doctoral or equivalent level",
+        "Proportion":0.0003336939
+    },
+    {
+        "Sex":"Female",
+        "Age":"55 - 59",
+        "Educational attainment":"ISCED 2011, Unknown",
+        "Proportion":0.0007677648
+    },
+    {
+        "Sex":"Female",
+        "Age":"60 - 64",
+        "Educational attainment":"ISCED 2011, No education",
+        "Proportion":0.0014862372
+    },
+    {
+        "Sex":"Female",
+        "Age":"60 - 64",
+        "Educational attainment":"ISCED 2011, level 2 \u2013 Lower secondary education",
+        "Proportion":0.0051577659
+    },
+    {
+        "Sex":"Female",
+        "Age":"60 - 64",
+        "Educational attainment":"ISCED 2011, level 3 \u2013 Upper secondary education",
+        "Proportion":0.0095704715
+    },
+    {
+        "Sex":"Female",
+        "Age":"60 - 64",
+        "Educational attainment":"ISCED 2011, level 5 \u2013 Short-cycle tertiary education",
+        "Proportion":0.0035226063
+    },
+    {
+        "Sex":"Female",
+        "Age":"60 - 64",
+        "Educational attainment":"ISCED 2011, level 6 \u2013 Bachelor\u2019s or equivalent level",
+        "Proportion":0.0049535764
+    },
+    {
+        "Sex":"Female",
+        "Age":"60 - 64",
+        "Educational attainment":"ISCED 2011, level 7 \u2013 Master\u2019s or equivalent level",
+        "Proportion":0.0041015666
+    },
+    {
+        "Sex":"Female",
+        "Age":"60 - 64",
+        "Educational attainment":"ISCED 2011, level 8 \u2013 Doctoral or equivalent level",
+        "Proportion":0.0002988905
+    },
+    {
+        "Sex":"Female",
+        "Age":"60 - 64",
+        "Educational attainment":"ISCED 2011, Unknown",
+        "Proportion":0.0008325916
+    },
+    {
+        "Sex":"Female",
+        "Age":"65 - 69",
+        "Educational attainment":"ISCED 2011, No education",
+        "Proportion":0.0015276129
+    },
+    {
+        "Sex":"Female",
+        "Age":"65 - 69",
+        "Educational attainment":"ISCED 2011, level 2 \u2013 Lower secondary education",
+        "Proportion":0.0055631577
+    },
+    {
+        "Sex":"Female",
+        "Age":"65 - 69",
+        "Educational attainment":"ISCED 2011, level 3 \u2013 Upper secondary education",
+        "Proportion":0.0083770006
+    },
+    {
+        "Sex":"Female",
+        "Age":"65 - 69",
+        "Educational attainment":"ISCED 2011, level 5 \u2013 Short-cycle tertiary education",
+        "Proportion":0.0037996887
+    },
+    {
+        "Sex":"Female",
+        "Age":"65 - 69",
+        "Educational attainment":"ISCED 2011, level 6 \u2013 Bachelor\u2019s or equivalent level",
+        "Proportion":0.0045199536
+    },
+    {
+        "Sex":"Female",
+        "Age":"65 - 69",
+        "Educational attainment":"ISCED 2011, level 7 \u2013 Master\u2019s or equivalent level",
+        "Proportion":0.0034809319
+    },
+    {
+        "Sex":"Female",
+        "Age":"65 - 69",
+        "Educational attainment":"ISCED 2011, level 8 \u2013 Doctoral or equivalent level",
+        "Proportion":0.000244669
+    },
+    {
+        "Sex":"Female",
+        "Age":"65 - 69",
+        "Educational attainment":"ISCED 2011, Unknown",
+        "Proportion":0.0007408781
+    },
+    {
+        "Sex":"Female",
+        "Age":"70 - 74",
+        "Educational attainment":"ISCED 2011, No education",
+        "Proportion":0.0018342707
+    },
+    {
+        "Sex":"Female",
+        "Age":"70 - 74",
+        "Educational attainment":"ISCED 2011, level 2 \u2013 Lower secondary education",
+        "Proportion":0.0051263981
+    },
+    {
+        "Sex":"Female",
+        "Age":"70 - 74",
+        "Educational attainment":"ISCED 2011, level 3 \u2013 Upper secondary education",
+        "Proportion":0.0069996545
+    },
+    {
+        "Sex":"Female",
+        "Age":"70 - 74",
+        "Educational attainment":"ISCED 2011, level 5 \u2013 Short-cycle tertiary education",
+        "Proportion":0.0038255298
+    },
+    {
+        "Sex":"Female",
+        "Age":"70 - 74",
+        "Educational attainment":"ISCED 2011, level 6 \u2013 Bachelor\u2019s or equivalent level",
+        "Proportion":0.0037442722
+    },
+    {
+        "Sex":"Female",
+        "Age":"70 - 74",
+        "Educational attainment":"ISCED 2011, level 7 \u2013 Master\u2019s or equivalent level",
+        "Proportion":0.0029302026
+    },
+    {
+        "Sex":"Female",
+        "Age":"70 - 74",
+        "Educational attainment":"ISCED 2011, level 8 \u2013 Doctoral or equivalent level",
+        "Proportion":0.0003171137
+    },
+    {
+        "Sex":"Female",
+        "Age":"70 - 74",
+        "Educational attainment":"ISCED 2011, Unknown",
+        "Proportion":0.0007150369
+    },
+    {
+        "Sex":"Female",
+        "Age":"75 - 79",
+        "Educational attainment":"ISCED 2011, No education",
+        "Proportion":0.0019570533
+    },
+    {
+        "Sex":"Female",
+        "Age":"75 - 79",
+        "Educational attainment":"ISCED 2011, level 2 \u2013 Lower secondary education",
+        "Proportion":0.0038458442
+    },
+    {
+        "Sex":"Female",
+        "Age":"75 - 79",
+        "Educational attainment":"ISCED 2011, level 3 \u2013 Upper secondary education",
+        "Proportion":0.004425402
+    },
+    {
+        "Sex":"Female",
+        "Age":"75 - 79",
+        "Educational attainment":"ISCED 2011, level 5 \u2013 Short-cycle tertiary education",
+        "Proportion":0.0024689462
+    },
+    {
+        "Sex":"Female",
+        "Age":"75 - 79",
+        "Educational attainment":"ISCED 2011, level 6 \u2013 Bachelor\u2019s or equivalent level",
+        "Proportion":0.0020078393
+    },
+    {
+        "Sex":"Female",
+        "Age":"75 - 79",
+        "Educational attainment":"ISCED 2011, level 7 \u2013 Master\u2019s or equivalent level",
+        "Proportion":0.0014807105
+    },
+    {
+        "Sex":"Female",
+        "Age":"75 - 79",
+        "Educational attainment":"ISCED 2011, level 8 \u2013 Doctoral or equivalent level",
+        "Proportion":0.0001932855
+    },
+    {
+        "Sex":"Female",
+        "Age":"75 - 79",
+        "Educational attainment":"ISCED 2011, Unknown",
+        "Proportion":0.000463945
+    },
+    {
+        "Sex":"Female",
+        "Age":"80 - 84",
+        "Educational attainment":"ISCED 2011, No education",
+        "Proportion":0.0022463841
+    },
+    {
+        "Sex":"Female",
+        "Age":"80 - 84",
+        "Educational attainment":"ISCED 2011, level 2 \u2013 Lower secondary education",
+        "Proportion":0.0026737333
+    },
+    {
+        "Sex":"Female",
+        "Age":"80 - 84",
+        "Educational attainment":"ISCED 2011, level 3 \u2013 Upper secondary education",
+        "Proportion":0.0026587962
+    },
+    {
+        "Sex":"Female",
+        "Age":"80 - 84",
+        "Educational attainment":"ISCED 2011, level 5 \u2013 Short-cycle tertiary education",
+        "Proportion":0.0018164956
+    },
+    {
+        "Sex":"Female",
+        "Age":"80 - 84",
+        "Educational attainment":"ISCED 2011, level 6 \u2013 Bachelor\u2019s or equivalent level",
+        "Proportion":0.001248738
+    },
+    {
+        "Sex":"Female",
+        "Age":"80 - 84",
+        "Educational attainment":"ISCED 2011, level 7 \u2013 Master\u2019s or equivalent level",
+        "Proportion":0.0010109401
+    },
+    {
+        "Sex":"Female",
+        "Age":"80 - 84",
+        "Educational attainment":"ISCED 2011, level 8 \u2013 Doctoral or equivalent level",
+        "Proportion":0.000137869
+    },
+    {
+        "Sex":"Female",
+        "Age":"80 - 84",
+        "Educational attainment":"ISCED 2011, Unknown",
+        "Proportion":0.0004116653
+    },
+    {
+        "Sex":"Female",
+        "Age":"85 - 89",
+        "Educational attainment":"ISCED 2011, No education",
+        "Proportion":0.0021740887
+    },
+    {
+        "Sex":"Female",
+        "Age":"85 - 89",
+        "Educational attainment":"ISCED 2011, level 2 \u2013 Lower secondary education",
+        "Proportion":0.0016978953
+    },
+    {
+        "Sex":"Female",
+        "Age":"85 - 89",
+        "Educational attainment":"ISCED 2011, level 3 \u2013 Upper secondary education",
+        "Proportion":0.0017485319
+    },
+    {
+        "Sex":"Female",
+        "Age":"85 - 89",
+        "Educational attainment":"ISCED 2011, level 5 \u2013 Short-cycle tertiary education",
+        "Proportion":0.0009918206
+    },
+    {
+        "Sex":"Female",
+        "Age":"85 - 89",
+        "Educational attainment":"ISCED 2011, level 6 \u2013 Bachelor\u2019s or equivalent level",
+        "Proportion":0.0007667192
+    },
+    {
+        "Sex":"Female",
+        "Age":"85 - 89",
+        "Educational attainment":"ISCED 2011, level 7 \u2013 Master\u2019s or equivalent level",
+        "Proportion":0.0006028596
+    },
+    {
+        "Sex":"Female",
+        "Age":"85 - 89",
+        "Educational attainment":"ISCED 2011, level 8 \u2013 Doctoral or equivalent level",
+        "Proportion":0.0000991821
+    },
+    {
+        "Sex":"Female",
+        "Age":"85 - 89",
+        "Educational attainment":"ISCED 2011, Unknown",
+        "Proportion":0.0002228609
+    },
+    {
+        "Sex":"Female",
+        "Age":"90 - 94",
+        "Educational attainment":"ISCED 2011, No education",
+        "Proportion":0.0013546417
+    },
+    {
+        "Sex":"Female",
+        "Age":"90 - 94",
+        "Educational attainment":"ISCED 2011, level 2 \u2013 Lower secondary education",
+        "Proportion":0.0006300451
+    },
+    {
+        "Sex":"Female",
+        "Age":"90 - 94",
+        "Educational attainment":"ISCED 2011, level 3 \u2013 Upper secondary education",
+        "Proportion":0.0007344551
+    },
+    {
+        "Sex":"Female",
+        "Age":"90 - 94",
+        "Educational attainment":"ISCED 2011, level 5 \u2013 Short-cycle tertiary education",
+        "Proportion":0.0003139769
+    },
+    {
+        "Sex":"Female",
+        "Age":"90 - 94",
+        "Educational attainment":"ISCED 2011, level 6 \u2013 Bachelor\u2019s or equivalent level",
+        "Proportion":0.0002893308
+    },
+    {
+        "Sex":"Female",
+        "Age":"90 - 94",
+        "Educational attainment":"ISCED 2011, level 7 \u2013 Master\u2019s or equivalent level",
+        "Proportion":0.0002309269
+    },
+    {
+        "Sex":"Female",
+        "Age":"90 - 94",
+        "Educational attainment":"ISCED 2011, level 8 \u2013 Doctoral or equivalent level",
+        "Proportion":0.0000355502
+    },
+    {
+        "Sex":"Female",
+        "Age":"90 - 94",
+        "Educational attainment":"ISCED 2011, Unknown",
+        "Proportion":0.0001171065
+    },
+    {
+        "Sex":"Female",
+        "Age":"95 +",
+        "Educational attainment":"ISCED 2011, No education",
+        "Proportion":0.0005477419
+    },
+    {
+        "Sex":"Female",
+        "Age":"95 +",
+        "Educational attainment":"ISCED 2011, level 2 \u2013 Lower secondary education",
+        "Proportion":0.0001925387
+    },
+    {
+        "Sex":"Female",
+        "Age":"95 +",
+        "Educational attainment":"ISCED 2011, level 3 \u2013 Upper secondary education",
+        "Proportion":0.0001823815
+    },
+    {
+        "Sex":"Female",
+        "Age":"95 +",
+        "Educational attainment":"ISCED 2011, level 5 \u2013 Short-cycle tertiary education",
+        "Proportion":0.0000788677
+    },
+    {
+        "Sex":"Female",
+        "Age":"95 +",
+        "Educational attainment":"ISCED 2011, level 6 \u2013 Bachelor\u2019s or equivalent level",
+        "Proportion":0.000079017
+    },
+    {
+        "Sex":"Female",
+        "Age":"95 +",
+        "Educational attainment":"ISCED 2011, level 7 \u2013 Master\u2019s or equivalent level",
+        "Proportion":0.0000575077
+    },
+    {
+        "Sex":"Female",
+        "Age":"95 +",
+        "Educational attainment":"ISCED 2011, level 8 \u2013 Doctoral or equivalent level",
+        "Proportion":0.0000077673
+    },
+    {
+        "Sex":"Female",
+        "Age":"95 +",
+        "Educational attainment":"ISCED 2011, Unknown",
+        "Proportion":0.0000570596
+    }
+]
