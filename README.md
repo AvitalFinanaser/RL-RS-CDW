@@ -35,7 +35,8 @@ python run_baselines.py --file_path "/absolute/path/to/dataset/instance_folder" 
 #### Import as a Package
 
 ```python
-from baselines import run_baseline_evaluation, run_single_baseline
+from scripts.run_baselines import run_baseline_evaluation, run_single_baseline
+from baselines.baseline_models import *
 
 # Run all policies
 results = run_baseline_evaluation(
