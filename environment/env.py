@@ -5,6 +5,13 @@ Defines the observation space and action space.
 Implements reset() and step(agent, action) (get feedback from a Collaborator, compute reward, update state).
 Will use other modules and ensures compliance with Gym (return (obs, reward, done, info)).
 """
+import os
+from typing import Optional, Dict, Any, List
+#
+import numpy as np
+import pandas as pd
+import gymnasium as gym
+from gymnasium import spaces
 #
 from environment.collaborators import LLMAgentWithTopics
 from environment.stance import StanceMatrix
@@ -12,21 +19,6 @@ from environment.memory import Memory
 from environment.topic_model import compute_paragraphs_topic_matrix
 from environment.loaders import ParagraphsLoader, AgentsLoader, EventsLoader
 from environment.reward_shaping import RewardShaper
-#
-# Suber modules
-# from environment.paragraphs_retrieval import ItemsRetrieval
-#
-import os
-from typing import Optional, Dict, Any, List
-from functools import reduce
-#
-import gymnasium as gym
-from gymnasium import spaces
-import numpy as np
-import pandas as pd
-import torch
-
-
 #
 
 
@@ -177,7 +169,7 @@ class CollaborativeDocRecEnv(gym.Env):
         """
         print(f"Step {self.step_num}, Current agent: a{self.current_agent_id}, Action: p{action}")
         # 1 - Validate action
-        valid_actions = self._get_valid_actions(self.current_agent_id)
+        valid_actions = self.get_valid_actions(self.current_agent_id)
         assert action in valid_actions, f"Invalid action: {action} not in valid actions: {valid_actions}"
 
         # 2 - Current interaction
@@ -321,7 +313,7 @@ class CollaborativeDocRecEnv(gym.Env):
             # Option 3 - No loader and not a starting stance matrix, then all preferences are unknown
             self.stance = StanceMatrix(agents=self.agents, paragraphs=self.paragraphs)
 
-    def _get_valid_actions(self, agent_id: int) -> List[int]:
+    def get_valid_actions(self, agent_id: int) -> List[int]:
         """
         Retrieve list of valid actions (paragraph indices) that the given agent has not voted on yet.
         Returns: a list of action indices of paragraphs with unknown votes.
@@ -367,8 +359,8 @@ class CollaborativeDocRecEnv(gym.Env):
 
     def _get_stance_completion_rate(self):
         """Calculate percentage of known votes."""
-        total_entries = self.num_agents * self.num_paragraphs
-        known_entries = len(self.memory.events)
+        known_entries = (self.stance.matrix.values != "?").sum()
+        total_entries = self.stance.matrix.size
         return known_entries / total_entries if total_entries > 0 else 0.0
 
     def _check_termination(self) -> bool:
@@ -493,20 +485,3 @@ class CollaborativeDocRecEnv(gym.Env):
     #         "LLM_rating": rating,
     #         "LLM_interaction_HTML": html_interaction,
     #     }
-    #
-    #     item_interaction = self.memory.user_to_seen_films[self._user.id][item_id]
-    #     reward, reward_shaping_termination = self.reward_shaping.reshape(
-    #         item_interaction, reward
-    #     )
-    #     if reward_shaping_termination:
-    #         terminated = True
-    #
-    #     # Handles evaluation termination
-    #     if self.evaluation:
-    #         self.evaluation_previous_user_id = self._user.id
-    #         self.evaluation_count += 1
-    #         terminated = False
-    #         if self.evaluation_count == 11:
-    #             terminated = True
-    #
-    #     return observation, reward, terminated, False, info

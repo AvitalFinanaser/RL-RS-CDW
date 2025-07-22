@@ -1,0 +1,18 @@
+Collaborative Writing Baseline Comparison Report
+============================================================
+
+Performance Summary:
+Policy              Mean Reward Std Reward  Episode Length Completion RateEngagement Rate
+-----------------------------------------------------------------------------------------
+Random              275.46      0.00        438.0          100.00%        100.00%        
+
+Best Performers:
+  Highest Mean Reward: Random (275.46)
+  Highest Completion Rate: Random (100.00%)
+  Highest Engagement Rate: Random (100.00%)
+
+Conceptual Insights:
+- Random policy provides lower bound performance
+- Popularity policy tests value of engagement-based recommendations
+- Collaborative Filtering tests agent similarity in collaborative writing
+- Engagement rate measures how often agents provide non-neutral feedback
