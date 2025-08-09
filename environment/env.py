@@ -17,8 +17,10 @@ from environment.collaborators import LLMAgentWithTopics
 from environment.stance import StanceMatrix
 from environment.memory import Memory
 from environment.topic_model import compute_paragraphs_topic_matrix
-from environment.loaders import ParagraphsLoader, AgentsLoader, EventsLoader
+from environment.loaders import ParagraphsLoader, AgentsLoader, EventsLoader, StanceLoader
 from environment.reward_shaping import RewardShaper
+
+
 #
 
 
@@ -33,6 +35,7 @@ class CollaborativeDocRecEnv(gym.Env):
     def __init__(
             self,
             render_mode: str = 'human',
+            stance_loader: Optional[StanceLoader] = None,
             paragraphs_loader: ParagraphsLoader = None,
             agents_loader: AgentsLoader = None,
             events_loader: EventsLoader = None,
@@ -89,10 +92,15 @@ class CollaborativeDocRecEnv(gym.Env):
         self.agent_ids = [a.agent_id for a in self.agents]
 
         ## 2.3 Initial stance loading (default: all "?")
-        if events_loader is not None:
-            self.events_loader = events_loader
-        if initial_stance_matrix is not None:
-            self.initial_stance_matrix = initial_stance_matrix
+
+        ## StanceLoader
+        self.stance_loader = stance_loader
+        if self.stance_loader is not None:
+            self.stance_loader.agents = self.agents
+            self.stance_loader.paragraphs = self.paragraphs
+        self.events_loader = events_loader
+        self.initial_stance_matrix = initial_stance_matrix
+
         self._init_stance_matrix()
 
         ## 2.4 Attach topic vectors
@@ -135,13 +143,14 @@ class CollaborativeDocRecEnv(gym.Env):
         ## 3.2 Defining observation space
         self.observation_space = spaces.Dict({
             "stance_matrix": spaces.Box(
-                low=-1, high=1,
+                low=-2, high=1,  # -2 stands for "?"
                 shape=(self.num_agents, self.num_paragraphs),
                 dtype=np.float32
             ),
             "current_agent_id": spaces.Discrete(self.num_agents),
             "active_agents": spaces.MultiBinary(self.num_agents),
-            "stance_completion_rate": spaces.Box(low=0, high=1, shape=(1,), dtype=np.float32)
+            "stance_completion_rate": spaces.Box(low=0, high=1, shape=(1,), dtype=np.float32),
+            "action_mask": spaces.MultiBinary(self.num_paragraphs)
         })
 
         # 4. Action Space
@@ -163,11 +172,13 @@ class CollaborativeDocRecEnv(gym.Env):
 
     def step(self, action: int):
         """
-        This is partial...
         The step takes an action, which correspond to a paragraph recommendation.
         We use the mapping paragraph_to_action to map an action to its corresponding paragraph.
         """
-        print(f"Step {self.step_num}, Current agent: a{self.current_agent_id}, Action: p{action}")
+        if self._check_termination():
+            print(f"Step {self.step_num}: Episode terminated before action.")
+            return self._get_obs(), 0.0, True, False, {"info": "Episode terminated"}
+
         # 1 - Validate action
         valid_actions = self.get_valid_actions(self.current_agent_id)
         assert action in valid_actions, f"Invalid action: {action} not in valid actions: {valid_actions}"
@@ -179,6 +190,12 @@ class CollaborativeDocRecEnv(gym.Env):
 
         # 3- Get vote & continuation from agent (feedback)
         vote, continuation = self._get_agent_feedback(agent_id, paragraph_id, self.stance)
+
+        print(f"Step {self.step_num},"
+              f" Current agent: a{self.current_agent_id},"
+              f" Action: p{action},"
+              f" Vote:{vote},"
+              f" Continuation: {continuation}")
 
         # Updating state variables - state, topic vectors, active agents
 
@@ -234,9 +251,11 @@ class CollaborativeDocRecEnv(gym.Env):
 
         return observation, reward, terminated, False, info
 
-    def reset(self, seed=42, options=None):
+    def reset(self, seed: Optional[int] = None, options: Optional[dict] = None):
         """Clean up reset method"""
-        # Reset provided seed or default
+        # Reset provided seed or default (random)
+        if seed is None:
+            seed = np.random.randint(1000000)
         self._set_seed(seed=seed)
         super().reset(seed=seed)
 
@@ -302,15 +321,18 @@ class CollaborativeDocRecEnv(gym.Env):
 
     def _init_stance_matrix(self):
         """Initialize stance matrix."""
-        if self.events_loader is not None:
-            # Option 1 - An EventsLoader is given for initiating a stance from previous event list.
-            events_df = self.events_loader.load_all(agents=self.agents, paragraphs=self.paragraphs)
-            self.stance = StanceMatrix.from_existing(agents=self.agents, paragraphs=self.paragraphs, matrix=events_df)
+        if self.stance_loader is not None:
+            # Option 1 - Using the stance loader (for random)
+            self.stance = self.stance_loader.load_random()
         elif self.initial_stance_matrix is not None:
             # Option 2 - No loader but yes for a starting stance matrix
             self.stance = self.initial_stance_matrix
+        elif self.events_loader is not None:
+            # Option 3 - An EventsLoader is given for initiating a stance from previous event list.
+            events_df = self.events_loader.load_all(agents=self.agents, paragraphs=self.paragraphs)
+            self.stance = StanceMatrix.from_existing(agents=self.agents, paragraphs=self.paragraphs, matrix=events_df)
         else:
-            # Option 3 - No loader and not a starting stance matrix, then all preferences are unknown
+            # Option 4 (Default) - No loader and not a starting stance matrix -> all preferences are unknown
             self.stance = StanceMatrix(agents=self.agents, paragraphs=self.paragraphs)
 
     def get_valid_actions(self, agent_id: int) -> List[int]:
@@ -342,19 +364,26 @@ class CollaborativeDocRecEnv(gym.Env):
                     stance_numerical[i, j] = float(vote)  # -1, 0, or 1
 
         # Active agents mask (boolean array)
-        active_mask = np.array([agent.agent_id in self.active_agents for agent in self.agents], dtype=np.float32)
+        active_mask = np.array([agent.agent_id in self.active_agents for agent in self.agents], dtype=np.int8)
 
         # Current agent index (for the RL agent to know who it's recommending to)
         if self.current_agent_id is not None:
+            valid_actions = self.get_valid_actions(self.current_agent_id)
             current_agent_idx = next(i for i, a in enumerate(self.agents) if a.agent_id == self.current_agent_id)
         else:
-            current_agent_idx = -1
+            current_agent_idx = 0
+            valid_actions = []
+
+        # Action valid mask (boolean array)
+        action_mask = np.zeros(self.num_paragraphs, dtype=np.int8)
+        action_mask[valid_actions] = 1
 
         return {
             "stance_matrix": stance_numerical,  # shape [num_agents, num_paragraphs]
             "current_agent_id": current_agent_idx,
             "active_agents": active_mask,
-            "stance_completion_rate": np.array([self._get_stance_completion_rate()], dtype=np.float32)
+            "stance_completion_rate": np.array([self._get_stance_completion_rate()], dtype=np.float32),
+            "action_mask": action_mask
         }
 
     def _get_stance_completion_rate(self):
@@ -371,10 +400,12 @@ class CollaborativeDocRecEnv(gym.Env):
 
         # Stance matrix complete
         if self.stance.is_complete():
+            print("Termination - stance is complete")
             return True
 
         # No active agents
         if len(self.active_agents) == 0:
+            print("Termination - no active agents")
             return True
 
         return False
@@ -393,6 +424,26 @@ class CollaborativeDocRecEnv(gym.Env):
     def _set_seed(self, seed=42):
         self.seed = seed
         np.random.seed(seed)
+
+    @staticmethod
+    def from_config(config: dict, render_mode: str = 'human', reward_params: Optional[Dict[str, Any]] = None,
+                    render_csv_name: str = "render.csv"):
+        agents_loader = AgentsLoader(filepath=config["file_path"], num_agents=config["num_agents"])
+        paragraphs_loader = ParagraphsLoader(filepath=config["file_path"], num_paragraphs=config["num_paragraphs"])
+        stance_loader = StanceLoader(
+            agents=agents_loader.load_all(),
+            paragraphs=paragraphs_loader.load_all(),
+            sparsity=config["sparsity"]
+        )
+        return CollaborativeDocRecEnv(
+            paragraphs_loader=paragraphs_loader,
+            agents_loader=agents_loader,
+            stance_loader=stance_loader,
+            reward_shaping_params=reward_params,
+            render_mode=render_mode,
+            render_csv_name=render_csv_name,
+            seed=config.get("seed", 42)
+        )
 
     # def step(self, action: int):
     #     """

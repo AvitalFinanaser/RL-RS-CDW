@@ -4,7 +4,7 @@ Test module for CollaborativeDocRecEnv (environment integration and RL loop)
 import os
 
 from environment.env import CollaborativeDocRecEnv  # adjust to your actual env module path
-from environment.loaders import ParagraphsLoader, AgentsLoader, EventsLoader
+from environment.loaders import ParagraphsLoader, AgentsLoader, EventsLoader, StanceLoader
 from environment.stance import StanceMatrix
 from environment.reward_shaping import RewardShaper
 import numpy as np
@@ -131,19 +131,39 @@ def test_render_csv_output():
     print(f"A csv file was created in {expected_file}")
 
 
+def test_stance_loader_reproducibility():
+    # Setup known agents and paragraphs
+    agents_loader = AgentsLoader(file_path)
+    paragraphs_loader = ParagraphsLoader(file_path)
+    agents = agents_loader.load_all()
+    paragraphs = paragraphs_loader.load_all()
+    stance_loader = StanceLoader(agents=agents, paragraphs=paragraphs, sparsity=0.5, seed=123)
+    env = CollaborativeDocRecEnv(
+        paragraphs_loader=paragraphs_loader,
+        agents_loader=agents_loader,
+        stance_loader=stance_loader,
+        seed=123
+    )
+    obs1, _ = env.reset()
+    matrix1 = env.stance.matrix.copy(deep=True)
+    obs2, _ = env.reset()
+    matrix2 = env.stance.matrix.copy(deep=True)
+    assert matrix1.equals(matrix2), "Stance matrix is not reproducible with same seed."
+
 
 def run_all_env_tests():
     print("RUNNING ENVIRONMENT MODULE TEST SUITE")
-    # test_env_initialization()
-    # test_reset()
-    # test_valid_actions_and_step()
-    # test_episode_completion()
-    # test_observation_space_consistency()
-    # test_agent_paragraph_mappings()
+    test_env_initialization()
+    test_reset()
+    test_valid_actions_and_step()
+    test_episode_completion()
+    test_observation_space_consistency()
+    test_agent_paragraph_mappings()
     test_render_csv_output()
-    # test_render_modes()
+    test_render_modes()
     print("ALL ENVIRONMENT MODULE TESTS PASSED!")
 
 
 if __name__ == "__main__":
-    run_all_env_tests()
+    #run_all_env_tests()
+    test_stance_loader_reproducibility()
