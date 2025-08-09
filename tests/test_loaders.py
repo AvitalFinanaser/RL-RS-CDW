@@ -1,6 +1,6 @@
 from environment.collaborators import Agent, LLMAgentWithTopics
 from environment.paragraphs import Paragraph, ParagraphWithTopics
-from environment.loaders import ParagraphsLoader, AgentsLoader, EventsLoader
+from environment.loaders import ParagraphsLoader, AgentsLoader, EventsLoader, StanceLoader
 from environment.topic_model import compute_paragraphs_topic_matrix
 
 
@@ -122,15 +122,35 @@ def test_env_total_loading():
     print(stance)
 
 
+def test_stance_loader():
+    file_path = r"C:/Users/avita/Desktop/לימודים/תוכנית מיתר/Consenz project/CDW/datasets/event_lists/config001_llm/(CSF=0_events,_APS,_threshold=0.5)/instance_0"
+
+    # Load paragraphs and agents
+    paragraphs = ParagraphsLoader(filepath=file_path).load_all()
+    agents = AgentsLoader(filepath=file_path).load_all()
+
+    # Load stance matrix from events
+    stance_loader = StanceLoader(agents=agents, paragraphs=paragraphs, sparsity=0.5, seed=42)
+    # Empty
+    stance_df = stance_loader.load_empty_matrix()
+    print(stance_df)
+
+    # Empty
+    stance_df = stance_loader.load_random()
+    print(stance_df)
+
+
 def run_all_tests():
-    print("Testing paragraphs loader...")
-    test_paragraphs_loader()
-    print("Testing agents loader...")
-    test_agents_loader()
-    print("Testing events loader...")
-    test_events_loader()
-    print("Testing environment loading pipeline ...")
-    test_env_total_loading()
+    # print("Testing paragraphs loader...")
+    # test_paragraphs_loader()
+    # print("Testing agents loader...")
+    # test_agents_loader()
+    # print("Testing events loader...")
+    # test_events_loader()
+    # print("Testing environment loading pipeline ...")
+    # test_env_total_loading()
+    print("Testing stance loading pipeline ...")
+    test_stance_loader()
 
 
 if __name__ == "__main__":
