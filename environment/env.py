@@ -40,7 +40,7 @@ class CollaborativeDocRecEnv(gym.Env):
             agents_loader: AgentsLoader = None,
             events_loader: EventsLoader = None,
             initial_stance_matrix: Optional[Any] = None,
-            paragraphs_retrieval=None,
+            instance_path: Optional[str] = None,
             reward_shaping_params: Optional[Dict[str, Any]] = None,
             render_path: str = "./render/",
             render_csv_name: str = "render.csv",
@@ -58,10 +58,8 @@ class CollaborativeDocRecEnv(gym.Env):
           3. Observation space
           4. Action space
           5. Action/paragraph mappings
-          5. Interaction (env) memory
-          6. Reward shaping parameters (alpha, etc.)
-          7. Retrieval and selection modules
-          8. Reward Shaping
+          6. Interaction (env) memory
+          7. Reward Shaping
         """
         # 0. Gym Environment setup
         super().__init__()
@@ -101,6 +99,10 @@ class CollaborativeDocRecEnv(gym.Env):
         self.events_loader = events_loader
         self.initial_stance_matrix = initial_stance_matrix
 
+        ## Initialize full stance matrix (ground truth) and sparse stance matrix
+        self.instance_path = instance_path
+        self.full_stance = None
+        self.consecutive_neutrals = {agent.agent_id: 0 for agent in self.agents}  # Track neutral votes per agent
         self._init_stance_matrix()
 
         ## 2.4 Attach topic vectors
@@ -163,11 +165,7 @@ class CollaborativeDocRecEnv(gym.Env):
         # 6. Memory Initialization (interactions history)
         self.memory = Memory()
 
-        # 7. Retrieval and Selection
-        ## Additional modules for prompting with selecting a shortlist from the paragraphs pool before making the final recommendation.
-        self.paragraphs_retrieval = paragraphs_retrieval
-
-        # 8. Reward Shaping
+        # 7. Reward Shaping
         self.reward_shaper = RewardShaper(reward_shaping_params)
 
     def step(self, action: int):
@@ -218,6 +216,7 @@ class CollaborativeDocRecEnv(gym.Env):
         reward = self.reward_shaper.calculate_reward(agents=agents_active,
                                                      stance=self.stance,
                                                      doc_topic_matrix=self.doc_topic_matrix)
+        reward_components = self.reward_shaper.get_reward_components(agents=agents_active,stance=self.stance, doc_topic_matrix=self.doc_topic_matrix)
 
         # 6 - Update memory - Log interaction
         self.memory.log_event(
@@ -246,9 +245,9 @@ class CollaborativeDocRecEnv(gym.Env):
             "vote": vote,
             "continuation": continuation,
             "agent_id": agent_id,
-            "paragraph_id": paragraph_id
+            "paragraph_id": paragraph_id,
+            "reward_components": reward_components
         }
-
         return observation, reward, terminated, False, info
 
     def reset(self, seed: Optional[int] = None, options: Optional[dict] = None):
@@ -271,6 +270,9 @@ class CollaborativeDocRecEnv(gym.Env):
         else:
             self.current_agent_id = None
 
+        # - Reset consecutive neutrals counter
+        self.consecutive_neutrals = {agent.agent_id: 0 for agent in self.agents}
+
         # Reset memory
         self.memory.reset()
 
@@ -280,7 +282,7 @@ class CollaborativeDocRecEnv(gym.Env):
         # Reset initial observation
         observation = self._get_obs()
 
-        return observation, {}
+        return observation, {"seed": self.seed}
 
     def render(self):
         """Render environment state and preserve interaction metadata."""
@@ -321,19 +323,35 @@ class CollaborativeDocRecEnv(gym.Env):
 
     def _init_stance_matrix(self):
         """Initialize stance matrix."""
-        if self.stance_loader is not None:
-            # Option 1 - Using the stance loader (for random)
+        # Option 0 - Have an instance with stance to load
+        if self.instance_path is not None and self.stance_loader is not None:
+            self.stance_loader.seed = self.seed
+            # 0.1) Load full stance matrix (sparsity=0)
+            self.full_stance = self.stance_loader.load_sparse_instance(
+                instance_path=self.instance_path,
+                sparsity=0.0)
+            # 0.2) Load sparse initial stance matrix
+            self.stance = self.stance_loader.load_sparse_instance(
+                instance_path=self.instance_path,
+                sparsity=self.stance_loader.sparsity)
+        # Option 1 - Using the stance loader for random
+        elif self.stance_loader is not None:
+            self.stance_loader.seed = self.seed
             self.stance = self.stance_loader.load_random()
+            self.full_stance = None  # No ground truth if random
+        # Option 2 - No loader but yes for a starting stance matrix
         elif self.initial_stance_matrix is not None:
-            # Option 2 - No loader but yes for a starting stance matrix
             self.stance = self.initial_stance_matrix
+            self.full_stance = None
+        # Option 3 - An EventsLoader is given for initiating a stance from previous event list.
         elif self.events_loader is not None:
-            # Option 3 - An EventsLoader is given for initiating a stance from previous event list.
             events_df = self.events_loader.load_all(agents=self.agents, paragraphs=self.paragraphs)
             self.stance = StanceMatrix.from_existing(agents=self.agents, paragraphs=self.paragraphs, matrix=events_df)
+            self.full_stance = None
+        # Option 4 (Default) - No loader and not a starting stance matrix -> all preferences are unknown
         else:
-            # Option 4 (Default) - No loader and not a starting stance matrix -> all preferences are unknown
             self.stance = StanceMatrix(agents=self.agents, paragraphs=self.paragraphs)
+            self.full_stance = None
 
     def get_valid_actions(self, agent_id: int) -> List[int]:
         """
@@ -410,16 +428,52 @@ class CollaborativeDocRecEnv(gym.Env):
 
         return False
 
+    # def _get_agent_feedback(self, agent_id: int, paragraph_id: int, stance: StanceMatrix) -> tuple:
+    #     """Get agent vote and continuation signal."""
+    #     # For now, agent favors vote at random
+    #     vote = np.random.choice([-1, 0, 1])  # Placeholder
+    #     # For now, agent favors continuation when are missing preferences
+    #     if len(self.stance.get_unknown_paragraphs(agent_id)) > 0:
+    #         continuation = 1
+    #     else:
+    #         continuation = 0
+    #     return str(vote), continuation
+
     def _get_agent_feedback(self, agent_id: int, paragraph_id: int, stance: StanceMatrix) -> tuple:
-        """Get agent vote and continuation signal."""
-        # For now, agent favors vote at random
-        vote = np.random.choice([-1, 0, 1])  # Placeholder
-        # For now, agent favors continuation when are missing preferences
-        if len(self.stance.get_unknown_paragraphs(agent_id)) > 0:
-            continuation = 1
+        """
+        Get agent vote from full stance matrix and continuation signal based on neutral vote fatigue.
+        Returns: (vote: str, continuation: int)
+        """
+        # Get paragraph text
+        paragraph = next(p for p in self.paragraphs if p.paragraph_id == paragraph_id)
+
+        # Retrieve true vote from full stance matrix (ground truth)
+        if self.full_stance is not None:
+            vote = self.full_stance.get_vote(agent_id, paragraph_id)
+            if vote == "?":
+                vote = "0"  # Fallback if full stance has unknown (shouldn't happen)
         else:
+            # Fallback to random vote if no full stance (e.g., random initialization)
+            vote = str(np.random.choice([-1, 0, 1]))
+
+        # Update consecutive neutrals counter
+        if vote == "0":
+            self.consecutive_neutrals[agent_id] += 1
+        else:
+            self.consecutive_neutrals[agent_id] = 0
+
+        # Compute quit probability: base 0.1 + 0.05 per consecutive neutral, capped at 0.5
+        quit_prob = min(0.1 + 0.05 * self.consecutive_neutrals[agent_id], 0.5)
+
+        # Sample continuation: 0 (quit) if random < quit_prob or no unknown paragraphs
+        if len(stance.get_unknown_paragraphs(agent_id)) == 0:
+            # no unknown paragraphs remain
             continuation = 0
-        return str(vote), continuation
+        else:
+            # fatigue abandonment
+            continuation = 0 if np.random.random() < quit_prob else 1
+
+        return vote, continuation
 
     def _set_seed(self, seed=42):
         self.seed = seed
@@ -428,111 +482,31 @@ class CollaborativeDocRecEnv(gym.Env):
     @staticmethod
     def from_config(config: dict, render_mode: str = 'human', reward_params: Optional[Dict[str, Any]] = None,
                     render_csv_name: str = "render.csv"):
+        """
+        Loading an env from a config of instance
+        :param config: dictionary with file_path (instance), num_agents, num_paragraphs, sparsity and seed.
+        :param render_mode:
+        :param reward_params:
+        :param render_csv_name:
+        :return:
+        """
         agents_loader = AgentsLoader(filepath=config["file_path"], num_agents=config["num_agents"])
         paragraphs_loader = ParagraphsLoader(filepath=config["file_path"], num_paragraphs=config["num_paragraphs"])
         stance_loader = StanceLoader(
             agents=agents_loader.load_all(),
             paragraphs=paragraphs_loader.load_all(),
-            sparsity=config["sparsity"]
+            sparsity=config["sparsity"],
+            seed=config.get("seed", 42)
         )
+        # Using file_path as instance_path if instance_path is not provided
+        instance_path = config.get("instance_path", config["file_path"])
         return CollaborativeDocRecEnv(
             paragraphs_loader=paragraphs_loader,
             agents_loader=agents_loader,
             stance_loader=stance_loader,
+            instance_path=instance_path,
             reward_shaping_params=reward_params,
             render_mode=render_mode,
             render_csv_name=render_csv_name,
             seed=config.get("seed", 42)
         )
-
-    # def step(self, action: int):
-    #     """
-    #     The step takes an action, which correspond to a paragraph recommendation.
-    #     We use the mapping paragraph_to_action to map an action to its corresponding paragraph.
-    #     """
-    #     item_id = self.action_to_item[action]
-    #
-    #     """
-    #     Use the MoviesLoader to load curr_item, which is a Movie object crresponding to the id item_id
-    #     """
-    #     curr_item = self.paragraphs_loader.load_items_from_ids(id_list=[item_id])
-    #
-    #     """
-    #     We fetch from the memory all previous films seen by the user together with the
-    #     interaction that the user had with the items. The interaction is represented via an interaction object
-    #     that summarize all important informations.
-    #     """
-    #     past_items, past_interactions = self.memory.get_items_and_scores(self._user.id)
-    #     num_interacted = self.memory.get_num_interaction(self._user.id, item_id)
-    #
-    #     """
-    #     The next step is to retrieve from the list of all items seen a smaller list of relevant items. The relevance from the Movie
-    #     depends on the retrieved mode.
-    #     """
-    #     retrieved_items, retrieved_interactions = self.paragraphs_retrieval.retrieve(
-    #         curr_item[0], past_items, past_interactions
-    #     )
-    #
-    #     """
-    #     Given the user, the recommended item and the retieved item we construct a prompt for the LLM to predict the rating that
-    #     the user would give to the recommended Movie.
-    #     """
-    #     with torch.random.fork_rng(["cuda:0"]):
-    #         torch.manual_seed(self.llm_seed)
-    #         rating, explanation, html_interaction = self.rating_prompt.query(
-    #             self._user,
-    #             curr_item[0],
-    #             num_interacted,
-    #             retrieved_interactions,
-    #             retrieved_items,
-    #         )
-    #         self.llm_seed += 1
-    #
-    #     """
-    #     After collecting the explanation and the rating from the LLM the next step is to select the item
-    #     (but this only in the case more than one is recommended)
-    #     """
-    #     selected_items, selected_ratings = self.paragraphs_selector.select(
-    #         curr_item, [rating]
-    #     )
-    #
-    #     """
-    #     Add a small perturbation to the rating.
-    #     """
-    #     selected_items, selected_ratings = self.reward_perturbator.perturb(
-    #         curr_item, [rating]
-    #     )
-    #
-    #     """
-    #     The next step consists in updating the Memory by adding the recommended item to the list of film seen by the user.
-    #     """
-    #     selected_items_ids = []
-    #
-    #     for m in selected_items:
-    #         selected_items_ids.append(m.id)
-    #
-    #     self.memory.update_memory(self._user.id, selected_items_ids, selected_ratings)
-    #
-    #     """
-    #     We also update the state by adding the recommended item to the list of film seen
-    #     """
-    #     self._items_interact = self._items_interact + (
-    #         np.array(
-    #             [self.item_to_action[selected_items_ids[0]], selected_ratings[0]],
-    #             dtype=np.int_,
-    #         ),
-    #     )
-    #
-    #     """
-    #     Termination is modelled in a similar fashion to a geometric distribution: after every step the user with some small probability
-    #     stops intercating with the environment
-    #     """
-    #     terminated = self.np_random.choice([True, False], p=[0.025, 0.975])
-    #     terminated = bool(terminated)
-    #     observation = self._get_obs()
-    #     reward = reduce(lambda x, y: x + y, selected_ratings)
-    #     info = {
-    #         "LLM_explanation": explanation,
-    #         "LLM_rating": rating,
-    #         "LLM_interaction_HTML": html_interaction,
-    #     }

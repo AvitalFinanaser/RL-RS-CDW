@@ -1,0 +1,460 @@
+Country or Area,Year,Sex,Age,Educational attainment,Value
+Israel,2022,Both Sexes,15 - 19,"ISCED 2011, No education",8101
+Israel,2022,Both Sexes,15 - 19,"ISCED 2011, level 2 – Lower secondary education",509085
+Israel,2022,Both Sexes,15 - 19,"ISCED 2011, level 3 – Upper secondary education",210353
+Israel,2022,Both Sexes,15 - 19,"ISCED 2011, level 5 – Short-cycle tertiary education",417
+Israel,2022,Both Sexes,15 - 19,"ISCED 2011, level 6 – Bachelor’s or equivalent level",0
+Israel,2022,Both Sexes,15 - 19,"ISCED 2011, level 7 – Master’s or equivalent level",0
+Israel,2022,Both Sexes,15 - 19,"ISCED 2011, level 8 – Doctoral or equivalent level",0
+Israel,2022,Both Sexes,15 - 19,"ISCED 2011, Unknown",298
+Israel,2022,Both Sexes,15 - 19,"ISCED 2011, Total",728255
+Israel,2022,Both Sexes,20 - 24,"ISCED 2011, No education",5940
+Israel,2022,Both Sexes,20 - 24,"ISCED 2011, level 2 – Lower secondary education",55302
+Israel,2022,Both Sexes,20 - 24,"ISCED 2011, level 3 – Upper secondary education",570018
+Israel,2022,Both Sexes,20 - 24,"ISCED 2011, level 5 – Short-cycle tertiary education",25846
+Israel,2022,Both Sexes,20 - 24,"ISCED 2011, level 6 – Bachelor’s or equivalent level",23343
+Israel,2022,Both Sexes,20 - 24,"ISCED 2011, level 7 – Master’s or equivalent level",569
+Israel,2022,Both Sexes,20 - 24,"ISCED 2011, level 8 – Doctoral or equivalent level",0
+Israel,2022,Both Sexes,20 - 24,"ISCED 2011, Unknown",861
+Israel,2022,Both Sexes,20 - 24,"ISCED 2011, Total",681880
+Israel,2022,Both Sexes,25 - 29,"ISCED 2011, No education",7037
+Israel,2022,Both Sexes,25 - 29,"ISCED 2011, level 2 – Lower secondary education",61130
+Israel,2022,Both Sexes,25 - 29,"ISCED 2011, level 3 – Upper secondary education",369128
+Israel,2022,Both Sexes,25 - 29,"ISCED 2011, level 5 – Short-cycle tertiary education",37554
+Israel,2022,Both Sexes,25 - 29,"ISCED 2011, level 6 – Bachelor’s or equivalent level",126258
+Israel,2022,Both Sexes,25 - 29,"ISCED 2011, level 7 – Master’s or equivalent level",19179
+Israel,2022,Both Sexes,25 - 29,"ISCED 2011, level 8 – Doctoral or equivalent level",131
+Israel,2022,Both Sexes,25 - 29,"ISCED 2011, Unknown",1824
+Israel,2022,Both Sexes,25 - 29,"ISCED 2011, Total",622240
+Israel,2022,Both Sexes,30 - 34,"ISCED 2011, No education",8366
+Israel,2022,Both Sexes,30 - 34,"ISCED 2011, level 2 – Lower secondary education",59000
+Israel,2022,Both Sexes,30 - 34,"ISCED 2011, level 3 – Upper secondary education",268398
+Israel,2022,Both Sexes,30 - 34,"ISCED 2011, level 5 – Short-cycle tertiary education",37728
+Israel,2022,Both Sexes,30 - 34,"ISCED 2011, level 6 – Bachelor’s or equivalent level",164481
+Israel,2022,Both Sexes,30 - 34,"ISCED 2011, level 7 – Master’s or equivalent level",58008
+Israel,2022,Both Sexes,30 - 34,"ISCED 2011, level 8 – Doctoral or equivalent level",1540
+Israel,2022,Both Sexes,30 - 34,"ISCED 2011, Unknown",2122
+Israel,2022,Both Sexes,30 - 34,"ISCED 2011, Total",599643
+Israel,2022,Both Sexes,35 - 39,"ISCED 2011, No education",8329
+Israel,2022,Both Sexes,35 - 39,"ISCED 2011, level 2 – Lower secondary education",57907
+Israel,2022,Both Sexes,35 - 39,"ISCED 2011, level 3 – Upper secondary education",237954
+Israel,2022,Both Sexes,35 - 39,"ISCED 2011, level 5 – Short-cycle tertiary education",36678
+Israel,2022,Both Sexes,35 - 39,"ISCED 2011, level 6 – Bachelor’s or equivalent level",151498
+Israel,2022,Both Sexes,35 - 39,"ISCED 2011, level 7 – Master’s or equivalent level",78527
+Israel,2022,Both Sexes,35 - 39,"ISCED 2011, level 8 – Doctoral or equivalent level",3997
+Israel,2022,Both Sexes,35 - 39,"ISCED 2011, Unknown",2562
+Israel,2022,Both Sexes,35 - 39,"ISCED 2011, Total",577452
+Israel,2022,Both Sexes,40 - 44,"ISCED 2011, No education",10039
+Israel,2022,Both Sexes,40 - 44,"ISCED 2011, level 2 – Lower secondary education",71721
+Israel,2022,Both Sexes,40 - 44,"ISCED 2011, level 3 – Upper secondary education",205113
+Israel,2022,Both Sexes,40 - 44,"ISCED 2011, level 5 – Short-cycle tertiary education",40120
+Israel,2022,Both Sexes,40 - 44,"ISCED 2011, level 6 – Bachelor’s or equivalent level",125213
+Israel,2022,Both Sexes,40 - 44,"ISCED 2011, level 7 – Master’s or equivalent level",80440
+Israel,2022,Both Sexes,40 - 44,"ISCED 2011, level 8 – Doctoral or equivalent level",6664
+Israel,2022,Both Sexes,40 - 44,"ISCED 2011, Unknown",3191
+Israel,2022,Both Sexes,40 - 44,"ISCED 2011, Total",542502
+Israel,2022,Both Sexes,45 - 49,"ISCED 2011, No education",14334
+Israel,2022,Both Sexes,45 - 49,"ISCED 2011, level 2 – Lower secondary education",68834
+Israel,2022,Both Sexes,45 - 49,"ISCED 2011, level 3 – Upper secondary education",208842
+Israel,2022,Both Sexes,45 - 49,"ISCED 2011, level 5 – Short-cycle tertiary education",45119
+Israel,2022,Both Sexes,45 - 49,"ISCED 2011, level 6 – Bachelor’s or equivalent level",105730
+Israel,2022,Both Sexes,45 - 49,"ISCED 2011, level 7 – Master’s or equivalent level",77542
+Israel,2022,Both Sexes,45 - 49,"ISCED 2011, level 8 – Doctoral or equivalent level",6695
+Israel,2022,Both Sexes,45 - 49,"ISCED 2011, Unknown",6354
+Israel,2022,Both Sexes,45 - 49,"ISCED 2011, Total",533452
+Israel,2022,Both Sexes,50 - 54,"ISCED 2011, No education",14298
+Israel,2022,Both Sexes,50 - 54,"ISCED 2011, level 2 – Lower secondary education",62637
+Israel,2022,Both Sexes,50 - 54,"ISCED 2011, level 3 – Upper secondary education",182500
+Israel,2022,Both Sexes,50 - 54,"ISCED 2011, level 5 – Short-cycle tertiary education",43960
+Israel,2022,Both Sexes,50 - 54,"ISCED 2011, level 6 – Bachelor’s or equivalent level",79630
+Israel,2022,Both Sexes,50 - 54,"ISCED 2011, level 7 – Master’s or equivalent level",64673
+Israel,2022,Both Sexes,50 - 54,"ISCED 2011, level 8 – Doctoral or equivalent level",5805
+Israel,2022,Both Sexes,50 - 54,"ISCED 2011, Unknown",9197
+Israel,2022,Both Sexes,50 - 54,"ISCED 2011, Total",462701
+Israel,2022,Both Sexes,55 - 59,"ISCED 2011, No education",15179
+Israel,2022,Both Sexes,55 - 59,"ISCED 2011, level 2 – Lower secondary education",62731
+Israel,2022,Both Sexes,55 - 59,"ISCED 2011, level 3 – Upper secondary education",151560
+Israel,2022,Both Sexes,55 - 59,"ISCED 2011, level 5 – Short-cycle tertiary education",42350
+Israel,2022,Both Sexes,55 - 59,"ISCED 2011, level 6 – Bachelor’s or equivalent level",62635
+Israel,2022,Both Sexes,55 - 59,"ISCED 2011, level 7 – Master’s or equivalent level",52582
+Israel,2022,Both Sexes,55 - 59,"ISCED 2011, level 8 – Doctoral or equivalent level",4840
+Israel,2022,Both Sexes,55 - 59,"ISCED 2011, Unknown",9724
+Israel,2022,Both Sexes,55 - 59,"ISCED 2011, Total",401600
+Israel,2022,Both Sexes,60 - 64,"ISCED 2011, No education",16189
+Israel,2022,Both Sexes,60 - 64,"ISCED 2011, level 2 – Lower secondary education",68671
+Israel,2022,Both Sexes,60 - 64,"ISCED 2011, level 3 – Upper secondary education",125380
+Israel,2022,Both Sexes,60 - 64,"ISCED 2011, level 5 – Short-cycle tertiary education",46116
+Israel,2022,Both Sexes,60 - 64,"ISCED 2011, level 6 – Bachelor’s or equivalent level",59936
+Israel,2022,Both Sexes,60 - 64,"ISCED 2011, level 7 – Master’s or equivalent level",49707
+Israel,2022,Both Sexes,60 - 64,"ISCED 2011, level 8 – Doctoral or equivalent level",4603
+Israel,2022,Both Sexes,60 - 64,"ISCED 2011, Unknown",10200
+Israel,2022,Both Sexes,60 - 64,"ISCED 2011, Total",380801
+Israel,2022,Both Sexes,65 - 69,"ISCED 2011, No education",16475
+Israel,2022,Both Sexes,65 - 69,"ISCED 2011, level 2 – Lower secondary education",70551
+Israel,2022,Both Sexes,65 - 69,"ISCED 2011, level 3 – Upper secondary education",108448
+Israel,2022,Both Sexes,65 - 69,"ISCED 2011, level 5 – Short-cycle tertiary education",47717
+Israel,2022,Both Sexes,65 - 69,"ISCED 2011, level 6 – Bachelor’s or equivalent level",55140
+Israel,2022,Both Sexes,65 - 69,"ISCED 2011, level 7 – Master’s or equivalent level",43466
+Israel,2022,Both Sexes,65 - 69,"ISCED 2011, level 8 – Doctoral or equivalent level",4464
+Israel,2022,Both Sexes,65 - 69,"ISCED 2011, Unknown",9514
+Israel,2022,Both Sexes,65 - 69,"ISCED 2011, Total",355777
+Israel,2022,Both Sexes,70 - 74,"ISCED 2011, No education",18387
+Israel,2022,Both Sexes,70 - 74,"ISCED 2011, level 2 – Lower secondary education",65046
+Israel,2022,Both Sexes,70 - 74,"ISCED 2011, level 3 – Upper secondary education",87273
+Israel,2022,Both Sexes,70 - 74,"ISCED 2011, level 5 – Short-cycle tertiary education",45791
+Israel,2022,Both Sexes,70 - 74,"ISCED 2011, level 6 – Bachelor’s or equivalent level",47408
+Israel,2022,Both Sexes,70 - 74,"ISCED 2011, level 7 – Master’s or equivalent level",37037
+Israel,2022,Both Sexes,70 - 74,"ISCED 2011, level 8 – Doctoral or equivalent level",5354
+Israel,2022,Both Sexes,70 - 74,"ISCED 2011, Unknown",9170
+Israel,2022,Both Sexes,70 - 74,"ISCED 2011, Total",315466
+Israel,2022,Both Sexes,75 - 79,"ISCED 2011, No education",19086
+Israel,2022,Both Sexes,75 - 79,"ISCED 2011, level 2 – Lower secondary education",48404
+Israel,2022,Both Sexes,75 - 79,"ISCED 2011, level 3 – Upper secondary education",54739
+Israel,2022,Both Sexes,75 - 79,"ISCED 2011, level 5 – Short-cycle tertiary education",27881
+Israel,2022,Both Sexes,75 - 79,"ISCED 2011, level 6 – Bachelor’s or equivalent level",26542
+Israel,2022,Both Sexes,75 - 79,"ISCED 2011, level 7 – Master’s or equivalent level",19282
+Israel,2022,Both Sexes,75 - 79,"ISCED 2011, level 8 – Doctoral or equivalent level",3826
+Israel,2022,Both Sexes,75 - 79,"ISCED 2011, Unknown",6054
+Israel,2022,Both Sexes,75 - 79,"ISCED 2011, Total",205815
+Israel,2022,Both Sexes,80 - 84,"ISCED 2011, No education",21177
+Israel,2022,Both Sexes,80 - 84,"ISCED 2011, level 2 – Lower secondary education",31983
+Israel,2022,Both Sexes,80 - 84,"ISCED 2011, level 3 – Upper secondary education",32100
+Israel,2022,Both Sexes,80 - 84,"ISCED 2011, level 5 – Short-cycle tertiary education",20006
+Israel,2022,Both Sexes,80 - 84,"ISCED 2011, level 6 – Bachelor’s or equivalent level",15912
+Israel,2022,Both Sexes,80 - 84,"ISCED 2011, level 7 – Master’s or equivalent level",12924
+Israel,2022,Both Sexes,80 - 84,"ISCED 2011, level 8 – Doctoral or equivalent level",2750
+Israel,2022,Both Sexes,80 - 84,"ISCED 2011, Unknown",5051
+Israel,2022,Both Sexes,80 - 84,"ISCED 2011, Total",141902
+Israel,2022,Both Sexes,85 - 89,"ISCED 2011, No education",20451
+Israel,2022,Both Sexes,85 - 89,"ISCED 2011, level 2 – Lower secondary education",19713
+Israel,2022,Both Sexes,85 - 89,"ISCED 2011, level 3 – Upper secondary education",20164
+Israel,2022,Both Sexes,85 - 89,"ISCED 2011, level 5 – Short-cycle tertiary education",11002
+Israel,2022,Both Sexes,85 - 89,"ISCED 2011, level 6 – Bachelor’s or equivalent level",10287
+Israel,2022,Both Sexes,85 - 89,"ISCED 2011, level 7 – Master’s or equivalent level",7180
+Israel,2022,Both Sexes,85 - 89,"ISCED 2011, level 8 – Doctoral or equivalent level",1886
+Israel,2022,Both Sexes,85 - 89,"ISCED 2011, Unknown",3082
+Israel,2022,Both Sexes,85 - 89,"ISCED 2011, Total",93765
+Israel,2022,Both Sexes,90 - 94,"ISCED 2011, No education",12754
+Israel,2022,Both Sexes,90 - 94,"ISCED 2011, level 2 – Lower secondary education",7232
+Israel,2022,Both Sexes,90 - 94,"ISCED 2011, level 3 – Upper secondary education",8375
+Israel,2022,Both Sexes,90 - 94,"ISCED 2011, level 5 – Short-cycle tertiary education",3210
+Israel,2022,Both Sexes,90 - 94,"ISCED 2011, level 6 – Bachelor’s or equivalent level",3450
+Israel,2022,Both Sexes,90 - 94,"ISCED 2011, level 7 – Master’s or equivalent level",2392
+Israel,2022,Both Sexes,90 - 94,"ISCED 2011, level 8 – Doctoral or equivalent level",588
+Israel,2022,Both Sexes,90 - 94,"ISCED 2011, Unknown",1264
+Israel,2022,Both Sexes,90 - 94,"ISCED 2011, Total",39265
+Israel,2022,Both Sexes,95 +,"ISCED 2011, No education",5242
+Israel,2022,Both Sexes,95 +,"ISCED 2011, level 2 – Lower secondary education",1798
+Israel,2022,Both Sexes,95 +,"ISCED 2011, level 3 – Upper secondary education",1757
+Israel,2022,Both Sexes,95 +,"ISCED 2011, level 5 – Short-cycle tertiary education",826
+Israel,2022,Both Sexes,95 +,"ISCED 2011, level 6 – Bachelor’s or equivalent level",812
+Israel,2022,Both Sexes,95 +,"ISCED 2011, level 7 – Master’s or equivalent level",818
+Israel,2022,Both Sexes,95 +,"ISCED 2011, level 8 – Doctoral or equivalent level",190
+Israel,2022,Both Sexes,95 +,"ISCED 2011, Unknown",799
+Israel,2022,Both Sexes,95 +,"ISCED 2011, Total",12242
+Israel,2022,Male,15 - 19,"ISCED 2011, No education",3851
+Israel,2022,Male,15 - 19,"ISCED 2011, level 2 – Lower secondary education",265547
+Israel,2022,Male,15 - 19,"ISCED 2011, level 3 – Upper secondary education",102059
+Israel,2022,Male,15 - 19,"ISCED 2011, level 5 – Short-cycle tertiary education",282
+Israel,2022,Male,15 - 19,"ISCED 2011, level 6 – Bachelor’s or equivalent level",0
+Israel,2022,Male,15 - 19,"ISCED 2011, level 7 – Master’s or equivalent level",0
+Israel,2022,Male,15 - 19,"ISCED 2011, level 8 – Doctoral or equivalent level",0
+Israel,2022,Male,15 - 19,"ISCED 2011, Unknown",138
+Israel,2022,Male,15 - 19,"ISCED 2011, Total",371877
+Israel,2022,Male,20 - 24,"ISCED 2011, No education",3005
+Israel,2022,Male,20 - 24,"ISCED 2011, level 2 – Lower secondary education",42714
+Israel,2022,Male,20 - 24,"ISCED 2011, level 3 – Upper secondary education",279742
+Israel,2022,Male,20 - 24,"ISCED 2011, level 5 – Short-cycle tertiary education",15702
+Israel,2022,Male,20 - 24,"ISCED 2011, level 6 – Bachelor’s or equivalent level",6777
+Israel,2022,Male,20 - 24,"ISCED 2011, level 7 – Master’s or equivalent level",181
+Israel,2022,Male,20 - 24,"ISCED 2011, level 8 – Doctoral or equivalent level",0
+Israel,2022,Male,20 - 24,"ISCED 2011, Unknown",306
+Israel,2022,Male,20 - 24,"ISCED 2011, Total",348428
+Israel,2022,Male,25 - 29,"ISCED 2011, No education",3420
+Israel,2022,Male,25 - 29,"ISCED 2011, level 2 – Lower secondary education",44604
+Israel,2022,Male,25 - 29,"ISCED 2011, level 3 – Upper secondary education",196365
+Israel,2022,Male,25 - 29,"ISCED 2011, level 5 – Short-cycle tertiary education",25266
+Israel,2022,Male,25 - 29,"ISCED 2011, level 6 – Bachelor’s or equivalent level",37887
+Israel,2022,Male,25 - 29,"ISCED 2011, level 7 – Master’s or equivalent level",5463
+Israel,2022,Male,25 - 29,"ISCED 2011, level 8 – Doctoral or equivalent level",46
+Israel,2022,Male,25 - 29,"ISCED 2011, Unknown",864
+Israel,2022,Male,25 - 29,"ISCED 2011, Total",313916
+Israel,2022,Male,30 - 34,"ISCED 2011, No education",3782
+Israel,2022,Male,30 - 34,"ISCED 2011, level 2 – Lower secondary education",41624
+Israel,2022,Male,30 - 34,"ISCED 2011, level 3 – Upper secondary education",143073
+Israel,2022,Male,30 - 34,"ISCED 2011, level 5 – Short-cycle tertiary education",24875
+Israel,2022,Male,30 - 34,"ISCED 2011, level 6 – Bachelor’s or equivalent level",64686
+Israel,2022,Male,30 - 34,"ISCED 2011, level 7 – Master’s or equivalent level",20781
+Israel,2022,Male,30 - 34,"ISCED 2011, level 8 – Doctoral or equivalent level",691
+Israel,2022,Male,30 - 34,"ISCED 2011, Unknown",859
+Israel,2022,Male,30 - 34,"ISCED 2011, Total",300371
+Israel,2022,Male,35 - 39,"ISCED 2011, No education",3958
+Israel,2022,Male,35 - 39,"ISCED 2011, level 2 – Lower secondary education",38069
+Israel,2022,Male,35 - 39,"ISCED 2011, level 3 – Upper secondary education",125865
+Israel,2022,Male,35 - 39,"ISCED 2011, level 5 – Short-cycle tertiary education",22378
+Israel,2022,Male,35 - 39,"ISCED 2011, level 6 – Bachelor’s or equivalent level",64508
+Israel,2022,Male,35 - 39,"ISCED 2011, level 7 – Master’s or equivalent level",30222
+Israel,2022,Male,35 - 39,"ISCED 2011, level 8 – Doctoral or equivalent level",1918
+Israel,2022,Male,35 - 39,"ISCED 2011, Unknown",894
+Israel,2022,Male,35 - 39,"ISCED 2011, Total",287811
+Israel,2022,Male,40 - 44,"ISCED 2011, No education",4981
+Israel,2022,Male,40 - 44,"ISCED 2011, level 2 – Lower secondary education",44774
+Israel,2022,Male,40 - 44,"ISCED 2011, level 3 – Upper secondary education",104012
+Israel,2022,Male,40 - 44,"ISCED 2011, level 5 – Short-cycle tertiary education",22874
+Israel,2022,Male,40 - 44,"ISCED 2011, level 6 – Bachelor’s or equivalent level",53438
+Israel,2022,Male,40 - 44,"ISCED 2011, level 7 – Master’s or equivalent level",33499
+Israel,2022,Male,40 - 44,"ISCED 2011, level 8 – Doctoral or equivalent level",3311
+Israel,2022,Male,40 - 44,"ISCED 2011, Unknown",1207
+Israel,2022,Male,40 - 44,"ISCED 2011, Total",268097
+Israel,2022,Male,45 - 49,"ISCED 2011, No education",7131
+Israel,2022,Male,45 - 49,"ISCED 2011, level 2 – Lower secondary education",39865
+Israel,2022,Male,45 - 49,"ISCED 2011, level 3 – Upper secondary education",103681
+Israel,2022,Male,45 - 49,"ISCED 2011, level 5 – Short-cycle tertiary education",25851
+Israel,2022,Male,45 - 49,"ISCED 2011, level 6 – Bachelor’s or equivalent level",46927
+Israel,2022,Male,45 - 49,"ISCED 2011, level 7 – Master’s or equivalent level",32795
+Israel,2022,Male,45 - 49,"ISCED 2011, level 8 – Doctoral or equivalent level",3418
+Israel,2022,Male,45 - 49,"ISCED 2011, Unknown",2980
+Israel,2022,Male,45 - 49,"ISCED 2011, Total",262648
+Israel,2022,Male,50 - 54,"ISCED 2011, No education",6716
+Israel,2022,Male,50 - 54,"ISCED 2011, level 2 – Lower secondary education",33188
+Israel,2022,Male,50 - 54,"ISCED 2011, level 3 – Upper secondary education",91905
+Israel,2022,Male,50 - 54,"ISCED 2011, level 5 – Short-cycle tertiary education",24164
+Israel,2022,Male,50 - 54,"ISCED 2011, level 6 – Bachelor’s or equivalent level",36054
+Israel,2022,Male,50 - 54,"ISCED 2011, level 7 – Master’s or equivalent level",27626
+Israel,2022,Male,50 - 54,"ISCED 2011, level 8 – Doctoral or equivalent level",2814
+Israel,2022,Male,50 - 54,"ISCED 2011, Unknown",4152
+Israel,2022,Male,50 - 54,"ISCED 2011, Total",226619
+Israel,2022,Male,55 - 59,"ISCED 2011, No education",6371
+Israel,2022,Male,55 - 59,"ISCED 2011, level 2 – Lower secondary education",32678
+Israel,2022,Male,55 - 59,"ISCED 2011, level 3 – Upper secondary education",74558
+Israel,2022,Male,55 - 59,"ISCED 2011, level 5 – Short-cycle tertiary education",22376
+Israel,2022,Male,55 - 59,"ISCED 2011, level 6 – Bachelor’s or equivalent level",28331
+Israel,2022,Male,55 - 59,"ISCED 2011, level 7 – Master’s or equivalent level",23248
+Israel,2022,Male,55 - 59,"ISCED 2011, level 8 – Doctoral or equivalent level",2606
+Israel,2022,Male,55 - 59,"ISCED 2011, Unknown",4584
+Israel,2022,Male,55 - 59,"ISCED 2011, Total",194751
+Israel,2022,Male,60 - 64,"ISCED 2011, No education",6239
+Israel,2022,Male,60 - 64,"ISCED 2011, level 2 – Lower secondary education",34141
+Israel,2022,Male,60 - 64,"ISCED 2011, level 3 – Upper secondary education",61308
+Israel,2022,Male,60 - 64,"ISCED 2011, level 5 – Short-cycle tertiary education",22533
+Israel,2022,Male,60 - 64,"ISCED 2011, level 6 – Bachelor’s or equivalent level",26772
+Israel,2022,Male,60 - 64,"ISCED 2011, level 7 – Master’s or equivalent level",22249
+Israel,2022,Male,60 - 64,"ISCED 2011, level 8 – Doctoral or equivalent level",2602
+Israel,2022,Male,60 - 64,"ISCED 2011, Unknown",4626
+Israel,2022,Male,60 - 64,"ISCED 2011, Total",180469
+Israel,2022,Male,65 - 69,"ISCED 2011, No education",6248
+Israel,2022,Male,65 - 69,"ISCED 2011, level 2 – Lower secondary education",33307
+Israel,2022,Male,65 - 69,"ISCED 2011, level 3 – Upper secondary education",52367
+Israel,2022,Male,65 - 69,"ISCED 2011, level 5 – Short-cycle tertiary education",22279
+Israel,2022,Male,65 - 69,"ISCED 2011, level 6 – Bachelor’s or equivalent level",24881
+Israel,2022,Male,65 - 69,"ISCED 2011, level 7 – Master’s or equivalent level",20162
+Israel,2022,Male,65 - 69,"ISCED 2011, level 8 – Doctoral or equivalent level",2826
+Israel,2022,Male,65 - 69,"ISCED 2011, Unknown",4554
+Israel,2022,Male,65 - 69,"ISCED 2011, Total",166624
+Israel,2022,Male,70 - 74,"ISCED 2011, No education",6107
+Israel,2022,Male,70 - 74,"ISCED 2011, level 2 – Lower secondary education",30726
+Israel,2022,Male,70 - 74,"ISCED 2011, level 3 – Upper secondary education",40412
+Israel,2022,Male,70 - 74,"ISCED 2011, level 5 – Short-cycle tertiary education",20180
+Israel,2022,Male,70 - 74,"ISCED 2011, level 6 – Bachelor’s or equivalent level",22342
+Israel,2022,Male,70 - 74,"ISCED 2011, level 7 – Master’s or equivalent level",17420
+Israel,2022,Male,70 - 74,"ISCED 2011, level 8 – Doctoral or equivalent level",3231
+Israel,2022,Male,70 - 74,"ISCED 2011, Unknown",4383
+Israel,2022,Male,70 - 74,"ISCED 2011, Total",144800
+Israel,2022,Male,75 - 79,"ISCED 2011, No education",5984
+Israel,2022,Male,75 - 79,"ISCED 2011, level 2 – Lower secondary education",22657
+Israel,2022,Male,75 - 79,"ISCED 2011, level 3 – Upper secondary education",25112
+Israel,2022,Male,75 - 79,"ISCED 2011, level 5 – Short-cycle tertiary education",11353
+Israel,2022,Male,75 - 79,"ISCED 2011, level 6 – Bachelor’s or equivalent level",13100
+Israel,2022,Male,75 - 79,"ISCED 2011, level 7 – Master’s or equivalent level",9370
+Israel,2022,Male,75 - 79,"ISCED 2011, level 8 – Doctoral or equivalent level",2532
+Israel,2022,Male,75 - 79,"ISCED 2011, Unknown",2947
+Israel,2022,Male,75 - 79,"ISCED 2011, Total",93056
+Israel,2022,Male,80 - 84,"ISCED 2011, No education",6138
+Israel,2022,Male,80 - 84,"ISCED 2011, level 2 – Lower secondary education",14082
+Israel,2022,Male,80 - 84,"ISCED 2011, level 3 – Upper secondary education",14299
+Israel,2022,Male,80 - 84,"ISCED 2011, level 5 – Short-cycle tertiary education",7845
+Israel,2022,Male,80 - 84,"ISCED 2011, level 6 – Bachelor’s or equivalent level",7552
+Israel,2022,Male,80 - 84,"ISCED 2011, level 7 – Master’s or equivalent level",6156
+Israel,2022,Male,80 - 84,"ISCED 2011, level 8 – Doctoral or equivalent level",1827
+Israel,2022,Male,80 - 84,"ISCED 2011, Unknown",2294
+Israel,2022,Male,80 - 84,"ISCED 2011, Total",60194
+Israel,2022,Male,85 - 89,"ISCED 2011, No education",5896
+Israel,2022,Male,85 - 89,"ISCED 2011, level 2 – Lower secondary education",8345
+Israel,2022,Male,85 - 89,"ISCED 2011, level 3 – Upper secondary education",8458
+Israel,2022,Male,85 - 89,"ISCED 2011, level 5 – Short-cycle tertiary education",4361
+Israel,2022,Male,85 - 89,"ISCED 2011, level 6 – Bachelor’s or equivalent level",5154
+Israel,2022,Male,85 - 89,"ISCED 2011, level 7 – Master’s or equivalent level",3144
+Israel,2022,Male,85 - 89,"ISCED 2011, level 8 – Doctoral or equivalent level",1222
+Israel,2022,Male,85 - 89,"ISCED 2011, Unknown",1590
+Israel,2022,Male,85 - 89,"ISCED 2011, Total",38171
+Israel,2022,Male,90 - 94,"ISCED 2011, No education",3685
+Israel,2022,Male,90 - 94,"ISCED 2011, level 2 – Lower secondary education",3014
+Israel,2022,Male,90 - 94,"ISCED 2011, level 3 – Upper secondary education",3459
+Israel,2022,Male,90 - 94,"ISCED 2011, level 5 – Short-cycle tertiary education",1108
+Israel,2022,Male,90 - 94,"ISCED 2011, level 6 – Bachelor’s or equivalent level",1514
+Israel,2022,Male,90 - 94,"ISCED 2011, level 7 – Master’s or equivalent level",846
+Israel,2022,Male,90 - 94,"ISCED 2011, level 8 – Doctoral or equivalent level",350
+Israel,2022,Male,90 - 94,"ISCED 2011, Unknown",480
+Israel,2022,Male,90 - 94,"ISCED 2011, Total",14455
+Israel,2022,Male,95 +,"ISCED 2011, No education",1576
+Israel,2022,Male,95 +,"ISCED 2011, level 2 – Lower secondary education",509
+Israel,2022,Male,95 +,"ISCED 2011, level 3 – Upper secondary education",536
+Israel,2022,Male,95 +,"ISCED 2011, level 5 – Short-cycle tertiary education",298
+Israel,2022,Male,95 +,"ISCED 2011, level 6 – Bachelor’s or equivalent level",283
+Israel,2022,Male,95 +,"ISCED 2011, level 7 – Master’s or equivalent level",433
+Israel,2022,Male,95 +,"ISCED 2011, level 8 – Doctoral or equivalent level",138
+Israel,2022,Male,95 +,"ISCED 2011, Unknown",417
+Israel,2022,Male,95 +,"ISCED 2011, Total",4189
+Israel,2022,Female,15 - 19,"ISCED 2011, No education",4250
+Israel,2022,Female,15 - 19,"ISCED 2011, level 2 – Lower secondary education",243538
+Israel,2022,Female,15 - 19,"ISCED 2011, level 3 – Upper secondary education",108294
+Israel,2022,Female,15 - 19,"ISCED 2011, level 5 – Short-cycle tertiary education",135
+Israel,2022,Female,15 - 19,"ISCED 2011, level 6 – Bachelor’s or equivalent level",0
+Israel,2022,Female,15 - 19,"ISCED 2011, level 7 – Master’s or equivalent level",0
+Israel,2022,Female,15 - 19,"ISCED 2011, level 8 – Doctoral or equivalent level",0
+Israel,2022,Female,15 - 19,"ISCED 2011, Unknown",160
+Israel,2022,Female,15 - 19,"ISCED 2011, Total",356378
+Israel,2022,Female,20 - 24,"ISCED 2011, No education",2936
+Israel,2022,Female,20 - 24,"ISCED 2011, level 2 – Lower secondary education",12588
+Israel,2022,Female,20 - 24,"ISCED 2011, level 3 – Upper secondary education",290276
+Israel,2022,Female,20 - 24,"ISCED 2011, level 5 – Short-cycle tertiary education",10144
+Israel,2022,Female,20 - 24,"ISCED 2011, level 6 – Bachelor’s or equivalent level",16566
+Israel,2022,Female,20 - 24,"ISCED 2011, level 7 – Master’s or equivalent level",388
+Israel,2022,Female,20 - 24,"ISCED 2011, level 8 – Doctoral or equivalent level",0
+Israel,2022,Female,20 - 24,"ISCED 2011, Unknown",555
+Israel,2022,Female,20 - 24,"ISCED 2011, Total",333452
+Israel,2022,Female,25 - 29,"ISCED 2011, No education",3616
+Israel,2022,Female,25 - 29,"ISCED 2011, level 2 – Lower secondary education",16526
+Israel,2022,Female,25 - 29,"ISCED 2011, level 3 – Upper secondary education",172763
+Israel,2022,Female,25 - 29,"ISCED 2011, level 5 – Short-cycle tertiary education",12288
+Israel,2022,Female,25 - 29,"ISCED 2011, level 6 – Bachelor’s or equivalent level",88371
+Israel,2022,Female,25 - 29,"ISCED 2011, level 7 – Master’s or equivalent level",13716
+Israel,2022,Female,25 - 29,"ISCED 2011, level 8 – Doctoral or equivalent level",85
+Israel,2022,Female,25 - 29,"ISCED 2011, Unknown",960
+Israel,2022,Female,25 - 29,"ISCED 2011, Total",308325
+Israel,2022,Female,30 - 34,"ISCED 2011, No education",4583
+Israel,2022,Female,30 - 34,"ISCED 2011, level 2 – Lower secondary education",17377
+Israel,2022,Female,30 - 34,"ISCED 2011, level 3 – Upper secondary education",125325
+Israel,2022,Female,30 - 34,"ISCED 2011, level 5 – Short-cycle tertiary education",12853
+Israel,2022,Female,30 - 34,"ISCED 2011, level 6 – Bachelor’s or equivalent level",99795
+Israel,2022,Female,30 - 34,"ISCED 2011, level 7 – Master’s or equivalent level",37227
+Israel,2022,Female,30 - 34,"ISCED 2011, level 8 – Doctoral or equivalent level",848
+Israel,2022,Female,30 - 34,"ISCED 2011, Unknown",1263
+Israel,2022,Female,30 - 34,"ISCED 2011, Total",299271
+Israel,2022,Female,35 - 39,"ISCED 2011, No education",4371
+Israel,2022,Female,35 - 39,"ISCED 2011, level 2 – Lower secondary education",19838
+Israel,2022,Female,35 - 39,"ISCED 2011, level 3 – Upper secondary education",112089
+Israel,2022,Female,35 - 39,"ISCED 2011, level 5 – Short-cycle tertiary education",14301
+Israel,2022,Female,35 - 39,"ISCED 2011, level 6 – Bachelor’s or equivalent level",86990
+Israel,2022,Female,35 - 39,"ISCED 2011, level 7 – Master’s or equivalent level",48305
+Israel,2022,Female,35 - 39,"ISCED 2011, level 8 – Doctoral or equivalent level",2079
+Israel,2022,Female,35 - 39,"ISCED 2011, Unknown",1668
+Israel,2022,Female,35 - 39,"ISCED 2011, Total",289641
+Israel,2022,Female,40 - 44,"ISCED 2011, No education",5058
+Israel,2022,Female,40 - 44,"ISCED 2011, level 2 – Lower secondary education",26947
+Israel,2022,Female,40 - 44,"ISCED 2011, level 3 – Upper secondary education",101101
+Israel,2022,Female,40 - 44,"ISCED 2011, level 5 – Short-cycle tertiary education",17246
+Israel,2022,Female,40 - 44,"ISCED 2011, level 6 – Bachelor’s or equivalent level",71775
+Israel,2022,Female,40 - 44,"ISCED 2011, level 7 – Master’s or equivalent level",46941
+Israel,2022,Female,40 - 44,"ISCED 2011, level 8 – Doctoral or equivalent level",3353
+Israel,2022,Female,40 - 44,"ISCED 2011, Unknown",1984
+Israel,2022,Female,40 - 44,"ISCED 2011, Total",274405
+Israel,2022,Female,45 - 49,"ISCED 2011, No education",7203
+Israel,2022,Female,45 - 49,"ISCED 2011, level 2 – Lower secondary education",28970
+Israel,2022,Female,45 - 49,"ISCED 2011, level 3 – Upper secondary education",105161
+Israel,2022,Female,45 - 49,"ISCED 2011, level 5 – Short-cycle tertiary education",19268
+Israel,2022,Female,45 - 49,"ISCED 2011, level 6 – Bachelor’s or equivalent level",58803
+Israel,2022,Female,45 - 49,"ISCED 2011, level 7 – Master’s or equivalent level",44748
+Israel,2022,Female,45 - 49,"ISCED 2011, level 8 – Doctoral or equivalent level",3277
+Israel,2022,Female,45 - 49,"ISCED 2011, Unknown",3374
+Israel,2022,Female,45 - 49,"ISCED 2011, Total",270804
+Israel,2022,Female,50 - 54,"ISCED 2011, No education",7582
+Israel,2022,Female,50 - 54,"ISCED 2011, level 2 – Lower secondary education",29450
+Israel,2022,Female,50 - 54,"ISCED 2011, level 3 – Upper secondary education",90595
+Israel,2022,Female,50 - 54,"ISCED 2011, level 5 – Short-cycle tertiary education",19796
+Israel,2022,Female,50 - 54,"ISCED 2011, level 6 – Bachelor’s or equivalent level",43576
+Israel,2022,Female,50 - 54,"ISCED 2011, level 7 – Master’s or equivalent level",37047
+Israel,2022,Female,50 - 54,"ISCED 2011, level 8 – Doctoral or equivalent level",2992
+Israel,2022,Female,50 - 54,"ISCED 2011, Unknown",5045
+Israel,2022,Female,50 - 54,"ISCED 2011, Total",236082
+Israel,2022,Female,55 - 59,"ISCED 2011, No education",8808
+Israel,2022,Female,55 - 59,"ISCED 2011, level 2 – Lower secondary education",30053
+Israel,2022,Female,55 - 59,"ISCED 2011, level 3 – Upper secondary education",77002
+Israel,2022,Female,55 - 59,"ISCED 2011, level 5 – Short-cycle tertiary education",19974
+Israel,2022,Female,55 - 59,"ISCED 2011, level 6 – Bachelor’s or equivalent level",34304
+Israel,2022,Female,55 - 59,"ISCED 2011, level 7 – Master’s or equivalent level",29334
+Israel,2022,Female,55 - 59,"ISCED 2011, level 8 – Doctoral or equivalent level",2234
+Israel,2022,Female,55 - 59,"ISCED 2011, Unknown",5140
+Israel,2022,Female,55 - 59,"ISCED 2011, Total",206849
+Israel,2022,Female,60 - 64,"ISCED 2011, No education",9950
+Israel,2022,Female,60 - 64,"ISCED 2011, level 2 – Lower secondary education",34530
+Israel,2022,Female,60 - 64,"ISCED 2011, level 3 – Upper secondary education",64072
+Israel,2022,Female,60 - 64,"ISCED 2011, level 5 – Short-cycle tertiary education",23583
+Israel,2022,Female,60 - 64,"ISCED 2011, level 6 – Bachelor’s or equivalent level",33163
+Israel,2022,Female,60 - 64,"ISCED 2011, level 7 – Master’s or equivalent level",27459
+Israel,2022,Female,60 - 64,"ISCED 2011, level 8 – Doctoral or equivalent level",2001
+Israel,2022,Female,60 - 64,"ISCED 2011, Unknown",5574
+Israel,2022,Female,60 - 64,"ISCED 2011, Total",200332
+Israel,2022,Female,65 - 69,"ISCED 2011, No education",10227
+Israel,2022,Female,65 - 69,"ISCED 2011, level 2 – Lower secondary education",37244
+Israel,2022,Female,65 - 69,"ISCED 2011, level 3 – Upper secondary education",56082
+Israel,2022,Female,65 - 69,"ISCED 2011, level 5 – Short-cycle tertiary education",25438
+Israel,2022,Female,65 - 69,"ISCED 2011, level 6 – Bachelor’s or equivalent level",30260
+Israel,2022,Female,65 - 69,"ISCED 2011, level 7 – Master’s or equivalent level",23304
+Israel,2022,Female,65 - 69,"ISCED 2011, level 8 – Doctoral or equivalent level",1638
+Israel,2022,Female,65 - 69,"ISCED 2011, Unknown",4960
+Israel,2022,Female,65 - 69,"ISCED 2011, Total",189153
+Israel,2022,Female,70 - 74,"ISCED 2011, No education",12280
+Israel,2022,Female,70 - 74,"ISCED 2011, level 2 – Lower secondary education",34320
+Israel,2022,Female,70 - 74,"ISCED 2011, level 3 – Upper secondary education",46861
+Israel,2022,Female,70 - 74,"ISCED 2011, level 5 – Short-cycle tertiary education",25611
+Israel,2022,Female,70 - 74,"ISCED 2011, level 6 – Bachelor’s or equivalent level",25067
+Israel,2022,Female,70 - 74,"ISCED 2011, level 7 – Master’s or equivalent level",19617
+Israel,2022,Female,70 - 74,"ISCED 2011, level 8 – Doctoral or equivalent level",2123
+Israel,2022,Female,70 - 74,"ISCED 2011, Unknown",4787
+Israel,2022,Female,70 - 74,"ISCED 2011, Total",170666
+Israel,2022,Female,75 - 79,"ISCED 2011, No education",13102
+Israel,2022,Female,75 - 79,"ISCED 2011, level 2 – Lower secondary education",25747
+Israel,2022,Female,75 - 79,"ISCED 2011, level 3 – Upper secondary education",29627
+Israel,2022,Female,75 - 79,"ISCED 2011, level 5 – Short-cycle tertiary education",16529
+Israel,2022,Female,75 - 79,"ISCED 2011, level 6 – Bachelor’s or equivalent level",13442
+Israel,2022,Female,75 - 79,"ISCED 2011, level 7 – Master’s or equivalent level",9913
+Israel,2022,Female,75 - 79,"ISCED 2011, level 8 – Doctoral or equivalent level",1294
+Israel,2022,Female,75 - 79,"ISCED 2011, Unknown",3106
+Israel,2022,Female,75 - 79,"ISCED 2011, Total",112759
+Israel,2022,Female,80 - 84,"ISCED 2011, No education",15039
+Israel,2022,Female,80 - 84,"ISCED 2011, level 2 – Lower secondary education",17900
+Israel,2022,Female,80 - 84,"ISCED 2011, level 3 – Upper secondary education",17800
+Israel,2022,Female,80 - 84,"ISCED 2011, level 5 – Short-cycle tertiary education",12161
+Israel,2022,Female,80 - 84,"ISCED 2011, level 6 – Bachelor’s or equivalent level",8360
+Israel,2022,Female,80 - 84,"ISCED 2011, level 7 – Master’s or equivalent level",6768
+Israel,2022,Female,80 - 84,"ISCED 2011, level 8 – Doctoral or equivalent level",923
+Israel,2022,Female,80 - 84,"ISCED 2011, Unknown",2756
+Israel,2022,Female,80 - 84,"ISCED 2011, Total",81708
+Israel,2022,Female,85 - 89,"ISCED 2011, No education",14555
+Israel,2022,Female,85 - 89,"ISCED 2011, level 2 – Lower secondary education",11367
+Israel,2022,Female,85 - 89,"ISCED 2011, level 3 – Upper secondary education",11706
+Israel,2022,Female,85 - 89,"ISCED 2011, level 5 – Short-cycle tertiary education",6640
+Israel,2022,Female,85 - 89,"ISCED 2011, level 6 – Bachelor’s or equivalent level",5133
+Israel,2022,Female,85 - 89,"ISCED 2011, level 7 – Master’s or equivalent level",4036
+Israel,2022,Female,85 - 89,"ISCED 2011, level 8 – Doctoral or equivalent level",664
+Israel,2022,Female,85 - 89,"ISCED 2011, Unknown",1492
+Israel,2022,Female,85 - 89,"ISCED 2011, Total",55594
+Israel,2022,Female,90 - 94,"ISCED 2011, No education",9069
+Israel,2022,Female,90 - 94,"ISCED 2011, level 2 – Lower secondary education",4218
+Israel,2022,Female,90 - 94,"ISCED 2011, level 3 – Upper secondary education",4917
+Israel,2022,Female,90 - 94,"ISCED 2011, level 5 – Short-cycle tertiary education",2102
+Israel,2022,Female,90 - 94,"ISCED 2011, level 6 – Bachelor’s or equivalent level",1937
+Israel,2022,Female,90 - 94,"ISCED 2011, level 7 – Master’s or equivalent level",1546
+Israel,2022,Female,90 - 94,"ISCED 2011, level 8 – Doctoral or equivalent level",238
+Israel,2022,Female,90 - 94,"ISCED 2011, Unknown",784
+Israel,2022,Female,90 - 94,"ISCED 2011, Total",24810
+Israel,2022,Female,95 +,"ISCED 2011, No education",3667
+Israel,2022,Female,95 +,"ISCED 2011, level 2 – Lower secondary education",1289
+Israel,2022,Female,95 +,"ISCED 2011, level 3 – Upper secondary education",1221
+Israel,2022,Female,95 +,"ISCED 2011, level 5 – Short-cycle tertiary education",528
+Israel,2022,Female,95 +,"ISCED 2011, level 6 – Bachelor’s or equivalent level",529
+Israel,2022,Female,95 +,"ISCED 2011, level 7 – Master’s or equivalent level",385
+Israel,2022,Female,95 +,"ISCED 2011, level 8 – Doctoral or equivalent level",52
+Israel,2022,Female,95 +,"ISCED 2011, Unknown",382
+Israel,2022,Female,95 +,"ISCED 2011, Total",8053

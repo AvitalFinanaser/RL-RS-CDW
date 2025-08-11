@@ -16,8 +16,8 @@ class RewardShaper:
 
         if reward_params is None:
             self.params = {
-                "w1": 0.4,  # coverage weight
-                "w2": 0.3,  # completion weight
+                "w1": 0.3,  # coverage weight
+                "w2": 0.4,  # completion weight
                 "w3": 0.3,  # content weight
                 "use_jsd": True  # Use Jensen-Shannon divergence for topic alignment
             }
@@ -82,3 +82,8 @@ class RewardShaper:
         positive_votes = np.sum(stance.matrix.values == '1')
         total_votes = stance.matrix.size
         return min(float(positive_votes / total_votes), 1.0)  # Cap at 1.0
+
+    def get_reward_components(self, agents, stance, doc_topic_matrix):
+        return {"coverage": self._coverage_reward(agents, doc_topic_matrix),
+                "completion": self._completion_reward(stance),
+                "content": self._content_reward(stance)}

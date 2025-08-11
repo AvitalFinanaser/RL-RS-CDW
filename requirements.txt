@@ -6,6 +6,7 @@ nltk
 scipy
 scikit-learn
 matplotlib
+seaborn
 gymnasium
 torch
 dotenv
@@ -15,3 +16,7 @@ openai
 langchain-openai
 langchain-core
 stable-baselines3
+
+
+
+

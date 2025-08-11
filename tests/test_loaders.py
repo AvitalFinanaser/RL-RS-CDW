@@ -135,9 +135,20 @@ def test_stance_loader():
     stance_df = stance_loader.load_empty_matrix()
     print(stance_df)
 
-    # Empty
     stance_df = stance_loader.load_random()
     print(stance_df)
+
+    # instance
+    sparse_stance = stance_loader.load_sparse_instance(instance_path="datasets/instances/instance1")
+    print(sparse_stance)
+    total_entries = sparse_stance.matrix.size
+    unknown_count = (sparse_stance.matrix == "?").sum().sum()
+    known_count = total_entries - unknown_count
+
+    print(f"Total entries: {total_entries}")
+    print(f"Number of known votes: {known_count}")
+    print(f"Number of unknown votes: {unknown_count}")
+    print(f"Sparsity achieved: {unknown_count / total_entries:.2%}")
 
 
 def run_all_tests():

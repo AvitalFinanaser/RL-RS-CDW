@@ -4,12 +4,8 @@ import random
 
 import numpy as np
 from dotenv import load_dotenv
-from typing import List, Dict, Optional, Literal
+from typing import List, Tuple, Dict, Optional, Literal
 from langchain_openai import ChatOpenAI
-
-# Parser output
-from langchain_core.output_parsers import PydanticOutputParser
-from pydantic import BaseModel, Field
 
 # Langchain
 from langchain_core.messages import SystemMessage, HumanMessage
@@ -18,6 +14,12 @@ from langchain.chains import LLMChain
 
 # Env
 from environment.topic_model import compute_agents_profiles
+
+# OpenAI
+import openai
+
+load_dotenv()
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 SENTIMENT_CATEGORIES = {
     (0.00, 0.20): "active_resistance",  # Complete opposition to in favor action
@@ -516,6 +518,124 @@ class LLMAgentWithTopics(LLMAgent):
             a.topic_profile_vector = agent_profiles[a.agent_id]
 
         return agents
+
+    def get_vote_with_consistency_summary(
+            self,
+            current_paragraph: str,
+            past_votes: List[Tuple[str, str]],
+            model_summarizer: str = os.getenv("LLM_MODEL"),
+            model_voter: str = os.getenv("LLM_MODEL"),
+            summarizer_temperature: float = float(os.getenv("SUMMARIZER_TEMPERATURE", "0.2")),
+            voter_temperature: float = float(os.getenv("VOTER_TEMPERATURE", "0.7")),
+    ) -> str:
+        """
+        Uses two LLM agents:
+        - A summarizer agent (low temperature) to extract consistent preferences.
+        - A voter agent (noisier) to evaluate a new paragraph based on the summary.
+
+        Returns:
+            vote (str): one of {"1", "0", "-1"}
+        """
+
+        if not past_votes:
+            vote = random.choices(["1", "0", "-1"], weights=[0.5, 0.3, 0.2])[0]
+            return vote
+
+        # -------- Summarization agent prompt --------
+        history_prompt = (
+            "You are a summarizer analyzing how a specific agent has voted on a list of paragraphs.\n"
+            "Each paragraph is followed by a vote:\n"
+            "- Vote: 1 means the agent supported the paragraph.\n"
+            "- Vote: 0 means the agent was neutral or indifferent.\n"
+            "- Vote: -1 means the agent rejected the paragraph.\n\n"
+            "Your goal is to extract consistent patterns in the agent's decisions.\n"
+            "Focus on content, tone, or style that the agent tends to approve or disapprove.\n"
+            "Avoid guessing — only describe what can be supported by the data.\n"
+            "Output only a short, accurate summary that helps another agent understand how he thinks.\n\n"
+        )
+
+        for idx, (text, vote) in enumerate(past_votes):
+            history_prompt += f"Paragraph {idx + 1}:\n{text.strip()}\nVote: {vote}\n\n"
+
+        try:
+            summary_response = openai.chat.completions.create(
+                model=model_summarizer,
+                messages=[
+                    {
+                        "role": "system",
+                        "content": (
+                            "You are a neutral summarizer of agent voting patterns. "
+                            "Your summaries must be factual, concise, and based only on explicit evidence."
+                        )
+                    },
+                    {"role": "user", "content": history_prompt}
+                ],
+                temperature=summarizer_temperature
+            )
+            behavior_summary = summary_response.choices[0].message.content.strip()
+        except Exception as e:
+            print(f"[Summarizer Agent] Error: {e}")
+            behavior_summary = "The agent shows mixed behavior with partial support and rejection."
+
+        # -------- Voter agent prompt --------
+        vote_prompt = f"""
+You are an agent deciding whether to support a new paragraph in a collaborative document.
+
+Your previous voting behavior summary:
+\"\"\"{behavior_summary}\"\"\"
+
+Now, you are asked to evaluate the following paragraph:
+\"\"\"{current_paragraph.strip()}\"\"\"
+
+Think step by step:
+1. Does this paragraph match the kind of content you usually support?
+2. Does it contradict or oppose what you tend to reject?
+3. Is it irrelevant or unclear in relation to your past preferences?
+
+Based on this analysis, choose exactly one of the following votes:
+- Vote: 1 (aligns with your usual support)
+- Vote: 0 (indifferent/unclear)
+- Vote: -1 (goes against your usual support)
+
+Respond only in the following format:
+Vote: <one of -1, 0, or 1>
+Explanation: <your brief reasoning>
+""".strip()
+
+        try:
+            voter_response = openai.chat.completions.create(
+                model=model_voter,
+                messages=[
+                    {
+                        "role": "system",
+                        "content": (
+                            f"You are Agent a{self.agent_id}, a participant in a collaborative constitution writing system for {self._topic}. "
+                            f"The document is a list of action proposals the community you are part of should determine policy. "
+                            f"Your profile: {self._format_profile()}. "
+                            f"You are {self._position_category} regarding the {self._topic} topic. "
+                            "Decide if the presented paragraph aligns with your past behavior based on the given summary. "
+                            "Think logically before voting."
+                        )
+                    },
+                    {"role": "user", "content": vote_prompt}
+                ],
+                temperature=voter_temperature
+            )
+            content = voter_response.choices[0].message.content.lower()
+
+            if "vote: -1" in content:
+                vote = "-1"
+            elif "vote: 0" in content:
+                vote = "0"
+            elif "vote: 1" in content:
+                vote = "1"
+            else:
+                vote = "0"
+        except Exception as e:
+            print(f"[Voter Agent] Error: {e}")
+            vote = "0"
+
+        return vote
 
     def __str__(self):
         base_str = super().__str__()

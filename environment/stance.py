@@ -1,3 +1,5 @@
+import json
+import os
 from typing import List
 import numpy as np
 import pandas as pd
@@ -40,7 +42,7 @@ class StanceMatrix:
         :param paragraph_id: paragraph p's identifier.
         :param vote: preference of agent a on p.
         """
-        assert str(vote) in ["-1", "0", "1"], "Vote must be in-favor (1), against (-1) or neutral (0)."
+        assert str(vote) in ["-1", "0", "1", "?"], "Vote must be in-favor (1), against (-1), neutral (0) or unknown (?)."
         assert agent_id in self.agents_ids, "Agent id is unknown."
         assert paragraph_id in self.paragraphs_ids, "Paragraph id is unknown."
 
@@ -110,5 +112,68 @@ class StanceMatrix:
                 numerical[i, j] = 0.0 if vote == "?" else float(vote)
         return numerical
 
+    def save_to_json(self, filepath: str):
+        """
+        Save the stance matrix to a JSON file.
+        Args:
+            filepath: Path to save the JSON file.
+        """
+        votes = []
+        for agent in self.agents:
+            for paragraph in self.paragraphs:
+                vote = self.get_vote(agent.agent_id, paragraph.paragraph_id)
+                if vote != "?":
+                    votes.append({
+                        "agent_id": agent.agent_id,
+                        "paragraph_id": paragraph.paragraph_id,
+                        "vote": vote
+                    })
+
+        os.makedirs(os.path.dirname(filepath), exist_ok=True)
+        with open(filepath, 'w', encoding='utf-8') as f:
+            json.dump({"votes": votes}, f, indent=2)
+
+    @classmethod
+    def load_from_json(cls, filepath: str, agents: List[Agent], paragraphs: List[Paragraph]):
+        """
+        Load a stance matrix from a JSON file.
+
+        Args:
+            filepath: Path to the JSON file containing vote data.
+            agents: List of Agent objects.
+            paragraphs: List of Paragraph objects.
+
+        Returns:
+            StanceMatrix: Populated stance matrix.
+        """
+        # Initialize an empty stance matrix
+        stance_matrix = cls(agents=agents, paragraphs=paragraphs)
+
+        # Load JSON file
+        with open(filepath, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+
+        # Validate agent and paragraph IDs
+        valid_agent_ids = {a.agent_id for a in agents}
+        valid_paragraph_ids = {p.paragraph_id for p in paragraphs}
+
+        # Populate the matrix with votes
+        for entry in data.get("votes", []):
+            agent_id = entry["agent_id"]
+            paragraph_id = entry["paragraph_id"]
+            vote = entry["vote"]
+            if (agent_id in valid_agent_ids and
+                    paragraph_id in valid_paragraph_ids and
+                    str(vote) in ["-1", "0", "1"]):
+                stance_matrix.set_vote(agent_id, paragraph_id, vote)
+            else:
+                print(
+                    f"Warning: Invalid entry skipped - agent_id: {agent_id}, paragraph_id: {paragraph_id}, vote: {vote}")
+
+        return stance_matrix
+
     def __str__(self):
         return str(self.matrix)
+
+
+__all__ = ["StanceMatrix"]

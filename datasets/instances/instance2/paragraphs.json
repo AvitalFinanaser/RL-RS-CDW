@@ -1,0 +1,252 @@
+[
+  {
+    "paragraph_id": 1,
+    "text": "Document existing urban tree canopy coverage without implementing protection measures.",
+    "name": "p1"
+  },
+  {
+    "paragraph_id": 2,
+    "text": "Mandate water recycling systems in all municipal buildings larger than 10,000 square feet.",
+    "name": "p2"
+  },
+  {
+    "paragraph_id": 3,
+    "text": "Offer 30% matching funds for private property climate resilience improvements.",
+    "name": "p3"
+  },
+  {
+    "paragraph_id": 4,
+    "text": "Mandate mixed-use development with minimum 30 units per acre in all growth centers.",
+    "name": "p4"
+  },
+  {
+    "paragraph_id": 5,
+    "text": "Record total waste volumes collected without implementing any reduction measures.",
+    "name": "p5"
+  },
+  {
+    "paragraph_id": 6,
+    "text": "Install solar panels on 50% of suitable municipal rooftops within 4 years.",
+    "name": "p6"
+  },
+  {
+    "paragraph_id": 7,
+    "text": "Record business sector emissions data without implementing any reduction incentives or requirements.",
+    "name": "p7"
+  },
+  {
+    "paragraph_id": 8,
+    "text": "Install smart water meters with leak detection in all municipal facilities within 2 years.",
+    "name": "p8"
+  },
+  {
+    "paragraph_id": 9,
+    "text": "Maintain current mix of development patterns with equal treatment of all densities.",
+    "name": "p9"
+  },
+  {
+    "paragraph_id": 10,
+    "text": "Allow optional energy efficiency upgrades only during already planned renovations.",
+    "name": "p10"
+  },
+  {
+    "paragraph_id": 11,
+    "text": "Cap emergency response planning at current levels with explicit exclusion of climate-related scenario training.",
+    "name": "p11"
+  },
+  {
+    "paragraph_id": 12,
+    "text": "Mandate commercial properties to achieve 60% waste diversion with phased implementation over 3 years.",
+    "name": "p12"
+  },
+  {
+    "paragraph_id": 13,
+    "text": "Allow optional preservation of mature trees during development if not conflicting with construction.",
+    "name": "p13"
+  },
+  {
+    "paragraph_id": 14,
+    "text": "Conduct basic biodiversity surveys in public parks with voluntary conservation guidelines.",
+    "name": "p14"
+  },
+  {
+    "paragraph_id": 15,
+    "text": "Document renewable energy potential of municipal properties without installation requirements.",
+    "name": "p15"
+  },
+  {
+    "paragraph_id": 16,
+    "text": "Cap recycling program funding at 10% of waste management budget regardless of diversion potential.",
+    "name": "p16"
+  },
+  {
+    "paragraph_id": 17,
+    "text": "Consider both energy efficiency and traditional cost metrics equally in building decisions.",
+    "name": "p17"
+  },
+  {
+    "paragraph_id": 18,
+    "text": "Consider both compact and traditional development patterns equally in zoning decisions.",
+    "name": "p18"
+  },
+  {
+    "paragraph_id": 19,
+    "text": "Consider both environmental and traditional economic metrics in business development programs.",
+    "name": "p19"
+  },
+  {
+    "paragraph_id": 20,
+    "text": "Maintain current waste collection systems with equal promotion of recycling and disposal options.",
+    "name": "p20"
+  },
+  {
+    "paragraph_id": 21,
+    "text": "Maintain current mix of traditional and green business support services with equal funding.",
+    "name": "p21"
+  },
+  {
+    "paragraph_id": 22,
+    "text": "Offer 15% grant funding for new commercial solar installations up to 100kW.",
+    "name": "p22"
+  },
+  {
+    "paragraph_id": 23,
+    "text": "Consider both historical data and climate projections equally in hazard planning.",
+    "name": "p23"
+  },
+  {
+    "paragraph_id": 24,
+    "text": "Conduct basic summer heat risk assessments with voluntary guidance for vulnerable populations.",
+    "name": "p24"
+  },
+  {
+    "paragraph_id": 25,
+    "text": "Install interpretive signage about ecosystem services in major natural areas.",
+    "name": "p25"
+  },
+  {
+    "paragraph_id": 26,
+    "text": "Offer 15% reduction in business license fees for companies meeting basic sustainability criteria.",
+    "name": "p26"
+  },
+  {
+    "paragraph_id": 27,
+    "text": "Cap disaster preparedness budgets at current levels with explicit exclusion of climate adaptation measures.",
+    "name": "p27"
+  },
+  {
+    "paragraph_id": 28,
+    "text": "Create a public dashboard showing real-time municipal renewable energy generation.",
+    "name": "p28"
+  },
+  {
+    "paragraph_id": 29,
+    "text": "Install flood monitoring systems in major waterways without adaptation planning.",
+    "name": "p29"
+  },
+  {
+    "paragraph_id": 30,
+    "text": "Allow optional clustering of development only when specifically requested by developers.",
+    "name": "p30"
+  },
+  {
+    "paragraph_id": 31,
+    "text": "Record basic energy usage in municipal buildings annually with no requirement to act on findings.",
+    "name": "p31"
+  },
+  {
+    "paragraph_id": 32,
+    "text": "Create public recognition program for businesses achieving voluntary sustainability targets.",
+    "name": "p32"
+  },
+  {
+    "paragraph_id": 33,
+    "text": "Conduct basic climate vulnerability assessments with voluntary adaptation guidelines.",
+    "name": "p33"
+  },
+  {
+    "paragraph_id": 34,
+    "text": "Install sidewalks in main commercial areas without comprehensive pedestrian network planning.",
+    "name": "p34"
+  },
+  {
+    "paragraph_id": 35,
+    "text": "Install basic water meters in municipal buildings to track consumption patterns.",
+    "name": "p35"
+  },
+  {
+    "paragraph_id": 36,
+    "text": "Conduct basic waste audits annually with voluntary reduction suggestions for departments.",
+    "name": "p36"
+  },
+  {
+    "paragraph_id": 37,
+    "text": "Consider both renewable and conventional energy sources equally in procurement decisions.",
+    "name": "p37"
+  },
+  {
+    "paragraph_id": 38,
+    "text": "Implement RFID tracking on all waste bins to charge variable rates based on disposal volumes.",
+    "name": "p38"
+  },
+  {
+    "paragraph_id": 39,
+    "text": "Offer 20% rebate on commercial waste fees for businesses achieving 40% recycling rates.",
+    "name": "p39"
+  },
+  {
+    "paragraph_id": 40,
+    "text": "Create public dashboards showing real-time air quality and heat index data across the city.",
+    "name": "p40"
+  },
+  {
+    "paragraph_id": 41,
+    "text": "Consider both ecosystem services and development needs equally in land use decisions.",
+    "name": "p41"
+  },
+  {
+    "paragraph_id": 42,
+    "text": "Create public dashboard tracking urban ecosystem health indicators city-wide.",
+    "name": "p42"
+  },
+  {
+    "paragraph_id": 43,
+    "text": "Allow optional low-flow fixture installations only during scheduled plumbing maintenance.",
+    "name": "p43"
+  },
+  {
+    "paragraph_id": 44,
+    "text": "Mandate all new municipal facilities to include minimum 50kW renewable generation capacity.",
+    "name": "p44"
+  },
+  {
+    "paragraph_id": 45,
+    "text": "Implement form-based code requiring pedestrian-oriented design in all commercial districts.",
+    "name": "p45"
+  },
+  {
+    "paragraph_id": 46,
+    "text": "Require all new municipal buildings to achieve LEED Silver certification minimum.",
+    "name": "p46"
+  },
+  {
+    "paragraph_id": 47,
+    "text": "Restrict solar panel installations to ground-level only, prohibiting rooftop installations in all zones.",
+    "name": "p47"
+  },
+  {
+    "paragraph_id": 48,
+    "text": "Maintain current emergency response capabilities with equal attention to all hazard types.",
+    "name": "p48"
+  },
+  {
+    "paragraph_id": 49,
+    "text": "Maintain current water infrastructure with equal focus on efficiency and traditional operations.",
+    "name": "p49"
+  },
+  {
+    "paragraph_id": 50,
+    "text": "Install recycling bins alongside trash containers in main public areas only.",
+    "name": "p50"
+  }
+]

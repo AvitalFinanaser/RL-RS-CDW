@@ -128,7 +128,7 @@ class StanceLoader:
             self,
             agents: List[Agent] = None,
             paragraphs: List[Paragraph] = None,
-            sparsity: float = 0.3,
+            sparsity: float = 0.0,
             seed: int = 42
     ):
         """
@@ -177,3 +177,66 @@ class StanceLoader:
         """
         from environment.stance import StanceMatrix
         return StanceMatrix(agents=self.agents, paragraphs=self.paragraphs)
+
+    def load_sparse_instance(self, instance_path: str, sparsity: float = None):
+        """
+        Loads a fully populated stance matrix from the instance folder and masks votes to create a sparse initial state.
+
+        Args:
+            instance_path (str): Path to the instance folder containing agents.json, paragraphs.json, and stance.json.
+            sparsity (float): Sparsity level to have a sparse version of the full stance matrix
+        Returns:
+            StanceMatrix: A sparse stance matrix with the specified percentage of votes masked as unknown "?".
+        """
+        from environment.stance import StanceMatrix
+        if sparsity is None:
+            sparsity_req = self.sparsity
+        else:
+            sparsity_req = sparsity
+        n_agents = len(self.agents) if self.agents else 0
+        n_paragraphs = len(self.paragraphs) if self.paragraphs else 0
+
+        # Load agents and paragraphs
+        agents_loader = AgentsLoader(filepath=instance_path, num_agents=n_agents)
+        paragraphs_loader = ParagraphsLoader(filepath=instance_path, num_paragraphs=n_paragraphs)
+        agents = agents_loader.load_all()
+        paragraphs = paragraphs_loader.load_all()
+
+        # Load full stance matrix from stance_matrix.json
+        json_path = os.path.join(instance_path, "stance.json")
+        if not os.path.exists(json_path):
+            raise FileNotFoundError(f"Stance matrix file not found at {json_path}")
+
+        with open(json_path, "r", encoding="utf-8") as f:
+            stance_data = json.load(f)
+
+        # Initialize StanceMatrix with loaded agents and paragraphs
+        stance = StanceMatrix(agents=agents, paragraphs=paragraphs)
+
+        # Populate the matrix with votes from the JSON file
+        for entry in stance_data["votes"]:
+            agent_id = entry["agent_id"]
+            paragraph_id = entry["paragraph_id"]
+            vote = str(entry["vote"])
+            if vote in ["-1", "0", "1"]:  # Ensure valid vote
+                stance.set_vote(agent_id, paragraph_id, vote)
+            else:
+                raise ValueError(f"Invalid vote entry agent {agent_id} - paragraph {paragraph_id}")
+
+        # Mask votes to achieve desired sparsity
+        rng = np.random.RandomState(self.seed)
+        actual_n_agents = len(agents)
+        actual_n_paragraphs = len(paragraphs)
+        total_entries = actual_n_agents * actual_n_paragraphs
+        n_unknown = int(sparsity_req * total_entries)  # Number of votes to mask
+
+        # Randomly select indices to mask
+        indices = rng.permutation(total_entries)[:n_unknown]
+        for idx in indices:
+            agent_idx = idx // actual_n_paragraphs
+            para_idx = idx % actual_n_paragraphs
+            agent_id = agents[agent_idx].agent_id
+            paragraph_id = paragraphs[para_idx].paragraph_id
+            stance.set_vote(agent_id, paragraph_id, "?")  # Mask vote
+
+        return stance
