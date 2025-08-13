@@ -19,8 +19,6 @@ from environment.memory import Memory
 from environment.topic_model import compute_paragraphs_topic_matrix
 from environment.loaders import ParagraphsLoader, AgentsLoader, EventsLoader, StanceLoader
 from environment.reward_shaping import RewardShaper
-
-
 #
 
 
@@ -111,8 +109,9 @@ class CollaborativeDocRecEnv(gym.Env):
         # - Extract texts for topic modeling
         texts = [p.text for p in self.paragraphs]
         # - Perform topic modeling to get document-topic matrix
-        doc_topic_matrix, best_k, topic_keywords = compute_paragraphs_topic_matrix(texts, k_range=range(3, 4))
-        # doc_topic_matrix, best_k, topic_keywords = compute_paragraphs_topic_matrix(texts, k_range=range(3, 21))
+        # doc_topic_matrix, best_k, topic_keywords = compute_paragraphs_topic_matrix(texts, k_range=range(2, 10))
+        doc_topic_matrix, best_k, topic_keywords = compute_paragraphs_topic_matrix(texts, k_range=[5])
+
         # - Store topic modeling results
         self.doc_topic_matrix = doc_topic_matrix
         self.best_k = best_k
@@ -175,7 +174,15 @@ class CollaborativeDocRecEnv(gym.Env):
         """
         if self._check_termination():
             print(f"Step {self.step_num}: Episode terminated before action.")
-            return self._get_obs(), 0.0, True, False, {"info": "Episode terminated"}
+            observation = self._get_obs()
+            info = {
+                "info": "Episode terminated",
+                "abandonment_rate": 1.0 if len(self.active_agents) == 0 else 1 - len(
+                    self.active_agents) / self.num_agents,
+                "active_agents_count": len(self.active_agents),
+                "completion_rate": self._get_stance_completion_rate()
+            }
+            return observation, 0.0, True, False, info
 
         # 1 - Validate action
         valid_actions = self.get_valid_actions(self.current_agent_id)
@@ -246,7 +253,10 @@ class CollaborativeDocRecEnv(gym.Env):
             "continuation": continuation,
             "agent_id": agent_id,
             "paragraph_id": paragraph_id,
-            "reward_components": reward_components
+            "reward_components": reward_components,
+            "abandonment_rate": 1.0 if len(self.active_agents) == 0 else 1 - len(self.active_agents) / self.num_agents,
+            "active_agents_count": len(self.active_agents),
+            "completion_rate": self._get_stance_completion_rate()
         }
         return observation, reward, terminated, False, info
 
@@ -293,7 +303,7 @@ class CollaborativeDocRecEnv(gym.Env):
                 f"Step: {self.step_num}\n"
                 f"Current agent: a{self.current_agent_id}\n"
                 f"Active agents: {len(self.active_agents)}/{self.num_agents}\n"
-                f"Stance completion: {self._get_stance_completion_rate():.2%}"
+                f"Stance completion: {self._get_stance_completion_rate():.4%}"
             )
             if len(self.memory.events) > 0:
                 recent = self.memory.events[-1:]  # Last interaction
@@ -315,10 +325,7 @@ class CollaborativeDocRecEnv(gym.Env):
             csv_path = os.path.join(self.render_path, self.render_csv_name)
             if not os.path.exists(self.render_path):
                 os.makedirs(self.render_path, exist_ok=True)
-            # if os.path.exists(csv_path):
-            #     df.to_csv(csv_path, mode="a", index=False, header=False)
-            # else:
-            #     df.to_csv(csv_path, index=False)
+
             df.to_csv(csv_path, index=False)  # Overwrite
 
     def _init_stance_matrix(self):
@@ -463,7 +470,7 @@ class CollaborativeDocRecEnv(gym.Env):
             self.consecutive_neutrals[agent_id] = 0
 
         # Compute quit probability: base 0.1 + 0.05 per consecutive neutral, capped at 0.5
-        quit_prob = min(0.1 + 0.05 * self.consecutive_neutrals[agent_id], 0.5)
+        quit_prob = min(0.1 + 0.05 * self.consecutive_neutrals[agent_id], 0.3)
 
         # Sample continuation: 0 (quit) if random < quit_prob or no unknown paragraphs
         if len(stance.get_unknown_paragraphs(agent_id)) == 0:

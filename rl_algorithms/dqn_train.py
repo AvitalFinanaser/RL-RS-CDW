@@ -7,32 +7,22 @@ from stable_baselines3.common.policies import BasePolicy
 from stable_baselines3.common.type_aliases import Schedule
 from stable_baselines3.common.torch_layers import create_mlp
 from stable_baselines3.common.env_checker import check_env
-from stable_baselines3.common.callbacks import BaseCallback
+from stable_baselines3.common.callbacks import (
+    BaseCallback,
+    CallbackList,
+    CheckpointCallback,
+    EvalCallback,
+)
 # DQN
 import torch
 import torch.nn as nn
 import gymnasium as gym
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
 # Our env
 from environment.env import CollaborativeDocRecEnv
 from environment.loaders import ParagraphsLoader, AgentsLoader, EventsLoader, StanceLoader
 
-
-# class EpisodeTrackerCallback(BaseCallback):
-#     def __init__(self, verbose=0):
-#         super().__init__(verbose)
-#         self.episode_count = 0
-#         self.episode_start_step = 0
-#
-#     def _on_step(self) -> bool:
-#         if self.locals["dones"][0]:
-#             self.episode_count += 1
-#             print(f"Episode {self.episode_count} ended at step {self.num_timesteps}")
-#             self.episode_start_step = self.num_timesteps
-#         return True
 
 class EpisodeTrackerCallback(BaseCallback):
     def __init__(self, verbose=0, log_path="dqn_episode_metrics.csv", step_log_path="dqn_step_metrics.csv"):
@@ -80,7 +70,8 @@ class EpisodeTrackerCallback(BaseCallback):
         vote = info.get("vote", "unknown")
         continuation = info.get("continuation", "unknown")
 
-        self.step_data.append({
+        # Track current step metrics for potential use as final episode metrics
+        current_step_data = {
             "Episode": self.episode_count + 1,
             "Step": step - self.episode_start_step,
             "Reward": reward,
@@ -92,7 +83,9 @@ class EpisodeTrackerCallback(BaseCallback):
             "Paragraph ID": paragraph_id,
             "Vote": vote,
             "Continuation": continuation
-        })
+        }
+
+        self.step_data.append(current_step_data)
 
         if self.locals["dones"][0]:
             self.episode_count += 1
@@ -102,16 +95,29 @@ class EpisodeTrackerCallback(BaseCallback):
             episode_sparsity = env.stance_loader.sparsity
             self.episode_sparsities.append(episode_sparsity)
 
-            # Access environment metrics
-            try:
-                abandonment_rate = 1 - len(env.active_agents) / env.num_agents
-                completion_rate = env._get_stance_completion_rate()
-                active_agents = len(env.active_agents)
-            except AttributeError as e:
-                print(f"Error accessing environment metrics: {e}")
-                abandonment_rate = 0.0
-                completion_rate = 0.0
-                active_agents = 0
+            # Extract final metrics from info dictionary or calculate from step data
+            completion_rate = components.get("completion", 0.0)
+
+            # Try to get final episode metrics from info dictionary first
+            abandonment_rate = info.get("final_abandonment_rate")
+            active_agents = info.get("final_active_agents")
+
+            # If not available in info, calculate from step data
+            if abandonment_rate is None or active_agents is None:
+                # Get the last few steps to determine final state
+                current_episode_steps = self.step_data[-episode_steps:]
+
+                # Count unique agents that were active in this episode
+                active_agent_ids = set()
+                for step_data in current_episode_steps:
+                    if step_data["Continuation"] == 1:  # Agent is still active
+                        active_agent_ids.add(step_data["Agent ID"])
+
+                active_agents = len(active_agent_ids) if abandonment_rate is None else active_agents
+
+                # Calculate abandonment rate
+                total_agents = env.num_agents if hasattr(env, 'num_agents') else 20  # fallback
+                abandonment_rate = 1 - (active_agents / total_agents) if abandonment_rate is None else abandonment_rate
 
             self.episode_rewards.append(episode_reward)
             self.episode_abandonments.append(abandonment_rate)
@@ -120,14 +126,14 @@ class EpisodeTrackerCallback(BaseCallback):
             self.episode_seeds.append(self.current_episode_seed)
             self.episode_steps.append(episode_steps)
 
-            print(f"Episode {self.episode_count}: Steps {episode_steps}, Reward {episode_reward:.2f}, "
-                  f"Abandonment {abandonment_rate:.2%}, Completion {completion_rate:.2%}, "
+            print(f"Episode {self.episode_count}: Steps {episode_steps}, Reward {episode_reward:.4f}, "
+                  f"Abandonment {abandonment_rate:.4%}, Completion {completion_rate:.4%}, "
                   f"Active {active_agents}, Seed {self.current_episode_seed}")
 
             self._log_metrics()
             self._log_step_metrics()
             self.episode_start_step = step
-            self.current_episode_seed = None  # Reset for next episode
+            self.current_episode_seed = None
 
         return True
 
@@ -144,7 +150,7 @@ class EpisodeTrackerCallback(BaseCallback):
             "Active Agents": self.episode_active_agents,
         }
         df = pd.DataFrame(episode_data)
-        df.to_csv(self.log_path, index=False)
+        df.to_csv(self.log_path, index=False, float_format='%.8f')
 
     def _log_step_metrics(self):
         """Log step-level metrics to CSV"""
@@ -361,16 +367,13 @@ class ActionMaskWrapper(gym.Wrapper):
         obs = self.env._get_obs()
         action_mask = obs["action_mask"]
         valid_actions = np.where(action_mask == 1)[0]
-
         if len(valid_actions) == 0:
             # If no valid actions, return done
             obs, reward, done, truncated, info = self.env.step(0)
             return obs, reward, True, truncated, info
-
         if action not in valid_actions:
             # Choose random valid action
             action = np.random.choice(valid_actions)
-
         return self.env.step(action)
 
     def reset(self, *, seed: Optional[int] = None, options: Optional[dict] = None):
@@ -379,82 +382,31 @@ class ActionMaskWrapper(gym.Wrapper):
         self.env.stance_loader.sparsity = sparsity  # Set random sparsity
         return self.env.reset(seed=seed, options=options)
 
-
-# class SparsityRandomizerWrapper(gym.Wrapper):
-#     def __init__(self, env, sparsity_levels=None):
-#         super().__init__(env)
-#         if sparsity_levels is None:
-#             sparsity_levels = [0.3, 0.5, 0.7]
-#         self.sparsity_levels = sparsity_levels
-#
-#     def reset(self, seed=None, options=None):
-#         sparsity = np.random.choice(self.sparsity_levels)
-#         self.env.stance_loader.sparsity = sparsity  # Set random sparsity here
-#         return self.env.reset(seed=seed, options=options)
-
-
-# def evaluate_dqn(model, env, n_episodes=10, base_seed=42):
-#     runner = BaselineRunner(env, [])  # Use runner's episode logic
-#     results = []
-#     for episode in range(n_episodes):
-#         result = runner.run_episode(lambda obs: model.predict(obs, deterministic=True)[0], seed=base_seed + episode)
-#         results.append(result)
-#     return results
-#
-#
-# def plot_results(dqn_csv="dqn_episode_metrics.csv", baseline_csv="baseline_results.csv", output_dir="results"):
-#     os.makedirs(output_dir, exist_ok=True)
-#     dqn_df = pd.read_csv(dqn_csv)
-#     baseline_df = pd.read_csv(baseline_csv)
-#     baseline_df['Policy'] = 'Baseline'  # For simplicity; adjust if multiple
-#
-#     # Reward plot
-#     plt.figure(figsize=(10, 6))
-#     sns.lineplot(data=dqn_df, x='Episode', y='Reward', label='DQN')
-#     sns.lineplot(data=baseline_df, x='episode', y='total_reward', label='Baseline')
-#     plt.title("Reward per Episode")
-#     plt.savefig(os.path.join(output_dir, "reward_plot.png"))
-#     plt.close()
-#
-#     # Abandonment plot
-#     plt.figure(figsize=(10, 6))
-#     sns.lineplot(data=dqn_df, x='Episode', y='Abandonment Rate', label='DQN')
-#     sns.lineplot(data=baseline_df, x='episode', y='abandonment_rate', label='Baseline')  # Adjust column
-#     plt.title("Abandonment Rate per Episode")
-#     plt.savefig(os.path.join(output_dir, "abandonment_plot.png"))
-#     plt.close()
-#
-#     # Completion plot
-#     plt.figure(figsize=(10, 6))
-#     sns.lineplot(data=dqn_df, x='Episode', y='Completion Rate', label='DQN')
-#     sns.lineplot(data=baseline_df, x='episode', y='completion_rate', label='Baseline')  # Adjust column
-#     plt.title("Completion Rate per Episode")
-#     plt.savefig(os.path.join(output_dir, "completion_plot.png"))
-#     plt.close()
-#
-#     print("Plots saved in", output_dir)
+    def __getattr__(self, name):
+        """Forward undefined attributes to the wrapped environment"""
+        return getattr(self.env, name)
 
 
 if __name__ == "__main__":
     # Env initialization
 
     ## 1) using specific initial state
-    file_path = "C:/Users/avita/Desktop/לימודים/תוכנית מיתר/Consenz project/CDW/datasets/event_lists/config001_llm/(CSF=0_events,_APS,_threshold=0.5)/instance_0"
-    paragraphs_loader = ParagraphsLoader(filepath=file_path)
-    agents_loader = AgentsLoader(filepath=file_path)
-    events_loader = EventsLoader(filepath=file_path)
-    env = CollaborativeDocRecEnv(
-        paragraphs_loader=paragraphs_loader,
-        agents_loader=agents_loader,
-        events_loader=events_loader,
-        render_mode='csv',
-        render_csv_name="dqn_try.csv",
-        seed=42
-    )
-
-    # Check compatibility
-    env = ActionMaskWrapper(env)
-    check_env(env)
+    # file_path = "C:/Users/avita/Desktop/לימודים/תוכנית מיתר/Consenz project/CDW/datasets/event_lists/config001_llm/(CSF=0_events,_APS,_threshold=0.5)/instance_0"
+    # paragraphs_loader = ParagraphsLoader(filepath=file_path)
+    # agents_loader = AgentsLoader(filepath=file_path)
+    # events_loader = EventsLoader(filepath=file_path)
+    # env = CollaborativeDocRecEnv(
+    #     paragraphs_loader=paragraphs_loader,
+    #     agents_loader=agents_loader,
+    #     events_loader=events_loader,
+    #     render_mode='csv',
+    #     render_csv_name="dqn_try.csv",
+    #     seed=42
+    # )
+    #
+    # # Check compatibility
+    # env = ActionMaskWrapper(env)
+    # check_env(env)
 
     ## 2) using config properties
 
@@ -471,15 +423,22 @@ if __name__ == "__main__":
     env = ActionMaskWrapper(env)
     check_env(env)
 
-    # OLD
-    # config = {"sparsity": 0.3,
-    #           "num_agents": 20,
-    #           "num_paragraphs": 20,
-    #           "file_path": "C:/Users/avita/Desktop/לימודים/תוכנית מיתר/Consenz project/CDW/datasets/event_lists/config001_llm/(CSF=0_events,_APS,_threshold=0.5)/instance_0",
-    #           "instance_id": "instance_0"}
-    # env = CollaborativeDocRecEnv.from_config(config)
-    # env = ActionMaskWrapper(env)
-    # check_env(env)
+    # Evaluation environment (separate seed, fixed sparsity, monitored for metrics)
+
+    eval_env = CollaborativeDocRecEnv.from_config(
+        {**config, "seed": config["seed"] + 10},  # different seed for eval
+        render_mode="csv", render_csv_name="eval_stream.csv"
+    )
+    eval_env = ActionMaskWrapper(eval_env)
+    eval_cb = EvalCallback(
+        eval_env,
+        best_model_save_path="./tmp/models",
+        log_path="./tmp/eval_logs",
+        eval_freq=10_000,
+        n_eval_episodes=10,
+        deterministic=True,
+        render=False,
+    )
 
     # Initialize the DQN model
     model = DQN(
@@ -502,14 +461,26 @@ if __name__ == "__main__":
         verbose=1
     )
 
+    callback = CallbackList([EpisodeTrackerCallback(), eval_cb])
+
     # Train the model
     model.learn(
-        total_timesteps=100000,
+        total_timesteps=10000,
         log_interval=1,
-        callback=EpisodeTrackerCallback(),
+        callback=callback,
         progress_bar=True
     )
 
     # Save trained model
-    model.save("dqn_new_masked_cdw")
-    print("DQN model trained and saved as 'dqn_new_masked_cdw'")
+    model.save("dqn_cdw")
+    print("DQN model trained and saved as 'dqn_cdw'")
+
+    # OLD
+    # config = {"sparsity": 0.3,
+    #           "num_agents": 20,
+    #           "num_paragraphs": 20,
+    #           "file_path": "C:/Users/avita/Desktop/לימודים/תוכנית מיתר/Consenz project/CDW/datasets/event_lists/config001_llm/(CSF=0_events,_APS,_threshold=0.5)/instance_0",
+    #           "instance_id": "instance_0"}
+    # env = CollaborativeDocRecEnv.from_config(config)
+    # env = ActionMaskWrapper(env)
+    # check_env(env)

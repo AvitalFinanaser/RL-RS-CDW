@@ -16,7 +16,8 @@ openai
 langchain-openai
 langchain-core
 stable-baselines3
-
-
+python-dotenv
+langchain_openai
+langchain
 
 

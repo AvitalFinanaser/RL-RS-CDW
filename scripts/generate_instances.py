@@ -5,6 +5,8 @@ import random
 import os
 import pandas as pd
 import numpy as np
+from contextlib import redirect_stdout
+
 # RL-RS
 from environment.collaborators import LLMAgent, LLMAgentWithTopics
 from environment.stance import StanceMatrix
@@ -156,6 +158,56 @@ def create_full_stance_matrix(
     return stance_matrix
 
 
+def create_mock_stance_example(
+        agents_file: str,
+        paragraphs_file: str,
+        output_file: str,
+        log_file: str = "mock_stance_log.txt",
+        num_agents: int = 5,
+        num_paragraphs: int = 5,
+        seed: int = 123):
+    """
+    Create a reduced-size stance matrix (e.g., 5x5) for documentation/demo purposes,
+    with printed prompts and votes for each cell.
+    All console output is also saved to a log file.
+    """
+    random.seed(seed)
+    np.random.seed(seed)
+
+    agents_loader = AgentsLoader(filepath=agents_file, num_agents=num_agents)
+    paragraphs_loader = ParagraphsLoader(filepath=paragraphs_file, num_paragraphs=num_paragraphs)
+    agents = agents_loader.load_all()
+    paragraphs = paragraphs_loader.load_all()
+
+    stance_matrix = StanceMatrix(agents=agents, paragraphs=paragraphs)
+
+    # Ensure output directories exist
+    os.makedirs(os.path.dirname(output_file), exist_ok=True)
+    os.makedirs(os.path.dirname(log_file), exist_ok=True)
+
+    with open(log_file, "w", encoding="utf-8") as f:
+        with redirect_stdout(f):  # Redirect all prints inside to the log file
+            for agent in agents:
+                for paragraph in paragraphs:
+                    past_votes = [
+                        (p.text, stance_matrix.get_vote(agent.agent_id, p.paragraph_id))
+                        for p in paragraphs
+                        if stance_matrix.get_vote(agent.agent_id, p.paragraph_id) != "?"
+                    ]
+                    vote = agent.get_vote_with_consistency_summary(
+                        current_paragraph=paragraph.text,
+                        past_votes=past_votes,
+                        log_prompts=True  # All prompts and votes printed here
+                    )
+                    stance_matrix.set_vote(agent.agent_id, paragraph.paragraph_id, vote)
+
+    # Save stance matrix JSON
+    stance_matrix.save_to_json(output_file)
+    print(f"Saved stance matrix to {output_file}")
+    print(f"Saved log to {log_file}")
+    return stance_matrix
+
+
 if __name__ == "__main__":
     base_path = Path("datasets/processed")
     file_path = base_path / "prepared_demographics.json"
@@ -199,4 +251,14 @@ if __name__ == "__main__":
         num_paragraphs=num_paragraphs,
         output_file="datasets/instances/instance2/stance.json",
         seed=seed
+    )
+
+    # Report Example
+    create_mock_stance_example(
+        agents_file="datasets/instances/instance2",
+        paragraphs_file="datasets/instances/instance2",
+        output_file="datasets/examples/mock_stance_5x5.json",
+        log_file="datasets/examples/mock_stance_5x5_log.txt",
+        num_agents=5,
+        num_paragraphs=5
     )

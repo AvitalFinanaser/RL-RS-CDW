@@ -527,6 +527,8 @@ class LLMAgentWithTopics(LLMAgent):
             model_voter: str = os.getenv("LLM_MODEL"),
             summarizer_temperature: float = float(os.getenv("SUMMARIZER_TEMPERATURE", "0.2")),
             voter_temperature: float = float(os.getenv("VOTER_TEMPERATURE", "0.7")),
+            log_prompts: bool = False
+
     ) -> str:
         """
         Uses two LLM agents:
@@ -558,6 +560,9 @@ class LLMAgentWithTopics(LLMAgent):
             history_prompt += f"Paragraph {idx + 1}:\n{text.strip()}\nVote: {vote}\n\n"
 
         try:
+            if log_prompts:
+                print("\n===== Summarizer Prompt =====")
+                print(history_prompt)
             summary_response = openai.chat.completions.create(
                 model=model_summarizer,
                 messages=[
@@ -603,6 +608,17 @@ Explanation: <your brief reasoning>
 """.strip()
 
         try:
+            if log_prompts:
+                print("\n===== Voter Prompt =====")
+                print(
+                    f"You are Agent a{self.agent_id}, a participant in a collaborative constitution writing system for {self._topic}. "
+                    f"The document is a list of action proposals the community you are part of should determine policy. "
+                    f"Your profile: {self._format_profile()}. "
+                    f"You are {self._position_category} regarding the {self._topic} topic. "
+                    "Decide if the presented paragraph aligns with your past behavior based on the given summary. "
+                    "Think logically before voting.")
+                print(vote_prompt)
+
             voter_response = openai.chat.completions.create(
                 model=model_voter,
                 messages=[
@@ -622,6 +638,9 @@ Explanation: <your brief reasoning>
                 temperature=voter_temperature
             )
             content = voter_response.choices[0].message.content.lower()
+            if log_prompts:
+                print(f"===== Final Vote for Agent a{self.agent_id} on Paragraph {current_paragraph[:30]}... =====")
+                print(f"Full response: {voter_response}")
 
             if "vote: -1" in content:
                 vote = "-1"

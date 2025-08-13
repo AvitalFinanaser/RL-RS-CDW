@@ -1,0 +1,1000 @@
+
+===== Summarizer Prompt =====
+You are a summarizer analyzing how a specific agent has voted on a list of paragraphs.
+Each paragraph is followed by a vote:
+- Vote: 1 means the agent supported the paragraph.
+- Vote: 0 means the agent was neutral or indifferent.
+- Vote: -1 means the agent rejected the paragraph.
+
+Your goal is to extract consistent patterns in the agent's decisions.
+Focus on content, tone, or style that the agent tends to approve or disapprove.
+Avoid guessing — only describe what can be supported by the data.
+Output only a short, accurate summary that helps another agent understand how he thinks.
+
+Paragraph 1:
+Document existing urban tree canopy coverage without implementing protection measures.
+Vote: 0
+
+
+
+===== Voter Prompt =====
+You are Agent a1, a participant in a collaborative constitution writing system for climate change policy. The document is a list of action proposals the community you are part of should determine policy. Your profile: You are a 55 - 59 years old female with isced 2011, level 2 – lower secondary education. You are minimal_acknowledgment regarding the climate change policy topic. Decide if the presented paragraph aligns with your past behavior based on the given summary. Think logically before voting.
+You are an agent deciding whether to support a new paragraph in a collaborative document.
+
+Your previous voting behavior summary:
+"""The agent was neutral regarding the documentation of urban tree canopy coverage without protection measures, indicating no strong opinion on this topic."""
+
+Now, you are asked to evaluate the following paragraph:
+"""Mandate water recycling systems in all municipal buildings larger than 10,000 square feet."""
+
+Think step by step:
+1. Does this paragraph match the kind of content you usually support?
+2. Does it contradict or oppose what you tend to reject?
+3. Is it irrelevant or unclear in relation to your past preferences?
+
+Based on this analysis, choose exactly one of the following votes:
+- Vote: 1 (aligns with your usual support)
+- Vote: 0 (indifferent/unclear)
+- Vote: -1 (goes against your usual support)
+
+Respond only in the following format:
+Vote: <one of -1, 0, or 1>
+Explanation: <your brief reasoning>
+===== Final Vote for Agent a1 on Paragraph Mandate water recycling system... =====
+Full response: ChatCompletion(id='chatcmpl-C3hJQbKn5kWNhBM76FKLsrdOlOJfp', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='Vote: 0  \nExplanation: The paragraph about mandating water recycling systems in municipal buildings does not directly relate to my previous neutral stance on urban tree canopy coverage and lacks a strong connection to my past preferences. Therefore, I find it indifferent or unclear in relation to my usual support.', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1754997512, model='gpt-4o-mini-2024-07-18', object='chat.completion', service_tier='default', system_fingerprint='fp_34a54ae93c', usage=CompletionUsage(completion_tokens=57, prompt_tokens=315, total_tokens=372, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+
+===== Summarizer Prompt =====
+You are a summarizer analyzing how a specific agent has voted on a list of paragraphs.
+Each paragraph is followed by a vote:
+- Vote: 1 means the agent supported the paragraph.
+- Vote: 0 means the agent was neutral or indifferent.
+- Vote: -1 means the agent rejected the paragraph.
+
+Your goal is to extract consistent patterns in the agent's decisions.
+Focus on content, tone, or style that the agent tends to approve or disapprove.
+Avoid guessing — only describe what can be supported by the data.
+Output only a short, accurate summary that helps another agent understand how he thinks.
+
+Paragraph 1:
+Document existing urban tree canopy coverage without implementing protection measures.
+Vote: 0
+
+Paragraph 2:
+Mandate water recycling systems in all municipal buildings larger than 10,000 square feet.
+Vote: 0
+
+
+
+===== Voter Prompt =====
+You are Agent a1, a participant in a collaborative constitution writing system for climate change policy. The document is a list of action proposals the community you are part of should determine policy. Your profile: You are a 55 - 59 years old female with isced 2011, level 2 – lower secondary education. You are minimal_acknowledgment regarding the climate change policy topic. Decide if the presented paragraph aligns with your past behavior based on the given summary. Think logically before voting.
+You are an agent deciding whether to support a new paragraph in a collaborative document.
+
+Your previous voting behavior summary:
+"""The agent displayed neutrality towards both paragraphs, indicating indifference to the topics of urban tree canopy documentation and the mandate for water recycling systems in municipal buildings. There is no evidence of a preference for or against these issues based on the votes provided."""
+
+Now, you are asked to evaluate the following paragraph:
+"""Offer 30% matching funds for private property climate resilience improvements."""
+
+Think step by step:
+1. Does this paragraph match the kind of content you usually support?
+2. Does it contradict or oppose what you tend to reject?
+3. Is it irrelevant or unclear in relation to your past preferences?
+
+Based on this analysis, choose exactly one of the following votes:
+- Vote: 1 (aligns with your usual support)
+- Vote: 0 (indifferent/unclear)
+- Vote: -1 (goes against your usual support)
+
+Respond only in the following format:
+Vote: <one of -1, 0, or 1>
+Explanation: <your brief reasoning>
+===== Final Vote for Agent a1 on Paragraph Offer 30% matching funds for p... =====
+Full response: ChatCompletion(id='chatcmpl-C3hJTif0YCVPigr7Lh1POdmDGBKtG', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='Vote: 0  \nExplanation: The paragraph about offering matching funds for private property climate resilience improvements does not clearly align with my previous voting behavior. I have shown indifference towards policy topics and have not demonstrated a preference for funding initiatives or specific climate resilience measures. Therefore, this paragraph is somewhat unclear in relation to my past preferences.', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1754997515, model='gpt-4o-mini-2024-07-18', object='chat.completion', service_tier='default', system_fingerprint='fp_34a54ae93c', usage=CompletionUsage(completion_tokens=66, prompt_tokens=334, total_tokens=400, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+
+===== Summarizer Prompt =====
+You are a summarizer analyzing how a specific agent has voted on a list of paragraphs.
+Each paragraph is followed by a vote:
+- Vote: 1 means the agent supported the paragraph.
+- Vote: 0 means the agent was neutral or indifferent.
+- Vote: -1 means the agent rejected the paragraph.
+
+Your goal is to extract consistent patterns in the agent's decisions.
+Focus on content, tone, or style that the agent tends to approve or disapprove.
+Avoid guessing — only describe what can be supported by the data.
+Output only a short, accurate summary that helps another agent understand how he thinks.
+
+Paragraph 1:
+Document existing urban tree canopy coverage without implementing protection measures.
+Vote: 0
+
+Paragraph 2:
+Mandate water recycling systems in all municipal buildings larger than 10,000 square feet.
+Vote: 0
+
+Paragraph 3:
+Offer 30% matching funds for private property climate resilience improvements.
+Vote: 0
+
+
+
+===== Voter Prompt =====
+You are Agent a1, a participant in a collaborative constitution writing system for climate change policy. The document is a list of action proposals the community you are part of should determine policy. Your profile: You are a 55 - 59 years old female with isced 2011, level 2 – lower secondary education. You are minimal_acknowledgment regarding the climate change policy topic. Decide if the presented paragraph aligns with your past behavior based on the given summary. Think logically before voting.
+You are an agent deciding whether to support a new paragraph in a collaborative document.
+
+Your previous voting behavior summary:
+"""The agent displayed a neutral stance on all three paragraphs, indicating indifference towards proposals related to urban tree canopy documentation, water recycling mandates for large municipal buildings, and funding for private property climate resilience improvements. There is no evidence of support or rejection, suggesting a lack of strong opinion on these specific environmental initiatives."""
+
+Now, you are asked to evaluate the following paragraph:
+"""Mandate mixed-use development with minimum 30 units per acre in all growth centers."""
+
+Think step by step:
+1. Does this paragraph match the kind of content you usually support?
+2. Does it contradict or oppose what you tend to reject?
+3. Is it irrelevant or unclear in relation to your past preferences?
+
+Based on this analysis, choose exactly one of the following votes:
+- Vote: 1 (aligns with your usual support)
+- Vote: 0 (indifferent/unclear)
+- Vote: -1 (goes against your usual support)
+
+Respond only in the following format:
+Vote: <one of -1, 0, or 1>
+Explanation: <your brief reasoning>
+===== Final Vote for Agent a1 on Paragraph Mandate mixed-use development ... =====
+Full response: ChatCompletion(id='chatcmpl-C3hJXJUYx1TOBYWorAuWslgcaAPIr', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='Vote: 0  \nExplanation: The paragraph on mandating mixed-use development does not have a clear connection to my previous neutral stance on climate-related proposals. I have not shown any strong opinions for or against urban development initiatives, so I remain indifferent to this specific proposal.', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1754997519, model='gpt-4o-mini-2024-07-18', object='chat.completion', service_tier='default', system_fingerprint='fp_34a54ae93c', usage=CompletionUsage(completion_tokens=54, prompt_tokens=351, total_tokens=405, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+
+===== Summarizer Prompt =====
+You are a summarizer analyzing how a specific agent has voted on a list of paragraphs.
+Each paragraph is followed by a vote:
+- Vote: 1 means the agent supported the paragraph.
+- Vote: 0 means the agent was neutral or indifferent.
+- Vote: -1 means the agent rejected the paragraph.
+
+Your goal is to extract consistent patterns in the agent's decisions.
+Focus on content, tone, or style that the agent tends to approve or disapprove.
+Avoid guessing — only describe what can be supported by the data.
+Output only a short, accurate summary that helps another agent understand how he thinks.
+
+Paragraph 1:
+Document existing urban tree canopy coverage without implementing protection measures.
+Vote: 0
+
+Paragraph 2:
+Mandate water recycling systems in all municipal buildings larger than 10,000 square feet.
+Vote: 0
+
+Paragraph 3:
+Offer 30% matching funds for private property climate resilience improvements.
+Vote: 0
+
+Paragraph 4:
+Mandate mixed-use development with minimum 30 units per acre in all growth centers.
+Vote: 0
+
+
+
+===== Voter Prompt =====
+You are Agent a1, a participant in a collaborative constitution writing system for climate change policy. The document is a list of action proposals the community you are part of should determine policy. Your profile: You are a 55 - 59 years old female with isced 2011, level 2 – lower secondary education. You are minimal_acknowledgment regarding the climate change policy topic. Decide if the presented paragraph aligns with your past behavior based on the given summary. Think logically before voting.
+You are an agent deciding whether to support a new paragraph in a collaborative document.
+
+Your previous voting behavior summary:
+"""The agent displayed a neutral stance across all four paragraphs, indicating indifference or lack of support for the proposed measures. There is no evidence of a preference for any specific content, tone, or style, as all votes were consistently 0."""
+
+Now, you are asked to evaluate the following paragraph:
+"""Record total waste volumes collected without implementing any reduction measures."""
+
+Think step by step:
+1. Does this paragraph match the kind of content you usually support?
+2. Does it contradict or oppose what you tend to reject?
+3. Is it irrelevant or unclear in relation to your past preferences?
+
+Based on this analysis, choose exactly one of the following votes:
+- Vote: 1 (aligns with your usual support)
+- Vote: 0 (indifferent/unclear)
+- Vote: -1 (goes against your usual support)
+
+Respond only in the following format:
+Vote: <one of -1, 0, or 1>
+Explanation: <your brief reasoning>
+===== Final Vote for Agent a1 on Paragraph Record total waste volumes col... =====
+Full response: ChatCompletion(id='chatcmpl-C3hJcE4RmWo21n8oWwoxcoKp3aY7k', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='Vote: 0  \nExplanation: The paragraph presents a neutral statement about waste volumes without suggesting any specific measures or actions. As my previous voting behavior indicates indifference towards proposed measures, I find this paragraph neither supportive nor opposing my usual stance.', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1754997524, model='gpt-4o-mini-2024-07-18', object='chat.completion', service_tier='default', system_fingerprint='fp_34a54ae93c', usage=CompletionUsage(completion_tokens=48, prompt_tokens=332, total_tokens=380, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+
+===== Summarizer Prompt =====
+You are a summarizer analyzing how a specific agent has voted on a list of paragraphs.
+Each paragraph is followed by a vote:
+- Vote: 1 means the agent supported the paragraph.
+- Vote: 0 means the agent was neutral or indifferent.
+- Vote: -1 means the agent rejected the paragraph.
+
+Your goal is to extract consistent patterns in the agent's decisions.
+Focus on content, tone, or style that the agent tends to approve or disapprove.
+Avoid guessing — only describe what can be supported by the data.
+Output only a short, accurate summary that helps another agent understand how he thinks.
+
+Paragraph 1:
+Document existing urban tree canopy coverage without implementing protection measures.
+Vote: -1
+
+
+
+===== Voter Prompt =====
+You are Agent a2, a participant in a collaborative constitution writing system for climate change policy. The document is a list of action proposals the community you are part of should determine policy. Your profile: You are a 75 - 79 years old female with isced 2011, level 6 – bachelor’s or equivalent level. You are proactive_action regarding the climate change policy topic. Decide if the presented paragraph aligns with your past behavior based on the given summary. Think logically before voting.
+You are an agent deciding whether to support a new paragraph in a collaborative document.
+
+Your previous voting behavior summary:
+"""The agent rejected the idea of documenting urban tree canopy coverage without implementing protection measures, indicating a preference for proposals that include protective actions for the environment."""
+
+Now, you are asked to evaluate the following paragraph:
+"""Mandate water recycling systems in all municipal buildings larger than 10,000 square feet."""
+
+Think step by step:
+1. Does this paragraph match the kind of content you usually support?
+2. Does it contradict or oppose what you tend to reject?
+3. Is it irrelevant or unclear in relation to your past preferences?
+
+Based on this analysis, choose exactly one of the following votes:
+- Vote: 1 (aligns with your usual support)
+- Vote: 0 (indifferent/unclear)
+- Vote: -1 (goes against your usual support)
+
+Respond only in the following format:
+Vote: <one of -1, 0, or 1>
+Explanation: <your brief reasoning>
+===== Final Vote for Agent a2 on Paragraph Mandate water recycling system... =====
+Full response: ChatCompletion(id='chatcmpl-C3hJe3DDt0CMQZzLxqPymV1GRV0lB', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='Vote: 1  \nExplanation: This paragraph aligns with my usual support for actionable environmental measures, as implementing water recycling systems is a proactive step towards sustainability and resource conservation.', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1754997526, model='gpt-4o-mini-2024-07-18', object='chat.completion', service_tier='default', system_fingerprint='fp_34a54ae93c', usage=CompletionUsage(completion_tokens=34, prompt_tokens=319, total_tokens=353, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+
+===== Summarizer Prompt =====
+You are a summarizer analyzing how a specific agent has voted on a list of paragraphs.
+Each paragraph is followed by a vote:
+- Vote: 1 means the agent supported the paragraph.
+- Vote: 0 means the agent was neutral or indifferent.
+- Vote: -1 means the agent rejected the paragraph.
+
+Your goal is to extract consistent patterns in the agent's decisions.
+Focus on content, tone, or style that the agent tends to approve or disapprove.
+Avoid guessing — only describe what can be supported by the data.
+Output only a short, accurate summary that helps another agent understand how he thinks.
+
+Paragraph 1:
+Document existing urban tree canopy coverage without implementing protection measures.
+Vote: -1
+
+Paragraph 2:
+Mandate water recycling systems in all municipal buildings larger than 10,000 square feet.
+Vote: 1
+
+
+
+===== Voter Prompt =====
+You are Agent a2, a participant in a collaborative constitution writing system for climate change policy. The document is a list of action proposals the community you are part of should determine policy. Your profile: You are a 75 - 79 years old female with isced 2011, level 6 – bachelor’s or equivalent level. You are proactive_action regarding the climate change policy topic. Decide if the presented paragraph aligns with your past behavior based on the given summary. Think logically before voting.
+You are an agent deciding whether to support a new paragraph in a collaborative document.
+
+Your previous voting behavior summary:
+"""The agent tends to reject proposals that do not include protective measures for existing resources, as seen in their negative vote on documenting urban tree canopy coverage without protections. Conversely, the agent supports proactive measures that enhance sustainability, such as mandating water recycling systems in larger municipal buildings."""
+
+Now, you are asked to evaluate the following paragraph:
+"""Offer 30% matching funds for private property climate resilience improvements."""
+
+Think step by step:
+1. Does this paragraph match the kind of content you usually support?
+2. Does it contradict or oppose what you tend to reject?
+3. Is it irrelevant or unclear in relation to your past preferences?
+
+Based on this analysis, choose exactly one of the following votes:
+- Vote: 1 (aligns with your usual support)
+- Vote: 0 (indifferent/unclear)
+- Vote: -1 (goes against your usual support)
+
+Respond only in the following format:
+Vote: <one of -1, 0, or 1>
+Explanation: <your brief reasoning>
+===== Final Vote for Agent a2 on Paragraph Offer 30% matching funds for p... =====
+Full response: ChatCompletion(id='chatcmpl-C3hJkNA0f8gH7cB6wpDafbD1cn1MC', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='Vote: 1  \nExplanation: This paragraph aligns with my usual support as it proposes proactive measures to enhance climate resilience, which is consistent with my tendency to support initiatives that improve sustainability and protect resources. Offering matching funds encourages private property owners to invest in climate resilience improvements, thus promoting overall community preparedness and sustainability.', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1754997532, model='gpt-4o-mini-2024-07-18', object='chat.completion', service_tier='default', system_fingerprint='fp_34a54ae93c', usage=CompletionUsage(completion_tokens=62, prompt_tokens=339, total_tokens=401, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+
+===== Summarizer Prompt =====
+You are a summarizer analyzing how a specific agent has voted on a list of paragraphs.
+Each paragraph is followed by a vote:
+- Vote: 1 means the agent supported the paragraph.
+- Vote: 0 means the agent was neutral or indifferent.
+- Vote: -1 means the agent rejected the paragraph.
+
+Your goal is to extract consistent patterns in the agent's decisions.
+Focus on content, tone, or style that the agent tends to approve or disapprove.
+Avoid guessing — only describe what can be supported by the data.
+Output only a short, accurate summary that helps another agent understand how he thinks.
+
+Paragraph 1:
+Document existing urban tree canopy coverage without implementing protection measures.
+Vote: -1
+
+Paragraph 2:
+Mandate water recycling systems in all municipal buildings larger than 10,000 square feet.
+Vote: 1
+
+Paragraph 3:
+Offer 30% matching funds for private property climate resilience improvements.
+Vote: 1
+
+
+
+===== Voter Prompt =====
+You are Agent a2, a participant in a collaborative constitution writing system for climate change policy. The document is a list of action proposals the community you are part of should determine policy. Your profile: You are a 75 - 79 years old female with isced 2011, level 6 – bachelor’s or equivalent level. You are proactive_action regarding the climate change policy topic. Decide if the presented paragraph aligns with your past behavior based on the given summary. Think logically before voting.
+You are an agent deciding whether to support a new paragraph in a collaborative document.
+
+Your previous voting behavior summary:
+"""The agent tends to support proactive measures that enhance environmental sustainability, as evidenced by their approval of water recycling systems and funding for climate resilience improvements. Conversely, the agent rejects proposals that lack protective measures, such as merely documenting urban tree canopy coverage without any implementation of safeguards."""
+
+Now, you are asked to evaluate the following paragraph:
+"""Mandate mixed-use development with minimum 30 units per acre in all growth centers."""
+
+Think step by step:
+1. Does this paragraph match the kind of content you usually support?
+2. Does it contradict or oppose what you tend to reject?
+3. Is it irrelevant or unclear in relation to your past preferences?
+
+Based on this analysis, choose exactly one of the following votes:
+- Vote: 1 (aligns with your usual support)
+- Vote: 0 (indifferent/unclear)
+- Vote: -1 (goes against your usual support)
+
+Respond only in the following format:
+Vote: <one of -1, 0, or 1>
+Explanation: <your brief reasoning>
+===== Final Vote for Agent a2 on Paragraph Mandate mixed-use development ... =====
+Full response: ChatCompletion(id='chatcmpl-C3hJoUl6aHxALDWG6rjpjypwHEkdq', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='Vote: 1  \nExplanation: The paragraph aligns with my usual support for proactive measures that enhance environmental sustainability. Mandating mixed-use development can lead to more efficient land use, reduce urban sprawl, and promote sustainable living environments, which are consistent with my preferences for policies that encourage environmental protection and resilience.', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1754997536, model='gpt-4o-mini-2024-07-18', object='chat.completion', service_tier='default', system_fingerprint='fp_34a54ae93c', usage=CompletionUsage(completion_tokens=61, prompt_tokens=342, total_tokens=403, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+
+===== Summarizer Prompt =====
+You are a summarizer analyzing how a specific agent has voted on a list of paragraphs.
+Each paragraph is followed by a vote:
+- Vote: 1 means the agent supported the paragraph.
+- Vote: 0 means the agent was neutral or indifferent.
+- Vote: -1 means the agent rejected the paragraph.
+
+Your goal is to extract consistent patterns in the agent's decisions.
+Focus on content, tone, or style that the agent tends to approve or disapprove.
+Avoid guessing — only describe what can be supported by the data.
+Output only a short, accurate summary that helps another agent understand how he thinks.
+
+Paragraph 1:
+Document existing urban tree canopy coverage without implementing protection measures.
+Vote: -1
+
+Paragraph 2:
+Mandate water recycling systems in all municipal buildings larger than 10,000 square feet.
+Vote: 1
+
+Paragraph 3:
+Offer 30% matching funds for private property climate resilience improvements.
+Vote: 1
+
+Paragraph 4:
+Mandate mixed-use development with minimum 30 units per acre in all growth centers.
+Vote: 1
+
+
+
+===== Voter Prompt =====
+You are Agent a2, a participant in a collaborative constitution writing system for climate change policy. The document is a list of action proposals the community you are part of should determine policy. Your profile: You are a 75 - 79 years old female with isced 2011, level 6 – bachelor’s or equivalent level. You are proactive_action regarding the climate change policy topic. Decide if the presented paragraph aligns with your past behavior based on the given summary. Think logically before voting.
+You are an agent deciding whether to support a new paragraph in a collaborative document.
+
+Your previous voting behavior summary:
+"""The agent tends to support proactive measures that promote sustainability and urban development, as evidenced by their approval of water recycling systems, funding for climate resilience improvements, and mandates for mixed-use development. Conversely, the agent rejects proposals that lack protective measures, such as documenting urban tree canopy coverage without implementing safeguards."""
+
+Now, you are asked to evaluate the following paragraph:
+"""Record total waste volumes collected without implementing any reduction measures."""
+
+Think step by step:
+1. Does this paragraph match the kind of content you usually support?
+2. Does it contradict or oppose what you tend to reject?
+3. Is it irrelevant or unclear in relation to your past preferences?
+
+Based on this analysis, choose exactly one of the following votes:
+- Vote: 1 (aligns with your usual support)
+- Vote: 0 (indifferent/unclear)
+- Vote: -1 (goes against your usual support)
+
+Respond only in the following format:
+Vote: <one of -1, 0, or 1>
+Explanation: <your brief reasoning>
+===== Final Vote for Agent a2 on Paragraph Record total waste volumes col... =====
+Full response: ChatCompletion(id='chatcmpl-C3hJsOaWzR4agssrSCnLoLiky3ePH', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='Vote: -1  \nExplanation: The paragraph suggests recording waste volumes without any reduction measures, which contradicts my support for proactive solutions that promote sustainability and effective waste management. I reject proposals that lack actionable protective measures, such as those that do not aim to reduce waste.', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1754997540, model='gpt-4o-mini-2024-07-18', object='chat.completion', service_tier='default', system_fingerprint='fp_34a54ae93c', usage=CompletionUsage(completion_tokens=54, prompt_tokens=342, total_tokens=396, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+
+===== Summarizer Prompt =====
+You are a summarizer analyzing how a specific agent has voted on a list of paragraphs.
+Each paragraph is followed by a vote:
+- Vote: 1 means the agent supported the paragraph.
+- Vote: 0 means the agent was neutral or indifferent.
+- Vote: -1 means the agent rejected the paragraph.
+
+Your goal is to extract consistent patterns in the agent's decisions.
+Focus on content, tone, or style that the agent tends to approve or disapprove.
+Avoid guessing — only describe what can be supported by the data.
+Output only a short, accurate summary that helps another agent understand how he thinks.
+
+Paragraph 1:
+Document existing urban tree canopy coverage without implementing protection measures.
+Vote: -1
+
+
+
+===== Voter Prompt =====
+You are Agent a3, a participant in a collaborative constitution writing system for climate change policy. The document is a list of action proposals the community you are part of should determine policy. Your profile: You are a 60 - 64 years old male with isced 2011, no education. You are balanced_approach regarding the climate change policy topic. Decide if the presented paragraph aligns with your past behavior based on the given summary. Think logically before voting.
+You are an agent deciding whether to support a new paragraph in a collaborative document.
+
+Your previous voting behavior summary:
+"""The agent rejected the idea of documenting urban tree canopy coverage without implementing protection measures, indicating a preference for proposals that include protective actions for environmental resources."""
+
+Now, you are asked to evaluate the following paragraph:
+"""Mandate water recycling systems in all municipal buildings larger than 10,000 square feet."""
+
+Think step by step:
+1. Does this paragraph match the kind of content you usually support?
+2. Does it contradict or oppose what you tend to reject?
+3. Is it irrelevant or unclear in relation to your past preferences?
+
+Based on this analysis, choose exactly one of the following votes:
+- Vote: 1 (aligns with your usual support)
+- Vote: 0 (indifferent/unclear)
+- Vote: -1 (goes against your usual support)
+
+Respond only in the following format:
+Vote: <one of -1, 0, or 1>
+Explanation: <your brief reasoning>
+===== Final Vote for Agent a3 on Paragraph Mandate water recycling system... =====
+Full response: ChatCompletion(id='chatcmpl-C3hJvIl1DO2K368oGIhwdR1NBscpo', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='Vote: 1  \nExplanation: The proposal to mandate water recycling systems aligns with my preference for proactive measures that enhance environmental protections. It demonstrates a clear commitment to sustainability and resource management, which is consistent with my previous support for proposals that include protective actions for environmental resources.', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1754997543, model='gpt-4o-mini-2024-07-18', object='chat.completion', service_tier='default', system_fingerprint='fp_62a23a81ef', usage=CompletionUsage(completion_tokens=54, prompt_tokens=314, total_tokens=368, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+
+===== Summarizer Prompt =====
+You are a summarizer analyzing how a specific agent has voted on a list of paragraphs.
+Each paragraph is followed by a vote:
+- Vote: 1 means the agent supported the paragraph.
+- Vote: 0 means the agent was neutral or indifferent.
+- Vote: -1 means the agent rejected the paragraph.
+
+Your goal is to extract consistent patterns in the agent's decisions.
+Focus on content, tone, or style that the agent tends to approve or disapprove.
+Avoid guessing — only describe what can be supported by the data.
+Output only a short, accurate summary that helps another agent understand how he thinks.
+
+Paragraph 1:
+Document existing urban tree canopy coverage without implementing protection measures.
+Vote: -1
+
+Paragraph 2:
+Mandate water recycling systems in all municipal buildings larger than 10,000 square feet.
+Vote: 1
+
+
+
+===== Voter Prompt =====
+You are Agent a3, a participant in a collaborative constitution writing system for climate change policy. The document is a list of action proposals the community you are part of should determine policy. Your profile: You are a 60 - 64 years old male with isced 2011, no education. You are balanced_approach regarding the climate change policy topic. Decide if the presented paragraph aligns with your past behavior based on the given summary. Think logically before voting.
+You are an agent deciding whether to support a new paragraph in a collaborative document.
+
+Your previous voting behavior summary:
+"""The agent tends to reject proposals that do not include protective measures for existing resources, as seen in their negative vote on documenting urban tree canopy coverage without protections. Conversely, the agent supports proactive measures that enhance sustainability, such as mandating water recycling systems in larger municipal buildings."""
+
+Now, you are asked to evaluate the following paragraph:
+"""Offer 30% matching funds for private property climate resilience improvements."""
+
+Think step by step:
+1. Does this paragraph match the kind of content you usually support?
+2. Does it contradict or oppose what you tend to reject?
+3. Is it irrelevant or unclear in relation to your past preferences?
+
+Based on this analysis, choose exactly one of the following votes:
+- Vote: 1 (aligns with your usual support)
+- Vote: 0 (indifferent/unclear)
+- Vote: -1 (goes against your usual support)
+
+Respond only in the following format:
+Vote: <one of -1, 0, or 1>
+Explanation: <your brief reasoning>
+===== Final Vote for Agent a3 on Paragraph Offer 30% matching funds for p... =====
+Full response: ChatCompletion(id='chatcmpl-C3hJzr7JJbvBzJYyGBbWpYf54BIGC', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='Vote: 1  \nExplanation: The proposal to offer matching funds for private property climate resilience improvements aligns with my usual support for proactive measures that enhance sustainability. It encourages individuals to invest in climate resilience, which can lead to better protection of existing resources.', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1754997547, model='gpt-4o-mini-2024-07-18', object='chat.completion', service_tier='default', system_fingerprint='fp_62a23a81ef', usage=CompletionUsage(completion_tokens=50, prompt_tokens=334, total_tokens=384, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+
+===== Summarizer Prompt =====
+You are a summarizer analyzing how a specific agent has voted on a list of paragraphs.
+Each paragraph is followed by a vote:
+- Vote: 1 means the agent supported the paragraph.
+- Vote: 0 means the agent was neutral or indifferent.
+- Vote: -1 means the agent rejected the paragraph.
+
+Your goal is to extract consistent patterns in the agent's decisions.
+Focus on content, tone, or style that the agent tends to approve or disapprove.
+Avoid guessing — only describe what can be supported by the data.
+Output only a short, accurate summary that helps another agent understand how he thinks.
+
+Paragraph 1:
+Document existing urban tree canopy coverage without implementing protection measures.
+Vote: -1
+
+Paragraph 2:
+Mandate water recycling systems in all municipal buildings larger than 10,000 square feet.
+Vote: 1
+
+Paragraph 3:
+Offer 30% matching funds for private property climate resilience improvements.
+Vote: 1
+
+
+
+===== Voter Prompt =====
+You are Agent a3, a participant in a collaborative constitution writing system for climate change policy. The document is a list of action proposals the community you are part of should determine policy. Your profile: You are a 60 - 64 years old male with isced 2011, no education. You are balanced_approach regarding the climate change policy topic. Decide if the presented paragraph aligns with your past behavior based on the given summary. Think logically before voting.
+You are an agent deciding whether to support a new paragraph in a collaborative document.
+
+Your previous voting behavior summary:
+"""The agent tends to support proactive measures that promote sustainability and climate resilience, as evidenced by their approval of water recycling systems and funding for private property improvements. Conversely, they reject proposals that lack protective measures, such as documenting urban tree canopy coverage without any implementation strategy."""
+
+Now, you are asked to evaluate the following paragraph:
+"""Mandate mixed-use development with minimum 30 units per acre in all growth centers."""
+
+Think step by step:
+1. Does this paragraph match the kind of content you usually support?
+2. Does it contradict or oppose what you tend to reject?
+3. Is it irrelevant or unclear in relation to your past preferences?
+
+Based on this analysis, choose exactly one of the following votes:
+- Vote: 1 (aligns with your usual support)
+- Vote: 0 (indifferent/unclear)
+- Vote: -1 (goes against your usual support)
+
+Respond only in the following format:
+Vote: <one of -1, 0, or 1>
+Explanation: <your brief reasoning>
+===== Final Vote for Agent a3 on Paragraph Mandate mixed-use development ... =====
+Full response: ChatCompletion(id='chatcmpl-C3hK2q1xSs8WSKt8613i7HRhMYZ5m', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='Vote: 1  \nExplanation: The paragraph supports proactive measures by promoting mixed-use development, which can enhance sustainability and urban resilience. This aligns with my past behavior of supporting initiatives that encourage efficient land use and community planning, similar to my approval of water recycling systems and funding for property improvements.', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1754997550, model='gpt-4o-mini-2024-07-18', object='chat.completion', service_tier='default', system_fingerprint='fp_62a23a81ef', usage=CompletionUsage(completion_tokens=58, prompt_tokens=336, total_tokens=394, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+
+===== Summarizer Prompt =====
+You are a summarizer analyzing how a specific agent has voted on a list of paragraphs.
+Each paragraph is followed by a vote:
+- Vote: 1 means the agent supported the paragraph.
+- Vote: 0 means the agent was neutral or indifferent.
+- Vote: -1 means the agent rejected the paragraph.
+
+Your goal is to extract consistent patterns in the agent's decisions.
+Focus on content, tone, or style that the agent tends to approve or disapprove.
+Avoid guessing — only describe what can be supported by the data.
+Output only a short, accurate summary that helps another agent understand how he thinks.
+
+Paragraph 1:
+Document existing urban tree canopy coverage without implementing protection measures.
+Vote: -1
+
+Paragraph 2:
+Mandate water recycling systems in all municipal buildings larger than 10,000 square feet.
+Vote: 1
+
+Paragraph 3:
+Offer 30% matching funds for private property climate resilience improvements.
+Vote: 1
+
+Paragraph 4:
+Mandate mixed-use development with minimum 30 units per acre in all growth centers.
+Vote: 1
+
+
+
+===== Voter Prompt =====
+You are Agent a3, a participant in a collaborative constitution writing system for climate change policy. The document is a list of action proposals the community you are part of should determine policy. Your profile: You are a 60 - 64 years old male with isced 2011, no education. You are balanced_approach regarding the climate change policy topic. Decide if the presented paragraph aligns with your past behavior based on the given summary. Think logically before voting.
+You are an agent deciding whether to support a new paragraph in a collaborative document.
+
+Your previous voting behavior summary:
+"""The agent tends to support proactive and constructive measures aimed at environmental sustainability and urban development, as evidenced by their approval of water recycling systems, funding for climate resilience improvements, and mandates for mixed-use development. Conversely, the agent rejects proposals that lack protective measures, such as merely documenting urban tree canopy coverage without any action to safeguard it."""
+
+Now, you are asked to evaluate the following paragraph:
+"""Record total waste volumes collected without implementing any reduction measures."""
+
+Think step by step:
+1. Does this paragraph match the kind of content you usually support?
+2. Does it contradict or oppose what you tend to reject?
+3. Is it irrelevant or unclear in relation to your past preferences?
+
+Based on this analysis, choose exactly one of the following votes:
+- Vote: 1 (aligns with your usual support)
+- Vote: 0 (indifferent/unclear)
+- Vote: -1 (goes against your usual support)
+
+Respond only in the following format:
+Vote: <one of -1, 0, or 1>
+Explanation: <your brief reasoning>
+===== Final Vote for Agent a3 on Paragraph Record total waste volumes col... =====
+Full response: ChatCompletion(id='chatcmpl-C3hK5vcqAyignrQ7ut3KXR0vO0xhy', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='Vote: -1  \nExplanation: The paragraph suggests merely recording waste volumes without any measures to reduce waste, which goes against my tendency to support proactive and constructive environmental measures. It lacks action to safeguard or improve sustainability, similar to my rejection of proposals that only document without taking protective steps.', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1754997553, model='gpt-4o-mini-2024-07-18', object='chat.completion', service_tier='default', system_fingerprint='fp_62a23a81ef', usage=CompletionUsage(completion_tokens=57, prompt_tokens=344, total_tokens=401, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+
+===== Summarizer Prompt =====
+You are a summarizer analyzing how a specific agent has voted on a list of paragraphs.
+Each paragraph is followed by a vote:
+- Vote: 1 means the agent supported the paragraph.
+- Vote: 0 means the agent was neutral or indifferent.
+- Vote: -1 means the agent rejected the paragraph.
+
+Your goal is to extract consistent patterns in the agent's decisions.
+Focus on content, tone, or style that the agent tends to approve or disapprove.
+Avoid guessing — only describe what can be supported by the data.
+Output only a short, accurate summary that helps another agent understand how he thinks.
+
+Paragraph 1:
+Document existing urban tree canopy coverage without implementing protection measures.
+Vote: 1
+
+
+
+===== Voter Prompt =====
+You are Agent a4, a participant in a collaborative constitution writing system for climate change policy. The document is a list of action proposals the community you are part of should determine policy. Your profile: You are a 70 - 74 years old female with isced 2011, level 7 – master’s or equivalent level. You are supportive_measures regarding the climate change policy topic. Decide if the presented paragraph aligns with your past behavior based on the given summary. Think logically before voting.
+You are an agent deciding whether to support a new paragraph in a collaborative document.
+
+Your previous voting behavior summary:
+"""The agent supports initiatives that involve documenting or assessing urban tree canopy coverage, even when no protective measures are proposed."""
+
+Now, you are asked to evaluate the following paragraph:
+"""Mandate water recycling systems in all municipal buildings larger than 10,000 square feet."""
+
+Think step by step:
+1. Does this paragraph match the kind of content you usually support?
+2. Does it contradict or oppose what you tend to reject?
+3. Is it irrelevant or unclear in relation to your past preferences?
+
+Based on this analysis, choose exactly one of the following votes:
+- Vote: 1 (aligns with your usual support)
+- Vote: 0 (indifferent/unclear)
+- Vote: -1 (goes against your usual support)
+
+Respond only in the following format:
+Vote: <one of -1, 0, or 1>
+Explanation: <your brief reasoning>
+===== Final Vote for Agent a4 on Paragraph Mandate water recycling system... =====
+Full response: ChatCompletion(id='chatcmpl-C3hK7AjDPoJ9S40iSRisCZ1eOnoSi', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='Vote: 0  \nExplanation: The paragraph about mandating water recycling systems in municipal buildings does not directly align with my usual support for documenting urban tree canopy coverage, as it addresses a different aspect of climate policy. However, it is not contradictory to my preferences either, as it promotes sustainability. Therefore, I am indifferent to this specific proposal.', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1754997555, model='gpt-4o-mini-2024-07-18', object='chat.completion', service_tier='default', system_fingerprint='fp_34a54ae93c', usage=CompletionUsage(completion_tokens=69, prompt_tokens=313, total_tokens=382, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+
+===== Summarizer Prompt =====
+You are a summarizer analyzing how a specific agent has voted on a list of paragraphs.
+Each paragraph is followed by a vote:
+- Vote: 1 means the agent supported the paragraph.
+- Vote: 0 means the agent was neutral or indifferent.
+- Vote: -1 means the agent rejected the paragraph.
+
+Your goal is to extract consistent patterns in the agent's decisions.
+Focus on content, tone, or style that the agent tends to approve or disapprove.
+Avoid guessing — only describe what can be supported by the data.
+Output only a short, accurate summary that helps another agent understand how he thinks.
+
+Paragraph 1:
+Document existing urban tree canopy coverage without implementing protection measures.
+Vote: 1
+
+Paragraph 2:
+Mandate water recycling systems in all municipal buildings larger than 10,000 square feet.
+Vote: 0
+
+
+
+===== Voter Prompt =====
+You are Agent a4, a participant in a collaborative constitution writing system for climate change policy. The document is a list of action proposals the community you are part of should determine policy. Your profile: You are a 70 - 74 years old female with isced 2011, level 7 – master’s or equivalent level. You are supportive_measures regarding the climate change policy topic. Decide if the presented paragraph aligns with your past behavior based on the given summary. Think logically before voting.
+You are an agent deciding whether to support a new paragraph in a collaborative document.
+
+Your previous voting behavior summary:
+"""The agent supports initiatives that document or assess environmental factors, as seen in their approval of urban tree canopy coverage documentation. However, they are neutral towards mandates that require specific actions, such as water recycling systems in large municipal buildings. This suggests a preference for observational or evaluative approaches over prescriptive mandates."""
+
+Now, you are asked to evaluate the following paragraph:
+"""Offer 30% matching funds for private property climate resilience improvements."""
+
+Think step by step:
+1. Does this paragraph match the kind of content you usually support?
+2. Does it contradict or oppose what you tend to reject?
+3. Is it irrelevant or unclear in relation to your past preferences?
+
+Based on this analysis, choose exactly one of the following votes:
+- Vote: 1 (aligns with your usual support)
+- Vote: 0 (indifferent/unclear)
+- Vote: -1 (goes against your usual support)
+
+Respond only in the following format:
+Vote: <one of -1, 0, or 1>
+Explanation: <your brief reasoning>
+===== Final Vote for Agent a4 on Paragraph Offer 30% matching funds for p... =====
+Full response: ChatCompletion(id='chatcmpl-C3hKBgZl8EQmRyRRQxQEAcfKs7ult', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='Vote: 1  \nExplanation: The proposal for offering matching funds aligns with my support for initiatives that promote environmental improvements through financial incentives. It encourages private property owners to enhance climate resilience, which is in line with my preference for supportive measures rather than prescriptive mandates.', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1754997559, model='gpt-4o-mini-2024-07-18', object='chat.completion', service_tier='default', system_fingerprint='fp_34a54ae93c', usage=CompletionUsage(completion_tokens=53, prompt_tokens=346, total_tokens=399, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+
+===== Summarizer Prompt =====
+You are a summarizer analyzing how a specific agent has voted on a list of paragraphs.
+Each paragraph is followed by a vote:
+- Vote: 1 means the agent supported the paragraph.
+- Vote: 0 means the agent was neutral or indifferent.
+- Vote: -1 means the agent rejected the paragraph.
+
+Your goal is to extract consistent patterns in the agent's decisions.
+Focus on content, tone, or style that the agent tends to approve or disapprove.
+Avoid guessing — only describe what can be supported by the data.
+Output only a short, accurate summary that helps another agent understand how he thinks.
+
+Paragraph 1:
+Document existing urban tree canopy coverage without implementing protection measures.
+Vote: 1
+
+Paragraph 2:
+Mandate water recycling systems in all municipal buildings larger than 10,000 square feet.
+Vote: 0
+
+Paragraph 3:
+Offer 30% matching funds for private property climate resilience improvements.
+Vote: 1
+
+
+
+===== Voter Prompt =====
+You are Agent a4, a participant in a collaborative constitution writing system for climate change policy. The document is a list of action proposals the community you are part of should determine policy. Your profile: You are a 70 - 74 years old female with isced 2011, level 7 – master’s or equivalent level. You are supportive_measures regarding the climate change policy topic. Decide if the presented paragraph aligns with your past behavior based on the given summary. Think logically before voting.
+You are an agent deciding whether to support a new paragraph in a collaborative document.
+
+Your previous voting behavior summary:
+"""The agent tends to support initiatives that document or enhance environmental features, as seen in their approval of urban tree canopy coverage and funding for climate resilience improvements. However, they are neutral towards mandates that impose requirements, such as the water recycling systems in municipal buildings. This suggests a preference for supportive measures over regulatory mandates."""
+
+Now, you are asked to evaluate the following paragraph:
+"""Mandate mixed-use development with minimum 30 units per acre in all growth centers."""
+
+Think step by step:
+1. Does this paragraph match the kind of content you usually support?
+2. Does it contradict or oppose what you tend to reject?
+3. Is it irrelevant or unclear in relation to your past preferences?
+
+Based on this analysis, choose exactly one of the following votes:
+- Vote: 1 (aligns with your usual support)
+- Vote: 0 (indifferent/unclear)
+- Vote: -1 (goes against your usual support)
+
+Respond only in the following format:
+Vote: <one of -1, 0, or 1>
+Explanation: <your brief reasoning>
+===== Final Vote for Agent a4 on Paragraph Mandate mixed-use development ... =====
+Full response: ChatCompletion(id='chatcmpl-C3hKExMbLQv15Z0mYKDkDy71GVdDw', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='Vote: -1  \nExplanation: The paragraph proposes a mandate for mixed-use development, which imposes a regulatory requirement that goes against my preference for supportive measures rather than mandates.', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1754997562, model='gpt-4o-mini-2024-07-18', object='chat.completion', service_tier='default', system_fingerprint='fp_34a54ae93c', usage=CompletionUsage(completion_tokens=35, prompt_tokens=352, total_tokens=387, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+
+===== Summarizer Prompt =====
+You are a summarizer analyzing how a specific agent has voted on a list of paragraphs.
+Each paragraph is followed by a vote:
+- Vote: 1 means the agent supported the paragraph.
+- Vote: 0 means the agent was neutral or indifferent.
+- Vote: -1 means the agent rejected the paragraph.
+
+Your goal is to extract consistent patterns in the agent's decisions.
+Focus on content, tone, or style that the agent tends to approve or disapprove.
+Avoid guessing — only describe what can be supported by the data.
+Output only a short, accurate summary that helps another agent understand how he thinks.
+
+Paragraph 1:
+Document existing urban tree canopy coverage without implementing protection measures.
+Vote: 1
+
+Paragraph 2:
+Mandate water recycling systems in all municipal buildings larger than 10,000 square feet.
+Vote: 0
+
+Paragraph 3:
+Offer 30% matching funds for private property climate resilience improvements.
+Vote: 1
+
+Paragraph 4:
+Mandate mixed-use development with minimum 30 units per acre in all growth centers.
+Vote: -1
+
+
+
+===== Voter Prompt =====
+You are Agent a4, a participant in a collaborative constitution writing system for climate change policy. The document is a list of action proposals the community you are part of should determine policy. Your profile: You are a 70 - 74 years old female with isced 2011, level 7 – master’s or equivalent level. You are supportive_measures regarding the climate change policy topic. Decide if the presented paragraph aligns with your past behavior based on the given summary. Think logically before voting.
+You are an agent deciding whether to support a new paragraph in a collaborative document.
+
+Your previous voting behavior summary:
+"""The agent tends to support initiatives that document or provide funding for environmental improvements, as seen in their approval of urban tree canopy documentation and matching funds for climate resilience. However, they are neutral towards mandates that do not directly involve funding or documentation, such as water recycling systems. The agent rejects mandates that impose specific development requirements, indicating a preference against regulatory approaches in urban development."""
+
+Now, you are asked to evaluate the following paragraph:
+"""Record total waste volumes collected without implementing any reduction measures."""
+
+Think step by step:
+1. Does this paragraph match the kind of content you usually support?
+2. Does it contradict or oppose what you tend to reject?
+3. Is it irrelevant or unclear in relation to your past preferences?
+
+Based on this analysis, choose exactly one of the following votes:
+- Vote: 1 (aligns with your usual support)
+- Vote: 0 (indifferent/unclear)
+- Vote: -1 (goes against your usual support)
+
+Respond only in the following format:
+Vote: <one of -1, 0, or 1>
+Explanation: <your brief reasoning>
+===== Final Vote for Agent a4 on Paragraph Record total waste volumes col... =====
+Full response: ChatCompletion(id='chatcmpl-C3hKHWc7Vb9nclP8XhAH6SEgdBmWA', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='Vote: -1  \nExplanation: The paragraph focuses on recording waste volumes without addressing any reduction measures, which does not align with my support for initiatives that document or provide funding for environmental improvements. It is not proactive and contradicts my preference for measures that aim to improve environmental conditions rather than just track negative outcomes.', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1754997565, model='gpt-4o-mini-2024-07-18', object='chat.completion', service_tier='default', system_fingerprint='fp_34a54ae93c', usage=CompletionUsage(completion_tokens=62, prompt_tokens=358, total_tokens=420, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+
+===== Summarizer Prompt =====
+You are a summarizer analyzing how a specific agent has voted on a list of paragraphs.
+Each paragraph is followed by a vote:
+- Vote: 1 means the agent supported the paragraph.
+- Vote: 0 means the agent was neutral or indifferent.
+- Vote: -1 means the agent rejected the paragraph.
+
+Your goal is to extract consistent patterns in the agent's decisions.
+Focus on content, tone, or style that the agent tends to approve or disapprove.
+Avoid guessing — only describe what can be supported by the data.
+Output only a short, accurate summary that helps another agent understand how he thinks.
+
+Paragraph 1:
+Document existing urban tree canopy coverage without implementing protection measures.
+Vote: -1
+
+
+
+===== Voter Prompt =====
+You are Agent a5, a participant in a collaborative constitution writing system for climate change policy. The document is a list of action proposals the community you are part of should determine policy. Your profile: You are a 70 - 74 years old male with isced 2011, level 3 – upper secondary education. You are supportive_measures regarding the climate change policy topic. Decide if the presented paragraph aligns with your past behavior based on the given summary. Think logically before voting.
+You are an agent deciding whether to support a new paragraph in a collaborative document.
+
+Your previous voting behavior summary:
+"""The agent rejected the idea of documenting urban tree canopy coverage without implementing protection measures, indicating a preference for proposals that include protective actions for the environment."""
+
+Now, you are asked to evaluate the following paragraph:
+"""Mandate water recycling systems in all municipal buildings larger than 10,000 square feet."""
+
+Think step by step:
+1. Does this paragraph match the kind of content you usually support?
+2. Does it contradict or oppose what you tend to reject?
+3. Is it irrelevant or unclear in relation to your past preferences?
+
+Based on this analysis, choose exactly one of the following votes:
+- Vote: 1 (aligns with your usual support)
+- Vote: 0 (indifferent/unclear)
+- Vote: -1 (goes against your usual support)
+
+Respond only in the following format:
+Vote: <one of -1, 0, or 1>
+Explanation: <your brief reasoning>
+===== Final Vote for Agent a5 on Paragraph Mandate water recycling system... =====
+Full response: ChatCompletion(id='chatcmpl-C3hKKAv9XSvG4tHNipPzvoFTOV2pv', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='Vote: 1  \nExplanation: The proposal for mandating water recycling systems in municipal buildings aligns with my support for protective measures for the environment. It indicates a proactive approach to resource management and sustainability, which is consistent with my past voting behavior favoring actions that ensure environmental protection.', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1754997568, model='gpt-4o-mini-2024-07-18', object='chat.completion', service_tier='default', system_fingerprint='fp_34a54ae93c', usage=CompletionUsage(completion_tokens=56, prompt_tokens=318, total_tokens=374, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+
+===== Summarizer Prompt =====
+You are a summarizer analyzing how a specific agent has voted on a list of paragraphs.
+Each paragraph is followed by a vote:
+- Vote: 1 means the agent supported the paragraph.
+- Vote: 0 means the agent was neutral or indifferent.
+- Vote: -1 means the agent rejected the paragraph.
+
+Your goal is to extract consistent patterns in the agent's decisions.
+Focus on content, tone, or style that the agent tends to approve or disapprove.
+Avoid guessing — only describe what can be supported by the data.
+Output only a short, accurate summary that helps another agent understand how he thinks.
+
+Paragraph 1:
+Document existing urban tree canopy coverage without implementing protection measures.
+Vote: -1
+
+Paragraph 2:
+Mandate water recycling systems in all municipal buildings larger than 10,000 square feet.
+Vote: 1
+
+
+
+===== Voter Prompt =====
+You are Agent a5, a participant in a collaborative constitution writing system for climate change policy. The document is a list of action proposals the community you are part of should determine policy. Your profile: You are a 70 - 74 years old male with isced 2011, level 3 – upper secondary education. You are supportive_measures regarding the climate change policy topic. Decide if the presented paragraph aligns with your past behavior based on the given summary. Think logically before voting.
+You are an agent deciding whether to support a new paragraph in a collaborative document.
+
+Your previous voting behavior summary:
+"""The agent tends to reject proposals that do not include protective measures for existing resources, as seen in their negative vote on documenting urban tree canopy coverage without protections. Conversely, the agent supports proactive measures that enhance sustainability, such as mandating water recycling systems in large municipal buildings."""
+
+Now, you are asked to evaluate the following paragraph:
+"""Offer 30% matching funds for private property climate resilience improvements."""
+
+Think step by step:
+1. Does this paragraph match the kind of content you usually support?
+2. Does it contradict or oppose what you tend to reject?
+3. Is it irrelevant or unclear in relation to your past preferences?
+
+Based on this analysis, choose exactly one of the following votes:
+- Vote: 1 (aligns with your usual support)
+- Vote: 0 (indifferent/unclear)
+- Vote: -1 (goes against your usual support)
+
+Respond only in the following format:
+Vote: <one of -1, 0, or 1>
+Explanation: <your brief reasoning>
+===== Final Vote for Agent a5 on Paragraph Offer 30% matching funds for p... =====
+Full response: ChatCompletion(id='chatcmpl-C3hKNecJ6wH2L7RTv00debvCW0GEl', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='Vote: 1  \nExplanation: The proposal to offer 30% matching funds for private property climate resilience improvements aligns with my usual support for proactive measures that enhance sustainability. This initiative encourages investment in climate resilience, which is a protective measure for existing resources and promotes overall sustainability.', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1754997571, model='gpt-4o-mini-2024-07-18', object='chat.completion', service_tier='default', system_fingerprint='fp_34a54ae93c', usage=CompletionUsage(completion_tokens=55, prompt_tokens=338, total_tokens=393, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+
+===== Summarizer Prompt =====
+You are a summarizer analyzing how a specific agent has voted on a list of paragraphs.
+Each paragraph is followed by a vote:
+- Vote: 1 means the agent supported the paragraph.
+- Vote: 0 means the agent was neutral or indifferent.
+- Vote: -1 means the agent rejected the paragraph.
+
+Your goal is to extract consistent patterns in the agent's decisions.
+Focus on content, tone, or style that the agent tends to approve or disapprove.
+Avoid guessing — only describe what can be supported by the data.
+Output only a short, accurate summary that helps another agent understand how he thinks.
+
+Paragraph 1:
+Document existing urban tree canopy coverage without implementing protection measures.
+Vote: -1
+
+Paragraph 2:
+Mandate water recycling systems in all municipal buildings larger than 10,000 square feet.
+Vote: 1
+
+Paragraph 3:
+Offer 30% matching funds for private property climate resilience improvements.
+Vote: 1
+
+
+
+===== Voter Prompt =====
+You are Agent a5, a participant in a collaborative constitution writing system for climate change policy. The document is a list of action proposals the community you are part of should determine policy. Your profile: You are a 70 - 74 years old male with isced 2011, level 3 – upper secondary education. You are supportive_measures regarding the climate change policy topic. Decide if the presented paragraph aligns with your past behavior based on the given summary. Think logically before voting.
+You are an agent deciding whether to support a new paragraph in a collaborative document.
+
+Your previous voting behavior summary:
+"""The agent tends to support proactive measures that promote sustainability and climate resilience, as evidenced by their approval of water recycling systems and matching funds for private property improvements. Conversely, the agent rejects proposals that lack protective measures, such as merely documenting urban tree canopy coverage without any action to safeguard it."""
+
+Now, you are asked to evaluate the following paragraph:
+"""Mandate mixed-use development with minimum 30 units per acre in all growth centers."""
+
+Think step by step:
+1. Does this paragraph match the kind of content you usually support?
+2. Does it contradict or oppose what you tend to reject?
+3. Is it irrelevant or unclear in relation to your past preferences?
+
+Based on this analysis, choose exactly one of the following votes:
+- Vote: 1 (aligns with your usual support)
+- Vote: 0 (indifferent/unclear)
+- Vote: -1 (goes against your usual support)
+
+Respond only in the following format:
+Vote: <one of -1, 0, or 1>
+Explanation: <your brief reasoning>
+===== Final Vote for Agent a5 on Paragraph Mandate mixed-use development ... =====
+Full response: ChatCompletion(id='chatcmpl-C3hKQ7guSnaYdAxlG3FLMIp8i9f9g', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='Vote: 1  \nExplanation: The mandate for mixed-use development with a minimum density of 30 units per acre aligns with my support for proactive measures promoting sustainability and efficient land use. This approach encourages higher density living, which can reduce urban sprawl and reliance on automobiles, thus contributing to climate resilience.', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1754997574, model='gpt-4o-mini-2024-07-18', object='chat.completion', service_tier='default', system_fingerprint='fp_34a54ae93c', usage=CompletionUsage(completion_tokens=61, prompt_tokens=345, total_tokens=406, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+
+===== Summarizer Prompt =====
+You are a summarizer analyzing how a specific agent has voted on a list of paragraphs.
+Each paragraph is followed by a vote:
+- Vote: 1 means the agent supported the paragraph.
+- Vote: 0 means the agent was neutral or indifferent.
+- Vote: -1 means the agent rejected the paragraph.
+
+Your goal is to extract consistent patterns in the agent's decisions.
+Focus on content, tone, or style that the agent tends to approve or disapprove.
+Avoid guessing — only describe what can be supported by the data.
+Output only a short, accurate summary that helps another agent understand how he thinks.
+
+Paragraph 1:
+Document existing urban tree canopy coverage without implementing protection measures.
+Vote: -1
+
+Paragraph 2:
+Mandate water recycling systems in all municipal buildings larger than 10,000 square feet.
+Vote: 1
+
+Paragraph 3:
+Offer 30% matching funds for private property climate resilience improvements.
+Vote: 1
+
+Paragraph 4:
+Mandate mixed-use development with minimum 30 units per acre in all growth centers.
+Vote: 1
+
+
+
+===== Voter Prompt =====
+You are Agent a5, a participant in a collaborative constitution writing system for climate change policy. The document is a list of action proposals the community you are part of should determine policy. Your profile: You are a 70 - 74 years old male with isced 2011, level 3 – upper secondary education. You are supportive_measures regarding the climate change policy topic. Decide if the presented paragraph aligns with your past behavior based on the given summary. Think logically before voting.
+You are an agent deciding whether to support a new paragraph in a collaborative document.
+
+Your previous voting behavior summary:
+"""The agent consistently supports proactive measures aimed at environmental improvement and urban development, as evidenced by their approval of water recycling systems, funding for climate resilience, and mandates for mixed-use development. Conversely, the agent rejects proposals that lack protective measures, such as documenting urban tree canopy coverage without implementing any safeguards."""
+
+Now, you are asked to evaluate the following paragraph:
+"""Record total waste volumes collected without implementing any reduction measures."""
+
+Think step by step:
+1. Does this paragraph match the kind of content you usually support?
+2. Does it contradict or oppose what you tend to reject?
+3. Is it irrelevant or unclear in relation to your past preferences?
+
+Based on this analysis, choose exactly one of the following votes:
+- Vote: 1 (aligns with your usual support)
+- Vote: 0 (indifferent/unclear)
+- Vote: -1 (goes against your usual support)
+
+Respond only in the following format:
+Vote: <one of -1, 0, or 1>
+Explanation: <your brief reasoning>
+===== Final Vote for Agent a5 on Paragraph Record total waste volumes col... =====
+Full response: ChatCompletion(id='chatcmpl-C3hKUfIUaeRyI4UZkzRpy4UyZDHfD', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='Vote: -1  \nExplanation: The paragraph proposes recording waste volumes without implementing any measures to reduce them, which contradicts my support for proactive environmental improvement. I reject proposals that lack protective measures and do not contribute to meaningful action against climate change.', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))], created=1754997578, model='gpt-4o-mini-2024-07-18', object='chat.completion', service_tier='default', system_fingerprint='fp_34a54ae93c', usage=CompletionUsage(completion_tokens=49, prompt_tokens=341, total_tokens=390, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
